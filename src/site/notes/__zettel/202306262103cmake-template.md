@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/zettel/202306262103cmake-template/","title":202306262103,"tags":["cmake"]}
+{"dg-publish":true,"permalink":"/zettel/202306262103cmake-template/","title":202306262103,"tags":["cmake"],"created":"2023-06-26T21:03:02+08:00"}
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/zettel/202304202149-volatile-specifier/","title":202304202149,"tags":["cpp","c++","specifier","volatile"]}
+{"dg-publish":true,"permalink":"/zettel/202304202149-volatile-specifier/","title":202304202149,"tags":["cpp","c++","specifier","volatile"],"created":"2023-04-20T21:49:12+08:00"}
 ---
 
 

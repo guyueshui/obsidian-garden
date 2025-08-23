@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/zettel/202412212317fcitx5-systray-icon/","title":"202412212317","tags":["fcitx","systray","icon-theme","美化","linux"]}
+{"dg-publish":true,"permalink":"/zettel/202412212317fcitx5-systray-icon/","title":"202412212317","tags":["fcitx","systray","icon-theme","美化","linux"],"created":"2024-12-21T23:17:36+08:00"}
 ---
 
 

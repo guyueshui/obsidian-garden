@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/zettel/202503092037-network-manager-iwd/","title":202503092037,"tags":["networkmanager","iwd","wpa_supplicant"]}
+{"dg-publish":true,"permalink":"/zettel/202503092037-network-manager-iwd/","title":202503092037,"tags":["networkmanager","iwd","wpa_supplicant"],"created":"2025-03-09T20:37:11+08:00"}
 ---
 
 
