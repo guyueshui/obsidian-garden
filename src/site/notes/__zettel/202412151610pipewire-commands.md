@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/zettel/202412151610pipewire-commands/","title":202412151610,"tags":["av","pulseaudio","audio","linux","pipewire"],"created":"2024-12-15T16:10:49+08:00"}
+{"dg-publish":true,"permalink":"/__zettel/202412151610pipewire-commands/","title":202412151610,"tags":["av","pulseaudio","audio","linux","pipewire"],"created":"2024-12-15T16:10:49+08:00"}
 ---
 
 >[!error] Disclaimer

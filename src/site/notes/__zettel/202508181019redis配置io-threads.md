@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/zettel/202508181019redis-io-threads/","title":202508181019,"tags":["redis"],"created":"2025-08-18T10:19:37+08:00"}
+{"dg-publish":true,"permalink":"/__zettel/202508181019redis配置io-threads/","title":202508181019,"tags":["redis"],"created":"2025-08-18T10:19:37+08:00"}
 ---
 
 ```

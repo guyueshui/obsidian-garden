@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/zettel/202304231659-firefox-chrome-ua/","title":202304231659,"tags":["firefox","chrome","browser","ua","useragent"],"created":"2023-04-23T16:59:37+08:00"}
+{"dg-publish":true,"permalink":"/__zettel/202304231659 firefox伪装chrome ua/","title":202304231659,"tags":["firefox","chrome","browser","ua","useragent"],"created":"2023-04-23T16:59:37+08:00"}
 ---
 
 

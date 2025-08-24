@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/zettel/202502201432python-paramiko/","title":202502201432,"tags":["paramiko","python","ssh"],"created":"2025-02-20T14:32:09+08:00"}
+{"dg-publish":true,"permalink":"/__zettel/202502201432python-paramiko使用小记/","title":202502201432,"tags":["paramiko","python","ssh"],"created":"2025-02-20T14:32:09+08:00"}
 ---
 
 paramiko是一个python ssh库，提供python api去执行ssh操作，包括但不限于登录远程机器（ssh），执行远程命令，sftp上传下载文件。

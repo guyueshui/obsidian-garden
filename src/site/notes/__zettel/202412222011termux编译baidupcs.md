@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/zettel/202412222011termux-baidupcs/","title":202412222011,"tags":["baidupcs","termux","android"],"created":"2024-12-22T20:11:08+08:00"}
+{"dg-publish":true,"permalink":"/__zettel/202412222011termux编译baidupcs/","title":202412222011,"tags":["baidupcs","termux","android"],"created":"2024-12-22T20:11:08+08:00"}
 ---
 
 有两种方式编译android版本的baidupcs

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/zettel/202502261718firefox-chrome/","title":202502261718,"tags":["firefox","chrome","技巧"],"created":"2025-02-26T17:18:01+08:00"}
+{"dg-publish":true,"permalink":"/__zettel/202502261718firefox-chrome-禁用政策插件/","title":202502261718,"tags":["firefox","chrome","技巧"],"created":"2025-02-26T17:18:01+08:00"}
 ---
 
 看到浏览器中“由贵组织管理”让人很恼怒，它装的插件一般是用来监控你的浏览记录和浏览内容的。所以，在这种情况下，你等于没穿衣服在网上冲浪。我们必须强烈抵制这种行为。

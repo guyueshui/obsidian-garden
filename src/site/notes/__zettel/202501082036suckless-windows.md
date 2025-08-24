@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/zettel/202501082036suckless-windows/","title":202501082036,"tags":["定制","windows","suckless","msys2"],"created":"2025-01-08T20:36:52+08:00"}
+{"dg-publish":true,"permalink":"/__zettel/202501082036suckless-windows/","title":202501082036,"tags":["定制","windows","suckless","msys2"],"created":"2025-01-08T20:36:52+08:00"}
 ---
 
 
