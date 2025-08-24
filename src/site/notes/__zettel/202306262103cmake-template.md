@@ -283,4 +283,4 @@ endif()
 # target_link_libraries(server pthread)
 ```
 
-see also [202304230920 cmake learn](202304230920%20cmake%20learn.md)
+see also [202304230920 cmake learn](202304230920%20cmake%20learn)

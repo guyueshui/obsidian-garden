@@ -31,4 +31,4 @@ https://support.mozilla.org/en-US/kb/cannot-remove-add-on-extension-or-theme
 
 可以看到插件ID，删除对应文件即可。
 
-see also [202412112322firefox重启保留标签页](202412112322firefox重启保留标签页.md)
+see also [202412112322firefox重启保留标签页](202412112322firefox重启保留标签页)

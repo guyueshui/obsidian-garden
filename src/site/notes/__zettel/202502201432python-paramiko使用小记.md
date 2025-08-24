@@ -92,23 +92,23 @@ class SSHConnection(object):
             self._sftp_client = self.get_client().open_sftp()
         return self._sftp_client
 
-    def excute(self, cmd):
-        stdin, stdout, stderr = self.get_client().exec_command(cmd)
-        return self.__handle_cmd_output(stdout, stderr, cmd)
+    def excute(self, ):
+        stdin, stdout, stderr = self.get_client().exec_command()
+        return self.__handle__output(stdout, stderr, )
 
-    def excute_with_sudo(self, cmd):
-        stdin, stdout, stderr = self.get_client().exec_command("sudo -S %s" % cmd)
+    def excute_with_sudo(self, ):
+        stdin, stdout, stderr = self.get_client().exec_command("sudo -S %s" % )
         stdin.write(self.password + "\n")
         stdin.flush()
-        return self.__handle_cmd_output(stdout, stderr, cmd)
+        return self.__handle__output(stdout, stderr, )
 
     @staticmethod
-    def __handle_cmd_output(stdout: paramiko.ChannelFile, stderr: paramiko.ChannelFile, cmd: str) -> int:
+    def __handle__output(stdout: paramiko.ChannelFile, stderr: paramiko.ChannelFile, : str) -> int:
         status = stdout.channel.recv_exit_status()
         if status != 0:
             raise CommandRunException(
                 "Excute '%s' failed with status %d.\n\n%s"
-                % (cmd, status, stderr.read().decode()))
+                % (, status, stderr.read().decode()))
         for line in stdout:
             print(line, end="")
         return status
@@ -242,7 +242,7 @@ class BarDev(NodeConf):
     HOST = "10.24.21.181"
     USERNAME = "xufei.li"
 
-    DEPLOY_DIR = "/home/shang/mdl_bar"
+    DEPLOY_DIR = "/home/shangl_bar"
 
 ```
 
@@ -312,17 +312,17 @@ class SSHConnection(object):
             self._sftp_client = self.get_client().open_sftp()
         return self._sftp_client
 
-    def excute(self, cmd):
-        stdin, stdout, stderr = self.get_client().exec_command(cmd)
-        return self.__handle_cmd_output(stdout, stderr, cmd)
+    def excute(self, ):
+        stdin, stdout, stderr = self.get_client().exec_command()
+        return self.__handle__output(stdout, stderr, )
 
-    def excute_with_sudo(self, cmd):
-        stdin, stdout, stderr = self.get_client().exec_command("sudo -S %s" % cmd)
+    def excute_with_sudo(self, ):
+        stdin, stdout, stderr = self.get_client().exec_command("sudo -S %s" % )
         stdin.write(self.password + "\n")
         stdin.flush()
-        return self.__handle_cmd_output(stdout, stderr, cmd)
+        return self.__handle__output(stdout, stderr, )
 
-    def __excute_successive_cmds(self, cmd):
+    def __excute_successive_s(self, ):
         client = self.get_client()
         chan = client.invoke_shell()
         chan.set_combine_stderr(True)
@@ -360,17 +360,17 @@ sudo -i
         print("exit_status:", exit_status)
 
     @staticmethod
-    def __handle_cmd_output(stdout: paramiko.ChannelFile, stderr: paramiko.ChannelFile, cmd: str) -> int:
+    def __handle__output(stdout: paramiko.ChannelFile, stderr: paramiko.ChannelFile, : str) -> int:
         for line in stdout:
             print(line, end="")
         status = stdout.channel.recv_exit_status()
         if status != 0:
             raise CommandRunException(
                 "Excute '%s' failed with status %d.\n\n%s"
-                % (cmd, status, stderr.read().decode()))
+                % (, status, stderr.read().decode()))
         return status
 
-    def get_cmd_chain(self, timeout=0):
+    def get__chain(self, timeout=0):
         return CommandChain(self.get_client(), timeout)
 
     def upload(self, local_path, remote_path):
@@ -435,9 +435,9 @@ class CommandChain(object):
         self._chan.close()
         self._client = None
 
-    def execute(self, one_line_cmd: str):
-        one_line_cmd = one_line_cmd.rstrip('\n') + '\n'
-        self._chan.send(one_line_cmd.encode())
+    def execute(self, one_line_: str):
+        one_line_ = one_line_.rstrip('\n') + '\n'
+        self._chan.send(one_line_.encode())
         return self
 
     def write_input(self, text: str):
@@ -482,12 +482,12 @@ ls -l""")
     conn.close()
 
 
-def test_cmd_chain():
+def test__chain():
     from tool.node import NewApiDevNode
     conn = SSHConnection()
     conn.re_init(NewApiDevNode)
 
-    conn.get_cmd_chain().execute("echo $USER")\
+    conn.get__chain().execute("echo $USER")\
         .execute("sudo -i").write_input(conn.password)\
         .execute("echo $USER").execute("apt list --upgradable|head -5")\
         .over()
@@ -495,7 +495,7 @@ def test_cmd_chain():
 
 if __name__ == "__main__":
     # test_connection()
-    test_cmd_chain()
+    test__chain()
 ```
 
 utils.py
@@ -579,10 +579,10 @@ class CompileTask1604(object):
             return tarinfo
         return None
 
-    def compile_mdl_src(self):
+    def compilel_src(self):
         conn = self.conn
 
-        tar_name = "mdl_src.tar.bz2"
+        tar_name = l_src.tar.bz2"
         utils.tar_dir(MDL_SRC, tar_name, filter=self.__class__.filter_src_files)
         conn.upload(tar_name, "./code/")
         conn.excute(f"""
@@ -590,7 +590,7 @@ cd code
 tar -xavf {tar_name}
 rm -f {tar_name}
 echo; echo
-cd mdl_src/build/make
+cdl_src/build/make
 make -j4
 """)
         os.remove(tar_name)
@@ -621,6 +621,6 @@ bash -e build.sh
 
 if __name__ == '__main__':
     task = CompileTask1604()
-    task.compile_mdl_src()
+    task.compilel_src()
     task.destroy()
 ```

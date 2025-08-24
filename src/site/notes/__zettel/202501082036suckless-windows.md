@@ -48,7 +48,7 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/msys2/
 如果你之前安装过git bash，现在你的电脑里面应该有两套mingw（一个git bash安装的，一个是MSYS2安装的）。Git bash里面自带vim. 而MSYS2里面可以通过包管理器安装vim. 然而重要的是windows系统程序的路径需要继承下来，这样可以方便的在mingw里面直接调用windows程序例如
 
 - notepad.exe：记事本
-- cmd：命令提示符
+- ：命令提示符
 - explorer：文件管理器
 
 要继承windows系统环境变量，找到MSYS2的安装目录（例如，D:\msys64）下有mingw64.ini，将里面的
@@ -94,11 +94,11 @@ SHELL=/usr/bin/zsh
         },
         "Command Prompt": {
             "path": [
-                "${env:windir}\\Sysnative\\cmd.exe",
-                "${env:windir}\\System32\\cmd.exe"
+                "${env:windir}\\Sysnative\\.exe",
+                "${env:windir}\\System32\\.exe"
             ],
             "args": [],
-            "icon": "terminal-cmd"
+            "icon": "terminal-"
         },
         "Git Bash": {
             "source": "Git Bash"
