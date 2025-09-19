@@ -1,0 +1,1542 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<title>Digital Garden Entry</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script async type="module">import mermaid from"https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"</script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-sv0slik/5O0JIPdLBCR2A3XDg/1U3WuDEheZfI/DI5n8Yqc3h5kjrnr46FGBNiUAJF7rE4LHKwQ/SoSLRKAxEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script async src="https://cdn.jsdelivr.net/npm/lucide@0.115.0/dist/umd/lucide.min.js"></script>
+<script>window.addEventListener("load",(()=>{document.querySelectorAll(".callout").forEach((e=>{const t=getComputedStyle(e).getPropertyValue("--callout-icon"),l=t&&t.trim().replace(/^lucide-/,"");if(l){const t=e.querySelector(".callout-title");if(t){const e=document.createElement("div"),c=document.createElement("i");e.appendChild(c),c.setAttribute("icon-name",l),e.setAttribute("class","callout-icon"),t.insertBefore(e,t.firstChild)}}})),lucide.createIcons(),Array.from(document.querySelectorAll(".callout.is-collapsible")).forEach((e=>{e.querySelector(".callout-title").addEventListener("click",(t=>{e.classList.contains("is-collapsed")?e.classList.remove("is-collapsed"):e.classList.add("is-collapsed")}))}))}))</script>
+<script async src="https://fastly.jsdelivr.net/npm/force-graph@1.43.0/dist/force-graph.min.js"></script>
+<script async src="https://fastly.jsdelivr.net/npm/@alpinejs/persist@3.11.1/dist/cdn.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js" async></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer" async>
+<script src="https://fastly.jsdelivr.net/npm/whatwg-fetch@3.6.2/dist/fetch.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
+<link href="/styles/digital-garden-base.css" rel="stylesheet">
+<link href="/styles/obsidian-base.css" rel="stylesheet">
+<link href="/styles/_theme.d92311c2.css" rel="stylesheet">
+<link href="/styles/custom-style.css" rel="stylesheet">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<style></style>
+</head>
+<body class="theme-dark markdown-preview-view markdown-rendered markdown-preview-section">
+<nav class="navbar">
+<div class="navbar-inner">
+<a href="/" style="text-decoration:none">
+<h1 style="margin:15px!important">Learn2Live</h1>
+</a>
+</div>
+<div class="search-button align-icon" onclick="toggleSearch()">
+<span class="search-icon">
+<i icon-name="search"></i>
+</span>
+<span class="search-text">
+<span>Search</span>
+<span style="font-size:.6rem;padding:2px 2px 0 6px;text-align:center;transform:translateY(4px)" class="search-keys">
+CTRL + K
+</span>
+</span>
+</div>
+</nav>
+<div class="search-container" id="globalsearch" onclick="toggleSearch()">
+<div class="search-box">
+<input type="search" id="term" placeholder="Start typing...">
+<div id="search-results"></div>
+<footer class="search-box-footer">
+<div class="navigation-hint">
+<span>Enter to select</span>
+</div>
+<div class="navigation-hint align-icon">
+<i icon-name="arrow-up" aria-hidden="true"></i>
+<i icon-name="arrow-down" aria-hidden="true"></i>
+<span>to navigate</span>
+</div>
+<div class="navigation-hint">
+<span>ESC to close</span>
+</div>
+</footer>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js"></script>
+<script>document.addEventListener("DOMContentLoaded",init,!1),document.addEventListener("DOMContentLoaded",setCorrectShortcut,!1),window.toggleSearch=function(){document.getElementById("globalsearch").classList.contains("active")?document.getElementById("globalsearch").classList.remove("active"):(document.getElementById("globalsearch").classList.add("active"),document.getElementById("term").focus())},window.toggleTagSearch=function(e){console.log(e.textContent);const t=e.textContent;t&&(window.document.getElementById("term").value=t.trim(),window.toggleSearch(),window.search())};const loadingSvg='\n    <svg width="100" height="100" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg" stroke="#fff">\n      <g fill="none" fill-rule="evenodd" transform="translate(1 1)" stroke-width="2">\n          <circle cx="22" cy="22" r="6" stroke-opacity="0">\n              <animate attributeName="r"\n                   begin="1.5s" dur="3s"\n                   values="6;22"\n                   calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-opacity"\n                   begin="1.5s" dur="3s"\n                   values="1;0" calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-width"\n                   begin="1.5s" dur="3s"\n                   values="2;0" calcMode="linear"\n                   repeatCount="indefinite" />\n          </circle>\n          <circle cx="22" cy="22" r="6" stroke-opacity="0">\n              <animate attributeName="r"\n                   begin="3s" dur="3s"\n                   values="6;22"\n                   calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-opacity"\n                   begin="3s" dur="3s"\n                   values="1;0" calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-width"\n                   begin="3s" dur="3s"\n                   values="2;0" calcMode="linear"\n                   repeatCount="indefinite" />\n          </circle>\n          <circle cx="22" cy="22" r="8">\n              <animate attributeName="r"\n                   begin="0s" dur="1.5s"\n                   values="6;1;2;3;4;5;6"\n                   calcMode="linear"\n                   repeatCount="indefinite" />\n          </circle>\n      </g>\n  </svg>';function debounce(e,t,n){var a;return function(){var r=this,i=arguments,c=n&&!a;clearTimeout(a),a=setTimeout((function(){a=null,n||e.apply(r,i)}),t),c&&e.apply(r,i)}}function setCorrectShortcut(){navigator.platform.toUpperCase().indexOf("MAC")>=0&&document.querySelectorAll(".search-keys").forEach((e=>e.innerHTML="⌘ + K"))}function createIndex(e){const t=e=>e.toLowerCase().split(/([^a-z]|[^\x00-\x7F])/),n=new FlexSearch.Document({cache:!0,charset:"latin:extra",optimize:!0,index:[{field:"content",tokenize:"reverse",encode:t},{field:"title",tokenize:"forward",encode:t},{field:"tags",tokenize:"forward",encode:t}]});return e.forEach(((e,t)=>{n.add({id:t,title:e.title,content:e.content,tags:e.tags})})),n}async function init(){let e=!0;if(localStorage.getItem("searchIndex")){let{date:t,docs:n}=JSON.parse(localStorage.getItem("searchIndex"));if("2025-09-19T16:10:09.342Z"===t){e=!1;let t=createIndex(n);window.docs=n,window.index=t}}if(e){let e=await(await fetch("/searchIndex.json?v=2025-09-19T16:10:09.342Z")).json(),t=createIndex(e);localStorage.setItem("searchIndex",JSON.stringify({date:"2025-09-19T16:10:09.342Z",docs:e})),window.docs=e,window.index=t}document.addEventListener("keydown",(e=>{if((e.ctrlKey||e.metaKey)&&"k"===e.key&&(e.preventDefault(),toggleSearch()),"Escape"===e.key&&document.getElementById("globalsearch").classList.remove("active"),document.getElementById("globalsearch").classList.contains("active")){if("ArrowDown"===e.key){e.preventDefault();let t=document.querySelector(".searchresult.active");t?(t.classList.remove("active"),t.nextElementSibling?t.nextElementSibling.classList.add("active"):document.querySelector(".searchresult").classList.add("active")):document.querySelector(".searchresult").classList.add("active");let n=document.querySelector(".searchresult.active");n&&n.scrollIntoView({behavior:"smooth",block:"nearest",inline:"start"})}if("ArrowUp"===e.key){e.preventDefault();let t=document.querySelector(".searchresult.active");t?(t.classList.remove("active"),t.previousElementSibling?t.previousElementSibling.classList.add("active"):document.querySelectorAll(".searchresult").forEach((e=>{e.nextElementSibling||e.classList.add("active")}))):document.querySelectorAll(".searchresult").forEach((e=>{e.nextElementSibling&&e.classList.add("active")}));let n=document.querySelector(".searchresult.active");n&&n.scrollIntoView({behavior:"smooth",block:"nearest",inline:"start"})}if("Enter"===e.key){e.preventDefault();let t=document.querySelector(".searchresult.active");t&&(window.location.href=t.querySelector("a").href)}}}));const t=debounce(search,200,!1);field=document.querySelector("#term"),field.addEventListener("keydown",(e=>{"ArrowDown"!==e.key&&"ArrowUp"!==e.key&&t()})),resultsDiv=document.querySelector("#search-results");const n=new URL(location.href).searchParams;n.get("q")&&(field.setAttribute("value",n.get("q")),toggleSearch(),search())}async function search(){let e=field.value.trim();if(!e)return;if(e==lastSearch)return;console.log(`search for ${e}`),window.lastSearch=e,resultsDiv.innerHTML=loadingSvg;let t=offlineSearch(e),n="";if(!t.length){let t=document.createElement("p");return t.innerText=`No results for "${e}"`,resultsDiv.innerHTML="",void resultsDiv.appendChild(t)}n+='<div style="max-width:100%;">',t.forEach((e=>{e.tags&&e.tags.length>0?n+=`<div class="searchresult">\n                    <a class="search-link" href="${e.url}">${e.title}</a>\n                    <div onclick="window.location='${e.url}'">\n                        <div class="header-meta">\n                            <div class="header-tags">\n                                ${e.tags.map((e=>'<a class="tag" href="JavaScript:Void(0);">#'+e+"</a>")).join("")}\n                            </div>\n                        </div>\n                        ${e.content}\n                    </div>\n                </div>`:n+=`<div class="searchresult">\n                    <a class="search-link" href="${e.url}">${e.title}</a>\n                    <div onclick="window.location='${e.url}'">\n                        ${e.content}\n                    </div>\n                </div>`})),n+="</div>",resultsDiv.innerHTML=n}function truncate(e,t){return(e=e.replaceAll(/<[^>]*>/g,"")).length<t?e:e.substring(0,t-3)+"..."}function offlineSearch(e){let t=window.docs,n="#"===e[0]&&e.length>1?index.search(e.substring(1),[{field:"tags"}]):index.search(e,[{field:"title",limit:5},{field:"content",weight:10}]);const a=e=>{const t=n.filter((t=>t.field===e));return 0===t.length?[]:[...t[0].result]};return[...new Set([...a("title"),...a("content"),...a("tags")])].map((e=>{let n=t[e];return n.content=truncate(n.content,400),n.tags=n.tags.filter((e=>"gardenEntry"!=e&&"note"!=e)),n}))}window.lastSearch=""</script>
+<main class="content cm-s-obsidian">
+<header>
+<h1></h1>
+<div class="header-meta">
+<div class="header-tags">
+</div>
+</div>
+</header>
+<p>This is site is powerd by obsidian digital garden plugin. And this page is a sample entry point for exploring this site, which should not be such simple though.</p>
+<p>This site is mainly for self references, all pages liscensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" class="external-link">CC BY-NC-ND 4.0</a> unless explicitly claimed.</p>
+<p>Some selected pages,</p>
+<div class="block-language-dataview table-wrapper"><table class="dataview table-view-table">
+<thead class="table-view-thead">
+<tr class="table-view-tr-header">
+<th class="table-view-th">File</th>
+<th class="table-view-th">Update</th>
+<th class="table-view-th">Tags</th>
+</tr>
+</thead>
+<tbody class="table-view-tbody">
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">经历</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#interview">#interview</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">模式匹配</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#coding-problem">#coding-problem</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#pattern-match">#pattern-match</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">树相关</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#tree">#tree</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#coding-problem">#coding-problem</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">栈和队列</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#stack">#stack</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#queue">#queue</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#coding-problem">#coding-problem</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">排序</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#sort">#sort</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#coding-problem">#coding-problem</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">基础题</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">场景题</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#coding-problem">#coding-problem</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">基本问答</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">信息汇总</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">ToLearn</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">操作系统</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#操作系统">#操作系统</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">tricks</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">条件编译</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#tex">#tex</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">shell基础</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#shell">#shell</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#bash">#bash</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">编码问题</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">weakref</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#python">#python</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">pylearn</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#python">#python</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#note">#note</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">nice_phrase_in_paper</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">计算机网络基础</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#http">#http</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#网络">#网络</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#tcp">#tcp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#udp">#udp</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">tcp</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">IO模型</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#network">#network</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#io-multiplex">#io-multiplex</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#io多路复用">#io多路复用</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#select">#select</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#poll">#poll</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">K-Means</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#math">#math</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">使用指北</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#linux">#linux</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#管理">#管理</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#手册">#手册</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#manual">#manual</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">Swap分区扩容</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">Archlinux重置keyring</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#linux">#linux</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">git手册</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#git">#git</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">Manage-Dotfiles-by-Git</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#git">#git</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">默认参数</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">链接</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#linkage">#linkage</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">输入输出</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/notes/cpp/继承/">继承</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#public">#public</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#private">#private</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#protected">#protected</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">类</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">模板</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#template">#template</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">智能指针</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#smart-pointer">#smart-pointer</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">宏</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#macro">#macro</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">字节序</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#endian">#endian</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">多态</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#virtual-destructor">#virtual-destructor</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#虚析构函数">#虚析构函数</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#destructor">#destructor</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#polymorphism">#polymorphism</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">函数指针</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#成员函数指针">#成员函数指针</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#function-pointer">#function-pointer</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#pointer">#pointer</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">内存布局</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#内存对齐">#内存对齐</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#mem-segment">#mem-segment</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">传值or引用or指针</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">static关键字</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">sizeof operator</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#sizeof">#sizeof</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">sdg-notes</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">gdb基础</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#debug">#debug</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#gdb">#gdb</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">cpp-learn</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#define">#define</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#include">#include</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#defined">#defined</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#inclue">#inclue</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#note">#note</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">TypeTraits介绍</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">CPP基础</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#链接">#链接</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#编译">#编译</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#linkage">#linkage</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">同步异步阻塞非阻塞</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#同步">#同步</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#异步">#异步</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#阻塞">#阻塞</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#非阻塞">#非阻塞</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">Asynchronous Operations</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">TCP协议</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#tcp">#tcp</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">GPG使用方法</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#gpg">#gpg</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#pgp">#pgp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#gnu">#gnu</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#加密">#加密</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#解密">#解密</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#数字签名">#数字签名</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#安全">#安全</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#linux">#linux</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">CVX notes</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#math">#math</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2025-08-22</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#life">#life</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#车检">#车检</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#年检">#年检</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#年审">#年审</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2024-11-02</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#问题">#问题</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#速记">#速记</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#terminfo">#terminfo</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2024-09-24</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#自我介绍">#自我介绍</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#个人介绍">#个人介绍</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#个人简介">#个人简介</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#intro">#intro</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2023-04-23</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2023-03-30</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#firefox">#firefox</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2023-03-11</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2023-03-08</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#openwrt">#openwrt</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#路由器">#路由器</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2023-01-09</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2022-12-12</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2022-11-10</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2022-09-08</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2022-09-06</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2022-08-15</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2022-08-10</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2022-08-02</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2022-07-24</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2022-07-22</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2022-07-21</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2022-07-18</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#gcc">#gcc</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2022-07-12</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#达夫设备">#达夫设备</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#duff-device">#duff-device</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2022-07-07</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2022-07-06</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2022-06-15</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2022-06-13</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2022-06-05</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#life">#life</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2022-06-02</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#python">#python</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#print">#print</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2022-06-01</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2022-05-31</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#css">#css</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2022-05-30</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#职位要求参考">#职位要求参考</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2022-05-29</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#templater">#templater</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#obsidian">#obsidian</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2022-05-26</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#copy-on-write">#copy-on-write</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#endian">#endian</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#ifdef">#ifdef</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#endif">#endif</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#if">#if</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#diary">#diary</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">2022-05-23</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/">202508232328garden-entry</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#gardenEntry">#gardenEntry</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202508181019redis配置io-threads/">202508181019redis配置io-threads</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#redis">#redis</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202508151303redis集群部署/">202508151303redis集群部署</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#redis">#redis</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cluster">#cluster</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202507241701cat命令/">202507241701cat命令</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#linux">#linux</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cmd">#cmd</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202507181631sed技巧/">202507181631sed技巧</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202507171527debug技巧之top/">202507171527debug技巧之top</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#linux">#linux</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#管理">#管理</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202507031535mysql基本命令/">202507031535mysql基本命令</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202506292148texlive精简安装/">202506292148texlive精简安装</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#tex">#tex</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202505281711lambda表达式作为参数传递/">202505281711lambda表达式作为参数传递</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#lambda">#lambda</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#pitfalls">#pitfalls</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202505090847awk判断csv的id有序性/">202505090847awk判断csv的id有序性</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#awk">#awk</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#csv">#csv</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#文本处理">#文本处理</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202504301210反向迭代器转正向迭代器/">202504301210反向迭代器转正向迭代器</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#iterator">#iterator</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#reverse_iterator">#reverse_iterator</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202503191332程序的进程名和命令名/">202503191332程序的进程名和命令名</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#pgrep">#pgrep</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#pkill">#pkill</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202503092037NetworkManager更换iwd后端/">202503092037NetworkManager更换iwd后端</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#networkmanager">#networkmanager</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#iwd">#iwd</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#wpa_supplicant">#wpa_supplicant</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202503071009不要直接改系统的glibc版本/">202503071009不要直接改系统的glibc版本</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#glibc">#glibc</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202502261718firefox-chrome-禁用政策插件/">202502261718firefox-chrome-禁用政策插件</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#firefox">#firefox</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#chrome">#chrome</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#技巧">#技巧</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202502241705crtp-in-cpp/">202502241705crtp-in-cpp</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#CRTP">#CRTP</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202502210928make-template/">202502210928make-template</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#make">#make</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202502201432python-paramiko使用小记/">202502201432python-paramiko使用小记</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#paramiko">#paramiko</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#python">#python</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#ssh">#ssh</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202502181657gdb-attach/">202502181657gdb-attach</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#gdb">#gdb</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#debug">#debug</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#调试">#调试</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#attach">#attach</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202502181641virtualbox虚拟机断网问题/">202502181641virtualbox虚拟机断网问题</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#route">#route</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#virtualbox">#virtualbox</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#网络">#网络</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#路由">#路由</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202502141432tar命令的小坑/">202502141432tar命令的小坑</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#tar">#tar</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#备份">#备份</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202501241043创建软连接的路径问题/">202501241043创建软连接的路径问题</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#linux">#linux</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#softlink">#softlink</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#软连接">#软连接</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#ln-command">#ln-command</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202501211106kroki-sample/">202501211106kroki-sample</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#kroki">#kroki</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#draw">#draw</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#画图">#画图</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#uml">#uml</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#digram">#digram</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202501092242archlinux安装指定版本包/">202501092242archlinux安装指定版本包</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#linux">#linux</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#包管理">#包管理</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#package">#package</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202501082036suckless-windows/">202501082036suckless-windows</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#定制">#定制</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#windows">#windows</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#suckless">#suckless</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#msys2">#msys2</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202412262023qt添加翻译/">202412262023qt添加翻译</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#qt">#qt</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#多语言">#多语言</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202412251940linux目录结构/">202412251940linux目录结构</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#linux">#linux</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#directory">#directory</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#目录结构">#目录结构</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202412242129rygel使用小记/">202412242129rygel使用小记</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#rygel">#rygel</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#dlna">#dlna</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202412222011termux编译baidupcs/">202412222011termux编译baidupcs</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#baidupcs">#baidupcs</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#termux">#termux</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#android">#android</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202412221603笔记方法论/">202412221603笔记方法论</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#笔记">#笔记</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#note">#note</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#方法论">#方法论</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202412212328goldendict更换systray-icon/">202412212328goldendict更换systray-icon</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#icon-theme">#icon-theme</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#goldendict">#goldendict</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#美化">#美化</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#linux">#linux</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#systray">#systray</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202412212317fcitx5更换systray-icon/">202412212317fcitx5更换systray-icon</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#fcitx">#fcitx</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#systray">#systray</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#icon-theme">#icon-theme</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#美化">#美化</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#linux">#linux</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202412202251ssh问题记录/">202412202251ssh问题记录</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#ssh">#ssh</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#terminfo">#terminfo</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#troubleshooting">#troubleshooting</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#sftp">#sftp</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202412202053simplify/">202412202053simplify</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#笔记">#笔记</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#方法论">#方法论</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202412171658imv官包不支持gif/">202412171658imv官包不支持gif</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#imv">#imv</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#image-viewer">#image-viewer</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#linux">#linux</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#tool">#tool</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202412151610pipewire-commands/">202412151610pipewire-commands</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#av">#av</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#pulseaudio">#pulseaudio</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#audio">#audio</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#linux">#linux</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#pipewire">#pipewire</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202412131501waydroid使用小记/">202412131501waydroid使用小记</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#waydroid">#waydroid</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#android">#android</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#linux">#linux</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#container">#container</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#安卓">#安卓</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#容器">#容器</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202412121707redshift使用小记/">202412121707redshift使用小记</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#redshift">#redshift</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#桌面">#桌面</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#美化">#美化</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#护眼">#护眼</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202412112322firefox重启保留标签页/">202412112322firefox重启保留标签页</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#firefox">#firefox</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#trick">#trick</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#技巧">#技巧</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202412112316linux桌面美化/">202412112316linux桌面美化</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#美化">#美化</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#桌面">#桌面</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#linux">#linux</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202412111913dunst使用小记/">202412111913dunst使用小记</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#dunst">#dunst</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#notification-daemon">#notification-daemon</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#桌面通知">#桌面通知</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#美化">#美化</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202411251922动态库链接问题/">202411251922动态库链接问题</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#链接路径">#链接路径</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#符号表">#符号表</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#链接">#链接</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#linkage">#linkage</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202411132048数字证书/">202411132048数字证书</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#数字签名">#数字签名</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#数字证书">#数字证书</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#安全">#安全</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#非对称加密">#非对称加密</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#http">#http</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#https">#https</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202411100101firewalld使用小记/">202411100101firewalld使用小记</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#firewalld">#firewalld</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#防火墙">#防火墙</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#centos">#centos</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202411092142-frp使用小记/">202411092142-frp使用小记</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#frp">#frp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#内网穿透">#内网穿透</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#反代理">#反代理</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202409242301-usb耳机无声音/">202409242301-usb耳机无声音</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#pipewire">#pipewire</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#pulseaudio">#pulseaudio</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#linux">#linux</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#音频">#音频</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202406111912函数栈/">202406111912函数栈</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#stack">#stack</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202405100938mutable-in-cpp/">202405100938mutable-in-cpp</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#mutable">#mutable</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202404150949vlan/">202404150949vlan</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#vlan">#vlan</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#vxlan">#vxlan</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202310232023/">202310232023</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#链接">#链接</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#编译">#编译</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202310162020UML基础/">202310162020UML基础</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#uml">#uml</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202309080931code-smells/">202309080931code-smells</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#code-smell">#code-smell</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#refactor">#refactor</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202308261504make基础/">202308261504make基础</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#make">#make</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202308181549SFINAE/">202308181549SFINAE</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#sfinae">#sfinae</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202308012018lambda表达式/">202308012018lambda表达式</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#labmda">#labmda</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202308011934C++惯用法/">202308011934C++惯用法</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202307261811vscode开发cpp配置/">202307261811vscode开发cpp配置</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202307121011开源协议解读/">202307121011开源协议解读</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#oss">#oss</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#开源">#开源</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202307051438CPP调试-coredump/">202307051438CPP调试-coredump</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#debug">#debug</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#coredump">#coredump</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#gdb">#gdb</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202307031654GIT-rebase撤销/">202307031654GIT-rebase撤销</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202306301718类成员是否可以是类本身的类型/">202306301718类成员是否可以是类本身的类型</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#class">#class</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202306281126异常处理/">202306281126异常处理</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#exception">#exception</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#异常处理">#异常处理</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202306281021资源管理/">202306281021资源管理</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#RAII">#RAII</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#resource-manage">#resource-manage</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202306281018循环队列参考/">202306281018循环队列参考</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#循环队列">#循环队列</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202306272237整数运算/">202306272237整数运算</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202306272227类型转换/">202306272227类型转换</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cast">#cast</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202306270923memcpy/">202306270923memcpy</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202306262103cmake-template/">202306262103cmake-template</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cmake">#cmake</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">202306081412GRE拨测切CPP方案</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#hw">#hw</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#work">#work</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#gre">#gre</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202306071056对称加密和非对称加密/">202306071056对称加密和非对称加密</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#加密">#加密</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#安全">#安全</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#密钥">#密钥</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202306062013SSL-vs-TLS/">202306062013SSL-vs-TLS</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#ssl">#ssl</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#tls">#tls</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#terminology">#terminology</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#term">#term</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#术语">#术语</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">202306011712GO拨测代码拆分</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#gre">#gre</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#go">#go</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#hw">#hw</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#work">#work</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202305310919GO语言基础/">202305310919GO语言基础</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#go">#go</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202305302345/">202305302345</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#coding">#coding</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#problem">#problem</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202305271514sudo安全问题/">202305271514sudo安全问题</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#hw">#hw</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#sudo">#sudo</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#安全">#安全</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">202305261402odrs表格拓扑</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#hw">#hw</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#work">#work</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">202305222026mermaid-tutorial</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#mermaid">#mermaid</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#graph">#graph</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#draw">#draw</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#画图">#画图</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#作图">#作图</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202305191500tcpdump抓包/">202305191500tcpdump抓包</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#tcpdump">#tcpdump</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#抓包">#抓包</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">202305181617GRE拨测诉求及问题整理</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#hw">#hw</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#work">#work</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">202305171430GOPROXY配置</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#hw">#hw</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#go">#go</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#goproxy">#goproxy</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202305170944callout-user-guide/">202305170944callout-user-guide</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#obsidian">#obsidian</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#callout">#callout</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#user-guide">#user-guide</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202305161028内存模型/">202305161028内存模型</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#memory-model">#memory-model</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#memory-order">#memory-order</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#memory-barrier">#memory-barrier</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#内存序">#内存序</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202305160951初始化列表/">202305160951初始化列表</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#initializer_list">#initializer_list</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202305091937枚举/">202305091937枚举</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#enum">#enum</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#enum_class">#enum_class</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202305080906 Redis数据库连接/">202305080906 Redis数据库连接</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#work">#work</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#hw">#hw</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">202305061708 操作高斯数据库的接口</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#work">#work</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#hw">#hw</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">202305040939welink记录</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#可信">#可信</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#聊天记录">#聊天记录</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#welink">#welink</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#chat">#chat</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#history">#history</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202304281707-右值引用/">202304281707-右值引用</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#rvalue">#rvalue</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#右值">#右值</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">202304271002 新增接口流程</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#hw">#hw</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#huawei">#huawei</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#work">#work</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">202304261834 布包流程</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#hw">#hw</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#huawei">#huawei</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#work">#work</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202304241826 RTTI in cpp/">202304241826 RTTI in cpp</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#rtti">#rtti</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#dynamic-cast">#dynamic-cast</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#typeid">#typeid</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202304231659 firefox伪装chrome ua/">202304231659 firefox伪装chrome ua</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#firefox">#firefox</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#chrome">#chrome</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#browser">#browser</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#ua">#ua</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#useragent">#useragent</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202304231411 name mangling/">202304231411 name mangling</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#name-mangling">#name-mangling</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202304230920 cmake learn/">202304230920 cmake learn</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cmake">#cmake</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202304202149volatile-specifier/">202304202149volatile-specifier</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#specifier">#specifier</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#volatile">#volatile</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">202304172151</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link" target="" data-note-icon="" href="/__zettel/202304101713 serach in hugo/">202304101713 serach in hugo</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#hugo">#hugo</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#search">#search</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#website">#website</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#blog">#blog</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">Untitled -1</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">Untitled -2</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">Untitled</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">README</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">最大熵对应的概率分布</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#math">#math</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">我与 Gnome 的爱与恨</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">鹧鸪天·夜游</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">鬼话</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#碎碎念">#碎碎念</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">题水阙</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">题五一心事</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">露降</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">雪压轩集</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">雪之野</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#现代诗">#现代诗</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">阿莉埃蒂</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">遣怀</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">道破元日</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">踏莎行·为五前作</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">踏莎行</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">赠有情人</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">谈谈《报任安书》</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">谈谈-LaTeX-的自定义字体</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#排版">#排版</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#latex">#latex</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#字体">#字体</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">评仙剑</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#短评">#短评</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">记一次重装Linux</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">行香子寄贺双卿</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">结萝</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">神奇的位运算</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#位运算">#位运算</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#trick">#trick</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">祝考研顺利</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">碎碎念</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#碎碎念">#碎碎念</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">瞎说KMP算法</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#算法">#算法</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#模式匹配">#模式匹配</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">相思曲</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">画工</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#短评">#短评</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">生查子</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">理园小桂</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">独不见</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">湖</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#现代诗">#现代诗</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">浅谈-Logistic-回归</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#math">#math</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#机器学习">#机器学习</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">某不正经的个人总结</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">村东头</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">杂记</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#碎碎念">#碎碎念</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">杂思</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#碎碎念">#碎碎念</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">望日观月</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">月夕调</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">旅客</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#现代诗">#现代诗</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">文本</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#现代诗">#现代诗</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">打春诗</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">戏小调</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">忆萝月·端阳</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">忆王孙</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">幽浦吟</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">年少的自大</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#碎碎念">#碎碎念</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">天空</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#现代诗">#现代诗</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">声音的消亡</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#碎碎念">#碎碎念</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">古别</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">卜算子·重阳</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">初尝-C-类设计</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">关于饭局那些事儿</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#碎碎念">#碎碎念</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">假想敌</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">使用Tar备份Archlinux</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#备份">#备份</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#tar">#tar</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">临江仙·造境</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">二十四</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">临江仙·友</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#诗词曲赋">#诗词曲赋</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">一些推导</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#math">#math</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">what-is-escape-character</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#转义">#转义</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">touchpad-horiz-scroll</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">wedding</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">tex-sty-basic</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#排版">#排版</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#latex">#latex</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">shell-intro</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#shell">#shell</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">python-metaclass</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#python">#python</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">python-coroutine-with-yield</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#python">#python</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#coroutine">#coroutine</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">python-iterables</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#python">#python</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">nn-notes</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cnn">#cnn</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">nice-softwares</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">metapost</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#metapost">#metapost</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#作图">#作图</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">melody-theme-customization</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#美化">#美化</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#个性化">#个性化</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">linux开机无声音</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">linux-hibernate</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#hibernate">#hibernate</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">latexmk-basic</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">hello-world</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">graduate-summary</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">gnome-app-slow-start</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#折腾">#折腾</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">eq-update</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">design-pattern-notes</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#设计模式">#设计模式</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">concurrent-programming</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#多线程">#多线程</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#并发">#并发</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">coding-problems</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#算法">#算法</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#动态规划">#动态规划</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#编程">#编程</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">build-your-ladder</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">blog-trans</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#字体">#字体</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#美化">#美化</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#个性化">#个性化</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">bit-field-struct</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#结构体">#结构体</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#位运算">#位运算</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">archlinx-keyring-broken</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">Vim命令速查</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#vim">#vim</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#reference">#reference</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">Use-Reference-in-Beamer</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#latex">#latex</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#beamer">#beamer</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#排版">#排版</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">The-Beauty-of-Recursion</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#recursion">#recursion</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#programming">#programming</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#thought">#thought</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">SICP-Learning-Notes</a></td>
+<td>-</td>
+<td><ul></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">Polybar-的配置笔记</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#polybar">#polybar</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#个性化">#个性化</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">Newifi-Mini安装PandoraBox</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#路由器">#路由器</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#个性化">#个性化</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#刷机">#刷机</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">Matrix-Factorization</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#math">#math</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#algebra">#algebra</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">Linux-相关信息速查</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#常用命令">#常用命令</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#reference">#reference</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">LeetCode-Sum-of-Two-Integers</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#cpp">#cpp</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#leetcode">#leetcode</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#位运算">#位运算</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">HTML-美化-Markdown-排版</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#排版">#排版</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#美化">#美化</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#html">#html</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">Exponetial-Distribution</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#math">#math</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#probability">#probability</a></li></ul></td>
+</tr>
+<tr>
+<td><a class="internal-link is-unresolved" href="/404" target="">Android刷机的一般步骤</a></td>
+<td>-</td>
+<td><ul><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#android">#android</a></li><li><a class="tag" onclick="toggleTagSearch(this)" data-content="#刷机">#刷机</a></li></ul></td>
+</tr>
+</tbody>
+</table></div>
+</main>
+<aside>
+<div class="sidebar">
+<div class="sidebar-container">
+<script>async function fetchGraphData(){const e=await fetch("/graph.json").then((e=>e.json()));return{graphData:e,fullGraphData:filterFullGraphData(e)}}function getNextLevelNeighbours(e,t){const n=Object.values(e).map((e=>e.neighbors)).flat();return Object.keys(t).reduce(((r,l)=>(-1!=n.indexOf(l)?t[l].hide||(e[l]=t[l]):r[l]=t[l],r)),{})}function filterLocalGraphData(e,t){if(null==e)return null;let n=JSON.parse(JSON.stringify(e.nodes)),r=JSON.parse(JSON.stringify(e.links)),l=n[decodeURI(window.location.pathname)]||Object.values(n).find((e=>e.home));if(delete n[l.url],!l.home){delete n[Object.values(n).find((e=>e.home)).url]}l.current=!0;let i={};i[l.url]=l;for(let e=0;e<t;e++)n=getNextLevelNeighbours(i,n);nodes=Object.values(i),l.home||(nodes=nodes.filter((e=>!e.home)));let o=nodes.map((e=>e.id));return{nodes:nodes,links:r.filter((function(e){return o.indexOf(e.target)>-1&&o.indexOf(e.source)>-1}))}}function getCssVar(e){return getComputedStyle(document.body).getPropertyValue(e)}function htmlDecode(e){return(new DOMParser).parseFromString(e,"text/html").documentElement.textContent}function renderGraph(e,t,n,r){if(null==e)return;const l=document.getElementById(t);width=l.offsetWidth,height=l.offsetHeight;const i=new Set;let o=null;const a=getCssVar("--graph-main"),s=getCssVar("--graph-muted");let u=ForceGraph()(l).graphData(e).nodeId("id").nodeLabel("title").linkSource("source").linkTarget("target").d3AlphaDecay(.1).width(width).height(height).linkDirectionalArrowLength(2).linkDirectionalArrowRelPos(.5).autoPauseRedraw(!1).linkColor((e=>null==o||e.source.id==o.id||e.target.id==o.id?a:s)).nodeCanvasObject(((e,t)=>{const n=e.neighbors&&e.neighbors.length||2,r=Math.min(7,Math.max(n/2,2));t.beginPath(),t.arc(e.x,e.y,r,0,2*Math.PI,!1),null==o||e==o||i.has(e.url)?t.fillStyle=a:t.fillStyle=s,t.fill(),e.current&&(t.beginPath(),t.arc(e.x,e.y,r+1,0,2*Math.PI,!1),t.lineWidth=.5,t.strokeStyle=a,t.stroke());const l=htmlDecode(e.title);t.font="3.5px Sans-Serif",t.textAlign="center",t.textBaseline="top",t.fillText(l,e.x,e.y+r+2)})).onNodeClick((e=>{window.location=e.url})).onNodeHover((e=>{i.clear(),e&&(i.add(e),e.neighbors.forEach((e=>i.add(e)))),o=e||null}));return(r||null!=n&&e.nodes.length>4)&&setTimeout((()=>{u.zoomToFit(5,75)}),n||200),u}function renderLocalGraph(e,t,n){window.graph&&window.graph._destructor();return renderGraph(filterLocalGraphData(e,t),"link-graph",null,n)}function filterFullGraphData(e){if(null==e)return null;e=JSON.parse(JSON.stringify(e));const t=Object.values(e.nodes).filter((e=>e.hide)).map((e=>e.id));return{links:JSON.parse(JSON.stringify(e.links)).filter((e=>-1==t.indexOf(e.source)&&-1==t.indexOf(e.target))),nodes:[...Object.values(e.nodes).filter((e=>!e.hide))]}}function openFullGraph(e){return lucide.createIcons({attrs:{class:["svg-icon"]}}),renderGraph(e,"full-graph-container",200,!1)}function closefullGraph(e){return e&&e._destructor(),null}</script>
+<div x-init="{graphData, fullGraphData} = await fetchGraphData();" x-data="{ graphData: null, depth: 1, graph: null, fullGraph: null, showFullGraph: false, fullScreen: false, fullGraphData: null}" id="graph-component" x-bind:class="fullScreen ? 'graph graph-fs' : 'graph'" v-scope>
+<div class="graph-title-container">
+<div class="graph-title">Connected Pages</div>
+<div id="graph-controls">
+<div class="depth-control">
+<label for="graph-depth">Depth</label>
+<div class="slider">
+<input x-model.number="depth" name="graph-depth" list="depthmarkers" type="range" step="1" min="1" max="3" id="graph-depth">
+<datalist id="depthmarkers">
+<option value="1" label="1"></option>
+<option value="2" label="2"></option>
+<option value="3" label="3"></option>
+</datalist>
+</div>
+<span id="depth-display" x-text="depth"></span>
+</div>
+<div class="ctrl-right">
+<span id="global-graph-btn" x-on:click="showFullGraph = true; setTimeout(() => {fullGraph = openFullGraph(fullGraphData)}, 100)"><i icon-name="globe" aria-hidden="true"></i></span>
+<span id="graph-fs-btn" x-on:click="fullScreen = !fullScreen"><i icon-name="expand" aria-hidden="true"></i></span>
+</div>
+</div>
+</div>
+<div x-effect="window.graph = renderLocalGraph(graphData, depth, fullScreen)" id="link-graph"></div>
+<div x-show="showFullGraph" id="full-graph" class="show" style="display:none">
+<span id="full-graph-close" x-on:click="fullGraph = closefullGraph(fullGraph); showFullGraph = false;"><i icon-name="x" aria-hidden="true"></i></span><div id="full-graph-container"></div>
+</div>
+</div>
+<div class="backlinks">
+<div class="backlink-title" style="margin:4px 0!important">Pages mentioning this page</div>
+<div class="backlink-list"></div>
+</div>
+</div>
+</div>
+</aside>
+<style>#tooltip-wrapper{background:var(--background-primary);padding:1em;border-radius:4px;overflow:hidden;position:fixed;width:80%;max-width:400px;height:auto;max-height:300px;font-size:.8em;box-shadow:0 5px 10px rgba(0,0,0,.1);opacity:0;transition:opacity .1s;unicode-bidi:plaintext;overflow-y:scroll;z-index:10}#tooltip-wrapper:after{content:"";position:absolute;z-index:1;bottom:0;left:0;pointer-events:none;width:100%;unicode-bidi:plaintext;height:75px}</style>
+<div style="opacity:0;display:none" id="tooltip-wrapper">
+<div id="tooltip-content">
+</div>
+</div>
+<iframe style="display:none;height:0;width:0" id="link-preview-iframe" src="">
+</iframe>
+<script>var opacityTimeout,contentTimeout,transitionDurationMs=100,iframe=document.getElementById("link-preview-iframe"),tooltipWrapper=document.getElementById("tooltip-wrapper"),tooltipContent=document.getElementById("tooltip-content"),linkHistories={};function hideTooltip(){opacityTimeout=setTimeout((function(){tooltipWrapper.style.opacity=0,contentTimeout=setTimeout((function(){tooltipContent.innerHTML="",tooltipWrapper.style.display="none"}),transitionDurationMs+1)}),transitionDurationMs)}function showTooltip(t){var e=t.target,o=e.getClientRects()[e.getClientRects().length-1],i=window.pageYOffset||document.documentElement.scrollTop,n=t.target.getAttribute("href");if(-1===n.indexOf("http")||-1!==n.indexOf(window.location.host)){let t=n.split("#")[0];linkHistories[t]?(tooltipContent.innerHTML=linkHistories[t],tooltipWrapper.style.display="block",setTimeout((function(){if(tooltipWrapper.style.opacity=1,-1!=n.indexOf("#")){let t=n.split("#")[1];const e=tooltipWrapper.querySelector(`[id='${t}']`);e.classList.add("referred"),e.scrollIntoView({behavior:"smooth"},!0)}else tooltipWrapper.scroll(0,0)}),1)):(iframe.src=t,iframe.onload=function(){tooltipContentHtml="",tooltipContentHtml+='<div style="font-weight: bold; unicode-bidi: plaintext;">'+iframe.contentWindow.document.querySelector("h1").innerHTML+"</div>",tooltipContentHtml+=iframe.contentWindow.document.querySelector(".content").innerHTML,tooltipContent.innerHTML=tooltipContentHtml,linkHistories[t]=tooltipContentHtml,tooltipWrapper.style.display="block",tooltipWrapper.scrollTop=0,setTimeout((function(){if(tooltipWrapper.style.opacity=1,-1!=n.indexOf("#")){let t=n.split("#")[1];const e=tooltipWrapper.querySelector(`[id='${t}']`);e.classList.add("referred"),console.log(e),e.scrollIntoView({behavior:"smooth"},!0)}else tooltipWrapper.scroll(0,0)}),1)}),tooltipWrapper.style.left=o.left-tooltipWrapper.offsetWidth/2+o.width/2+"px",window.innerHeight-o.top<tooltipWrapper.offsetHeight?tooltipWrapper.style.top=o.top+i-tooltipWrapper.offsetHeight-10+"px":window.innerHeight-o.top>tooltipWrapper.offsetHeight&&(tooltipWrapper.style.top=o.top+i+35+"px"),o.left+o.width/2<tooltipWrapper.offsetWidth/2?tooltipWrapper.style.left="10px":document.body.clientWidth-o.left-o.width/2<tooltipWrapper.offsetWidth/2&&(tooltipWrapper.style.left=document.body.clientWidth-tooltipWrapper.offsetWidth-20+"px")}}function setupListeners(t){t.addEventListener("mouseleave",(function(t){hideTooltip()})),tooltipWrapper.addEventListener("mouseleave",(function(t){hideTooltip()})),t.addEventListener("mouseenter",(function(t){clearTimeout(opacityTimeout),clearTimeout(contentTimeout),showTooltip(t)})),tooltipWrapper.addEventListener("mouseenter",(function(t){clearTimeout(opacityTimeout),clearTimeout(contentTimeout)}))}window.addEventListener("load",(function(t){document.querySelectorAll(".internal-link").forEach(setupListeners),document.querySelectorAll(".backlink-card a").forEach(setupListeners)}))</script>
+<script>lucide.createIcons({attrs:{class:["svg-icon"]}})</script>
+</body>
+</html>

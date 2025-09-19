@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<title>药性赋</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script async type="module">import mermaid from"https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"</script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-sv0slik/5O0JIPdLBCR2A3XDg/1U3WuDEheZfI/DI5n8Yqc3h5kjrnr46FGBNiUAJF7rE4LHKwQ/SoSLRKAxEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script async src="https://cdn.jsdelivr.net/npm/lucide@0.115.0/dist/umd/lucide.min.js"></script>
+<script>window.addEventListener("load",(()=>{document.querySelectorAll(".callout").forEach((e=>{const t=getComputedStyle(e).getPropertyValue("--callout-icon"),l=t&&t.trim().replace(/^lucide-/,"");if(l){const t=e.querySelector(".callout-title");if(t){const e=document.createElement("div"),c=document.createElement("i");e.appendChild(c),c.setAttribute("icon-name",l),e.setAttribute("class","callout-icon"),t.insertBefore(e,t.firstChild)}}})),lucide.createIcons(),Array.from(document.querySelectorAll(".callout.is-collapsible")).forEach((e=>{e.querySelector(".callout-title").addEventListener("click",(t=>{e.classList.contains("is-collapsed")?e.classList.remove("is-collapsed"):e.classList.add("is-collapsed")}))}))}))</script>
+<script async src="https://fastly.jsdelivr.net/npm/force-graph@1.43.0/dist/force-graph.min.js"></script>
+<script async src="https://fastly.jsdelivr.net/npm/@alpinejs/persist@3.11.1/dist/cdn.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js" async></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer" async>
+<script src="https://fastly.jsdelivr.net/npm/whatwg-fetch@3.6.2/dist/fetch.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
+<link href="/styles/digital-garden-base.css" rel="stylesheet">
+<link href="/styles/obsidian-base.css" rel="stylesheet">
+<link href="/styles/_theme.d92311c2.css" rel="stylesheet">
+<link href="/styles/custom-style.css" rel="stylesheet">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<style></style>
+</head>
+<body class="theme-dark markdown-preview-view markdown-rendered markdown-preview-section">
+<nav class="navbar">
+<div class="navbar-inner">
+<a href="/" style="text-decoration:none">
+<h1 style="margin:15px!important">Learn2Live</h1>
+</a>
+</div>
+<div class="search-button align-icon" onclick="toggleSearch()">
+<span class="search-icon">
+<i icon-name="search"></i>
+</span>
+<span class="search-text">
+<span>Search</span>
+<span style="font-size:.6rem;padding:2px 2px 0 6px;text-align:center;transform:translateY(4px)" class="search-keys">
+CTRL + K
+</span>
+</span>
+</div>
+</nav>
+<div class="search-container" id="globalsearch" onclick="toggleSearch()">
+<div class="search-box">
+<input type="search" id="term" placeholder="Start typing...">
+<div id="search-results"></div>
+<footer class="search-box-footer">
+<div class="navigation-hint">
+<span>Enter to select</span>
+</div>
+<div class="navigation-hint align-icon">
+<i icon-name="arrow-up" aria-hidden="true"></i>
+<i icon-name="arrow-down" aria-hidden="true"></i>
+<span>to navigate</span>
+</div>
+<div class="navigation-hint">
+<span>ESC to close</span>
+</div>
+</footer>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js"></script>
+<script>document.addEventListener("DOMContentLoaded",init,!1),document.addEventListener("DOMContentLoaded",setCorrectShortcut,!1),window.toggleSearch=function(){document.getElementById("globalsearch").classList.contains("active")?document.getElementById("globalsearch").classList.remove("active"):(document.getElementById("globalsearch").classList.add("active"),document.getElementById("term").focus())},window.toggleTagSearch=function(e){console.log(e.textContent);const t=e.textContent;t&&(window.document.getElementById("term").value=t.trim(),window.toggleSearch(),window.search())};const loadingSvg='\n    <svg width="100" height="100" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg" stroke="#fff">\n      <g fill="none" fill-rule="evenodd" transform="translate(1 1)" stroke-width="2">\n          <circle cx="22" cy="22" r="6" stroke-opacity="0">\n              <animate attributeName="r"\n                   begin="1.5s" dur="3s"\n                   values="6;22"\n                   calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-opacity"\n                   begin="1.5s" dur="3s"\n                   values="1;0" calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-width"\n                   begin="1.5s" dur="3s"\n                   values="2;0" calcMode="linear"\n                   repeatCount="indefinite" />\n          </circle>\n          <circle cx="22" cy="22" r="6" stroke-opacity="0">\n              <animate attributeName="r"\n                   begin="3s" dur="3s"\n                   values="6;22"\n                   calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-opacity"\n                   begin="3s" dur="3s"\n                   values="1;0" calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-width"\n                   begin="3s" dur="3s"\n                   values="2;0" calcMode="linear"\n                   repeatCount="indefinite" />\n          </circle>\n          <circle cx="22" cy="22" r="8">\n              <animate attributeName="r"\n                   begin="0s" dur="1.5s"\n                   values="6;1;2;3;4;5;6"\n                   calcMode="linear"\n                   repeatCount="indefinite" />\n          </circle>\n      </g>\n  </svg>';function debounce(e,t,n){var a;return function(){var r=this,i=arguments,c=n&&!a;clearTimeout(a),a=setTimeout((function(){a=null,n||e.apply(r,i)}),t),c&&e.apply(r,i)}}function setCorrectShortcut(){navigator.platform.toUpperCase().indexOf("MAC")>=0&&document.querySelectorAll(".search-keys").forEach((e=>e.innerHTML="⌘ + K"))}function createIndex(e){const t=e=>e.toLowerCase().split(/([^a-z]|[^\x00-\x7F])/),n=new FlexSearch.Document({cache:!0,charset:"latin:extra",optimize:!0,index:[{field:"content",tokenize:"reverse",encode:t},{field:"title",tokenize:"forward",encode:t},{field:"tags",tokenize:"forward",encode:t}]});return e.forEach(((e,t)=>{n.add({id:t,title:e.title,content:e.content,tags:e.tags})})),n}async function init(){let e=!0;if(localStorage.getItem("searchIndex")){let{date:t,docs:n}=JSON.parse(localStorage.getItem("searchIndex"));if("2025-09-19T16:10:09.342Z"===t){e=!1;let t=createIndex(n);window.docs=n,window.index=t}}if(e){let e=await(await fetch("/searchIndex.json?v=2025-09-19T16:10:09.342Z")).json(),t=createIndex(e);localStorage.setItem("searchIndex",JSON.stringify({date:"2025-09-19T16:10:09.342Z",docs:e})),window.docs=e,window.index=t}document.addEventListener("keydown",(e=>{if((e.ctrlKey||e.metaKey)&&"k"===e.key&&(e.preventDefault(),toggleSearch()),"Escape"===e.key&&document.getElementById("globalsearch").classList.remove("active"),document.getElementById("globalsearch").classList.contains("active")){if("ArrowDown"===e.key){e.preventDefault();let t=document.querySelector(".searchresult.active");t?(t.classList.remove("active"),t.nextElementSibling?t.nextElementSibling.classList.add("active"):document.querySelector(".searchresult").classList.add("active")):document.querySelector(".searchresult").classList.add("active");let n=document.querySelector(".searchresult.active");n&&n.scrollIntoView({behavior:"smooth",block:"nearest",inline:"start"})}if("ArrowUp"===e.key){e.preventDefault();let t=document.querySelector(".searchresult.active");t?(t.classList.remove("active"),t.previousElementSibling?t.previousElementSibling.classList.add("active"):document.querySelectorAll(".searchresult").forEach((e=>{e.nextElementSibling||e.classList.add("active")}))):document.querySelectorAll(".searchresult").forEach((e=>{e.nextElementSibling&&e.classList.add("active")}));let n=document.querySelector(".searchresult.active");n&&n.scrollIntoView({behavior:"smooth",block:"nearest",inline:"start"})}if("Enter"===e.key){e.preventDefault();let t=document.querySelector(".searchresult.active");t&&(window.location.href=t.querySelector("a").href)}}}));const t=debounce(search,200,!1);field=document.querySelector("#term"),field.addEventListener("keydown",(e=>{"ArrowDown"!==e.key&&"ArrowUp"!==e.key&&t()})),resultsDiv=document.querySelector("#search-results");const n=new URL(location.href).searchParams;n.get("q")&&(field.setAttribute("value",n.get("q")),toggleSearch(),search())}async function search(){let e=field.value.trim();if(!e)return;if(e==lastSearch)return;console.log(`search for ${e}`),window.lastSearch=e,resultsDiv.innerHTML=loadingSvg;let t=offlineSearch(e),n="";if(!t.length){let t=document.createElement("p");return t.innerText=`No results for "${e}"`,resultsDiv.innerHTML="",void resultsDiv.appendChild(t)}n+='<div style="max-width:100%;">',t.forEach((e=>{e.tags&&e.tags.length>0?n+=`<div class="searchresult">\n                    <a class="search-link" href="${e.url}">${e.title}</a>\n                    <div onclick="window.location='${e.url}'">\n                        <div class="header-meta">\n                            <div class="header-tags">\n                                ${e.tags.map((e=>'<a class="tag" href="JavaScript:Void(0);">#'+e+"</a>")).join("")}\n                            </div>\n                        </div>\n                        ${e.content}\n                    </div>\n                </div>`:n+=`<div class="searchresult">\n                    <a class="search-link" href="${e.url}">${e.title}</a>\n                    <div onclick="window.location='${e.url}'">\n                        ${e.content}\n                    </div>\n                </div>`})),n+="</div>",resultsDiv.innerHTML=n}function truncate(e,t){return(e=e.replaceAll(/<[^>]*>/g,"")).length<t?e:e.substring(0,t-3)+"..."}function offlineSearch(e){let t=window.docs,n="#"===e[0]&&e.length>1?index.search(e.substring(1),[{field:"tags"}]):index.search(e,[{field:"title",limit:5},{field:"content",weight:10}]);const a=e=>{const t=n.filter((t=>t.field===e));return 0===t.length?[]:[...t[0].result]};return[...new Set([...a("title"),...a("content"),...a("tags")])].map((e=>{let n=t[e];return n.content=truncate(n.content,400),n.tags=n.tags.filter((e=>"gardenEntry"!=e&&"note"!=e)),n}))}window.lastSearch=""</script>
+<main class="content cm-s-obsidian">
+<header>
+<h1 data-note-icon="">药性赋</h1>
+<div class="header-meta">
+<div class="header-tags">
+</div>
+<div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2022-06-02T11:08:57+08:00"></span></div></div></div>
+</header>
+<p>《药性赋》，原书未著撰人，据考证约为金元时代作品。原为中医初学中药的启蒙书。该书将248种常用中药按药性分寒、热、温、平四类，用韵语编写成赋体，言简意赅，朗朗上口，便于诵读记忆。尤其是对药性概括精辟，一经铭记在心，受用终生，颇受历代读者喜爱，传沿至今，长盛不衰。</p>
+<p>由于原书用歌赋韵语编写，文词过简，读之难以深悟。我们于60年代编写出版了《药性赋白话解》一书。该书一经刊行，即深受读者欢迎，已印行22次，连续多年排为畅销书之列。随着中药学的发展，一版已不能满足现代读者要求。为此，北京中医药大学中药教研室对此书进行了二版修订，内容更为丰富实用，除“白话解”外，增加了药物的现代用量用法、配伍应用、附方、注意事项，并加入按语，据药源不同、炮制之别、药理精微、功能对比等，阐述用法之异。读者熟读本书，便可打下坚实的药性基本功，终生受益。</p>
+<h2 id="第一章 寒性药" tabindex="-1">第一章 寒性药</h2>
+<p>诸药赋性，此类最寒。</p>
+<p>犀角解乎心热；羚羊清乎肺肝。泽泻利水通淋而补阴不足；海藻散瘿破气而治疝何难。闻之菊花能明目清头风；射干疗咽闭而消痈毒；薏苡理脚气而除风湿；藕节消瘀血而止吐衄。瓜蒌子下气润肺喘兮，又且宽中，车前子止泻利小便兮，尤能明目。是以黄柏疮用，兜铃嗽医。地骨皮有退热除蒸之效，薄荷叶宜消风清肿之施。宽中下气，枳壳缓而枳实速也；疗肌解表，干葛先而柴胡次之。百部治肺热，咳嗽可止；栀子凉心肾，鼻衄最宜。玄参治结热毒痈，清利咽膈；升麻消风热肿毒，发散疮痍。 尝闻腻粉抑肺而敛肛门；金箔镇心而安魂魄。茵陈主黄疸而利水；瞿麦治热淋之有血。 朴硝通大肠，破血而止痰僻；石膏治头痛，解肌而消烦渴。前胡除内外之痰实；滑石利六腑之涩结。天门冬止嗽，补血涸而润心肝；麦门冬清心，解烦渴而除肺热。又闻治虚烦、除哕呕，须用竹茹；通秘结、导瘀血，必资大黄。宣黄连治泠热之痢，又厚肠胃而止泻；淫羊藿疗风寒之痹，且补阴虚而助阳。茅根止血与吐衄；石苇通淋与小肠。熟地黄补血且疗虚损；生地黄宣血更医眼疮。赤芍药破血而疗腹痛，烦热亦解；白芍药补虚而生新血，温热尤良。 若乃消肿满逐水于牵牛；除热毒杀虫于贯众。金铃子治疝气而补精血；萱草根治五淋而消乳肿。侧柏叶治血山崩漏之疾；香附子理气血妇人之用。地肤子利膀胱，可洗皮肤之风；山豆根解热毒，能止咽喉之痛。白藓皮去风治筋弱，而疗足顽痹；旋覆花明目治头风，而消痰嗽壅。又况荆芥穗清头目便血，疏风散疮之用；瓜蒌根疗黄疸毒痈，消渴解痰之忧。地榆疗崩漏，止血止痢；昆布破疝气，散瘿散瘤。疗伤寒、解虚烦，淡竹叶之功倍；除结气、破瘀血，牡丹皮之用同。知母止嗽而骨蒸退；牡蛎涩精而虚汗收。贝母清痰止咳嗽而利心肝；桔梗开肺利胸膈而治咽喉。若夫黄芩治诸热，兼主五淋；槐花治肠风，亦医痔痢。常山理痰结而治温疟；葶苈泻肺喘而通水气。此六十六种药性之寒者也。</p>
+<h2 id="第二章 热性药" tabindex="-1">第二章 热性药</h2>
+<p>药有温热，又当审详。</p>
+<p>欲温中以荜拨；用发散以生姜。五味子止嗽痰，且滋肾水；腽肭脐疗痨瘵，更壮元阳。 原夫川芎祛风湿、补血清头；续断治崩漏、益筋强脚。麻黄表汗以疗咳逆；韭子壮阳而医白浊。川乌破积，有消痰治风痹之功；天雄散寒，为去湿助精阳之药。观夫川椒达下，干姜暖中。胡芦巴治虚泠之疝气；生卷柏破症葭而血通。白朮消痰壅、温胃，兼止吐泻；菖蒲开心气、散泠，更治耳聋。丁香快脾胃而止吐逆；良姜止心气痛之攻冲。肉苁蓉填精益肾；石硫黄暖胃驱虫。胡椒主去痰而除泠；秦椒主攻痛而去风。吴茱萸疗心腹之泠气；灵砂定心脏之怔忡。盖夫散肾泠、助脾胃，须毕澄茄；疗心痛、破积聚，用蓬莪朮。缩砂止吐泻安胎、化酒食之剂；附子疗虚寒反胃、壮元阳之方。白豆蔻治泠泻，疗痈止痛于乳香；红豆蔻止吐酸，消血杀虫于干漆。岂知鹿茸生精血，腰脊崩漏之均补；虎骨壮筋骨，寒湿毒风之并祛。檀香定霍乱，而心气之痛愈；鹿角秘精髓，而腰脊之痛除。消肿益血于米醋；下气散寒于紫苏。扁豆助脾，则酒有行药破结之用；麝香开窍，则葱为通中发汗之需。尝观五灵脂治崩漏，理血气之刺痛；麒麟竭止血出，疗金疮之伤折。糜茸壮阳以助肾；当归补虚而养血。乌贼骨止带下，且除崩漏目翳；鹿角胶住血崩，能补虚羸劳绝。白花蛇治瘫痪，疗风痒之癣疹；乌梢蛇疗不仁，去疮疡之风热。乌药有治泠气之理；禹余粮乃疗崩漏之因。巴豆利痰水，能破寒积；独活疗诸风，不论新久。山茱萸治头晕遗精之药；白石英医咳嗽吐脓之人。厚朴温胃而去呕胀，消痰亦验；肉桂行血而疗心痛，止汗如神。是则鲫鱼有温胃之功；代赭乃镇肝之剂。沉香下气补肾，定霍乱之心痛；橘皮开胃去痰，导壅滞之逆气。此六十六种药性之热者也。</p>
+<h2 id="第三章 温性药" tabindex="-1">第三章 温性药</h2>
+<p>温药总括，医家素谙。 木香理乎气滞；半夏主于痰湿。苍朮治目盲，燥脾去湿宜用；萝卜去膨胀，下气治面尤堪。况夫钟乳粉补肺气，兼疗肺虚；青盐治腹痛，且滋肾水。山药而腰湿能医；阿胶而痢嗽皆止。赤石脂治精浊而止泄，兼补崩中；阳起石暖子宫以壮阳，更疗阴痿。 诚以紫苑治嗽，防风怯风，苍耳子透脑止涕，威灵仙宣风通气。细辛去头风，止嗽而疗齿痛；艾叶治崩漏、安胎而医痢红。羌活明目驱风，除湿毒肿痛；白芷止崩治肿，疗痔瘘疮痈。若乃红蓝花通经，治产后恶血之余；刘寄奴散血，疗烫火金疮之苦。减风湿之痛则茵芋叶；疗折伤之症责骨碎补。 藿香叶辟恶气而定霍乱；草果仁温脾胃而止呕吐。巴戟天治阴疝白浊，补肾尤滋；元胡索理气痛血凝，调经有助。尝闻款冬花润肺，去痰嗽以定喘；肉豆蔻温中，止霍乱而助脾。抚芎走经络之痛；何首乌志疮疥之资。姜黄能下气、破恶血之积；防己宜消肿、去风湿之施。蒿本除风，主妇人阴痛之用；仙茅益肾，扶元气虚弱之衰。乃曰破故纸温肾，补精髓与劳伤；宣木瓜入肝，疗脚气并水肿。杏仁润肺燥止嗽之剂；茴香治疝气肾疼之用。诃子生精止渴，兼疗滑泄之痾；秦艽攻风逐水，又除肢节之痛。槟榔豁痰而逐水，杀刺白虫；杜仲益肾而添精，去腰膝重。当知紫石英疗惊悸崩中之疾，橘核仁治腰痛疝气之真。金樱子兮涩精；紫苏子兮下气涎。淡豆豉发伤寒之表；大小蓟除诸血之鲜。益智安神，治小便之频数；麻仁润肺，利六腑之燥坚。抑又闻补虚弱、排疮脓，莫若黄耆；强腰脚、壮筋骨，无如狗脊。 菟丝子补肾以明目；马兰花治疝而有益。此五十四种药性之温者也。</p>
+<h2 id="第四章 平性药" tabindex="-1">第四章 平性药</h2>
+<p>详论药性，平和惟在。</p>
+<p>以磠砂而去积；用龙齿以安魂。青皮快膈除膨胀，且利脾胃；芡实益精治白浊，兼补真元。原夫木贼草去目翳，崩漏亦医；花蕊石治金疮，血行则却。决明和肝气，治眼之剂；天麻主头眩，怯风之药。甘草和诸药而解百毒，盖以气平；石斛平胃气而补肾虚，更医脚弱。观乎商陆治肿，覆盆益精。琥珀安神而散血；朱砂镇心而有灵。牛膝强足补精，兼疗腰痛；龙骨止汗住泄，更治血崩。甘松理风气而痛止；蒺藜疗风疮而目明。人参润肺宁心，开脾助胃；蒲黄止崩治衄，消痨调经。岂不以南星醒脾，去惊风痰吐之忧；三棱破积，除血块气滞之症。没食主泄泻而神效；皂角治风痰而响应。桑螵蛸疗遗精之泄；鸭头血医水肿之盛。蛤蚧治痨嗽，牛蒡子疏风壅之痰；全蝎主风瘫，酸枣仁去怔忡之病。尝闻桑寄生益血安胎，且止腰痛；大腹子去膨下气，亦令胃和。小草、远志，俱有宁心之妙；木通、猪苓，尤为利水之多。莲肉有清心醒脾之用；没药乃治疮散血之科。郁李仁润肠宣血，去浮肿之疾；茯神宁心益智，除惊悸之痾。白茯苓补虚劳，多在心脾之有眚；赤茯苓破结血，独利水道以无毒。因知麦芽有助脾化食之功；小麦有止汗养心之力。 白附子去面风之游走；大腹皮治水肿之泛溢。椿根白皮主泻血；桑根白皮主喘息。桃仁破瘀血兼治腰痛；神曲健脾胃而进饮食。五加皮坚筋骨以立行；柏子仁养心神而有益。抑又闻安息香辟恶，且止心腹之痛；冬瓜仁醒脾，实为饮食之资。僵蚕治诸风之喉闭；百合恋肺痨之嗽萎。赤小豆解热毒，疮肿宜用；枇杷叶下逆气，哕呕可医。连翘排疮脓与肿毒；石南叶利筋骨与毛皮。谷芽养脾，阿魏除邪气而破积；紫河车补血，大枣和药性以开脾。然而鳖甲治痨疟，兼破症葭；龟甲坚筋骨，更疗崩疾。乌梅主便血疟疾之用；竹沥治中风声音之失。此六十八种药性之平者也。</p>
+<h2 id="references" tabindex="-1">References</h2>
+<ol>
+<li><a href="http://www.guoxuedashi.net/a/597h/" target="_blank" class="external-link">药性赋</a></li>
+</ol>
+</main>
+<aside>
+<div class="sidebar">
+<div class="sidebar-container">
+<script>async function fetchGraphData(){const e=await fetch("/graph.json").then((e=>e.json()));return{graphData:e,fullGraphData:filterFullGraphData(e)}}function getNextLevelNeighbours(e,t){const n=Object.values(e).map((e=>e.neighbors)).flat();return Object.keys(t).reduce(((r,l)=>(-1!=n.indexOf(l)?t[l].hide||(e[l]=t[l]):r[l]=t[l],r)),{})}function filterLocalGraphData(e,t){if(null==e)return null;let n=JSON.parse(JSON.stringify(e.nodes)),r=JSON.parse(JSON.stringify(e.links)),l=n[decodeURI(window.location.pathname)]||Object.values(n).find((e=>e.home));if(delete n[l.url],!l.home){delete n[Object.values(n).find((e=>e.home)).url]}l.current=!0;let i={};i[l.url]=l;for(let e=0;e<t;e++)n=getNextLevelNeighbours(i,n);nodes=Object.values(i),l.home||(nodes=nodes.filter((e=>!e.home)));let o=nodes.map((e=>e.id));return{nodes:nodes,links:r.filter((function(e){return o.indexOf(e.target)>-1&&o.indexOf(e.source)>-1}))}}function getCssVar(e){return getComputedStyle(document.body).getPropertyValue(e)}function htmlDecode(e){return(new DOMParser).parseFromString(e,"text/html").documentElement.textContent}function renderGraph(e,t,n,r){if(null==e)return;const l=document.getElementById(t);width=l.offsetWidth,height=l.offsetHeight;const i=new Set;let o=null;const a=getCssVar("--graph-main"),s=getCssVar("--graph-muted");let u=ForceGraph()(l).graphData(e).nodeId("id").nodeLabel("title").linkSource("source").linkTarget("target").d3AlphaDecay(.1).width(width).height(height).linkDirectionalArrowLength(2).linkDirectionalArrowRelPos(.5).autoPauseRedraw(!1).linkColor((e=>null==o||e.source.id==o.id||e.target.id==o.id?a:s)).nodeCanvasObject(((e,t)=>{const n=e.neighbors&&e.neighbors.length||2,r=Math.min(7,Math.max(n/2,2));t.beginPath(),t.arc(e.x,e.y,r,0,2*Math.PI,!1),null==o||e==o||i.has(e.url)?t.fillStyle=a:t.fillStyle=s,t.fill(),e.current&&(t.beginPath(),t.arc(e.x,e.y,r+1,0,2*Math.PI,!1),t.lineWidth=.5,t.strokeStyle=a,t.stroke());const l=htmlDecode(e.title);t.font="3.5px Sans-Serif",t.textAlign="center",t.textBaseline="top",t.fillText(l,e.x,e.y+r+2)})).onNodeClick((e=>{window.location=e.url})).onNodeHover((e=>{i.clear(),e&&(i.add(e),e.neighbors.forEach((e=>i.add(e)))),o=e||null}));return(r||null!=n&&e.nodes.length>4)&&setTimeout((()=>{u.zoomToFit(5,75)}),n||200),u}function renderLocalGraph(e,t,n){window.graph&&window.graph._destructor();return renderGraph(filterLocalGraphData(e,t),"link-graph",null,n)}function filterFullGraphData(e){if(null==e)return null;e=JSON.parse(JSON.stringify(e));const t=Object.values(e.nodes).filter((e=>e.hide)).map((e=>e.id));return{links:JSON.parse(JSON.stringify(e.links)).filter((e=>-1==t.indexOf(e.source)&&-1==t.indexOf(e.target))),nodes:[...Object.values(e.nodes).filter((e=>!e.hide))]}}function openFullGraph(e){return lucide.createIcons({attrs:{class:["svg-icon"]}}),renderGraph(e,"full-graph-container",200,!1)}function closefullGraph(e){return e&&e._destructor(),null}</script>
+<div x-init="{graphData, fullGraphData} = await fetchGraphData();" x-data="{ graphData: null, depth: 1, graph: null, fullGraph: null, showFullGraph: false, fullScreen: false, fullGraphData: null}" id="graph-component" x-bind:class="fullScreen ? 'graph graph-fs' : 'graph'" v-scope>
+<div class="graph-title-container">
+<div class="graph-title">Connected Pages</div>
+<div id="graph-controls">
+<div class="depth-control">
+<label for="graph-depth">Depth</label>
+<div class="slider">
+<input x-model.number="depth" name="graph-depth" list="depthmarkers" type="range" step="1" min="1" max="3" id="graph-depth">
+<datalist id="depthmarkers">
+<option value="1" label="1"></option>
+<option value="2" label="2"></option>
+<option value="3" label="3"></option>
+</datalist>
+</div>
+<span id="depth-display" x-text="depth"></span>
+</div>
+<div class="ctrl-right">
+<span id="global-graph-btn" x-on:click="showFullGraph = true; setTimeout(() => {fullGraph = openFullGraph(fullGraphData)}, 100)"><i icon-name="globe" aria-hidden="true"></i></span>
+<span id="graph-fs-btn" x-on:click="fullScreen = !fullScreen"><i icon-name="expand" aria-hidden="true"></i></span>
+</div>
+</div>
+</div>
+<div x-effect="window.graph = renderLocalGraph(graphData, depth, fullScreen)" id="link-graph"></div>
+<div x-show="showFullGraph" id="full-graph" class="show" style="display:none">
+<span id="full-graph-close" x-on:click="fullGraph = closefullGraph(fullGraph); showFullGraph = false;"><i icon-name="x" aria-hidden="true"></i></span><div id="full-graph-container"></div>
+</div>
+</div>
+<div class="backlinks">
+<div class="backlink-title" style="margin:4px 0!important">Pages mentioning this page</div>
+<div class="backlink-list"><div class="backlink-card">
+<span class="no-backlinks-message">No other pages mentions this page</span>
+</div></div>
+</div>
+</div>
+</div>
+</aside>
+<style>#tooltip-wrapper{background:var(--background-primary);padding:1em;border-radius:4px;overflow:hidden;position:fixed;width:80%;max-width:400px;height:auto;max-height:300px;font-size:.8em;box-shadow:0 5px 10px rgba(0,0,0,.1);opacity:0;transition:opacity .1s;unicode-bidi:plaintext;overflow-y:scroll;z-index:10}#tooltip-wrapper:after{content:"";position:absolute;z-index:1;bottom:0;left:0;pointer-events:none;width:100%;unicode-bidi:plaintext;height:75px}</style>
+<div style="opacity:0;display:none" id="tooltip-wrapper">
+<div id="tooltip-content">
+</div>
+</div>
+<iframe style="display:none;height:0;width:0" id="link-preview-iframe" src="">
+</iframe>
+<script>var opacityTimeout,contentTimeout,transitionDurationMs=100,iframe=document.getElementById("link-preview-iframe"),tooltipWrapper=document.getElementById("tooltip-wrapper"),tooltipContent=document.getElementById("tooltip-content"),linkHistories={};function hideTooltip(){opacityTimeout=setTimeout((function(){tooltipWrapper.style.opacity=0,contentTimeout=setTimeout((function(){tooltipContent.innerHTML="",tooltipWrapper.style.display="none"}),transitionDurationMs+1)}),transitionDurationMs)}function showTooltip(t){var e=t.target,o=e.getClientRects()[e.getClientRects().length-1],i=window.pageYOffset||document.documentElement.scrollTop,n=t.target.getAttribute("href");if(-1===n.indexOf("http")||-1!==n.indexOf(window.location.host)){let t=n.split("#")[0];linkHistories[t]?(tooltipContent.innerHTML=linkHistories[t],tooltipWrapper.style.display="block",setTimeout((function(){if(tooltipWrapper.style.opacity=1,-1!=n.indexOf("#")){let t=n.split("#")[1];const e=tooltipWrapper.querySelector(`[id='${t}']`);e.classList.add("referred"),e.scrollIntoView({behavior:"smooth"},!0)}else tooltipWrapper.scroll(0,0)}),1)):(iframe.src=t,iframe.onload=function(){tooltipContentHtml="",tooltipContentHtml+='<div style="font-weight: bold; unicode-bidi: plaintext;">'+iframe.contentWindow.document.querySelector("h1").innerHTML+"</div>",tooltipContentHtml+=iframe.contentWindow.document.querySelector(".content").innerHTML,tooltipContent.innerHTML=tooltipContentHtml,linkHistories[t]=tooltipContentHtml,tooltipWrapper.style.display="block",tooltipWrapper.scrollTop=0,setTimeout((function(){if(tooltipWrapper.style.opacity=1,-1!=n.indexOf("#")){let t=n.split("#")[1];const e=tooltipWrapper.querySelector(`[id='${t}']`);e.classList.add("referred"),console.log(e),e.scrollIntoView({behavior:"smooth"},!0)}else tooltipWrapper.scroll(0,0)}),1)}),tooltipWrapper.style.left=o.left-tooltipWrapper.offsetWidth/2+o.width/2+"px",window.innerHeight-o.top<tooltipWrapper.offsetHeight?tooltipWrapper.style.top=o.top+i-tooltipWrapper.offsetHeight-10+"px":window.innerHeight-o.top>tooltipWrapper.offsetHeight&&(tooltipWrapper.style.top=o.top+i+35+"px"),o.left+o.width/2<tooltipWrapper.offsetWidth/2?tooltipWrapper.style.left="10px":document.body.clientWidth-o.left-o.width/2<tooltipWrapper.offsetWidth/2&&(tooltipWrapper.style.left=document.body.clientWidth-tooltipWrapper.offsetWidth-20+"px")}}function setupListeners(t){t.addEventListener("mouseleave",(function(t){hideTooltip()})),tooltipWrapper.addEventListener("mouseleave",(function(t){hideTooltip()})),t.addEventListener("mouseenter",(function(t){clearTimeout(opacityTimeout),clearTimeout(contentTimeout),showTooltip(t)})),tooltipWrapper.addEventListener("mouseenter",(function(t){clearTimeout(opacityTimeout),clearTimeout(contentTimeout)}))}window.addEventListener("load",(function(t){document.querySelectorAll(".internal-link").forEach(setupListeners),document.querySelectorAll(".backlink-card a").forEach(setupListeners)}))</script>
+<script>window.location.hash&&document.getElementById(window.location.hash.slice(1)).classList.add("referred"),window.addEventListener("hashchange",(e=>{const t=e.oldURL.split("#");t[1]&&document.getElementById(t[1]).classList.remove("referred");const n=e.newURL.split("#");n[1]&&document.getElementById(n[1]).classList.add("referred")}),!1);const url_parts=window.location.href.split("#"),url=url_parts[0],referrence=url_parts[1];document.querySelectorAll(".cm-s-obsidian > *[id]").forEach((function(e){e.ondblclick=function(e){const t=url+"#"+e.target.id;navigator.clipboard.writeText(t)}}))</script>
+<script src="https://fastly.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js"></script>
+<script defer="defer">TIMESTAMP_FORMAT="yyyy/MM/dd HH:mm",document.querySelectorAll(".human-date").forEach((function(e){date=e.getAttribute("data-date")||e.innerText,parsed_date=luxon.DateTime.fromISO(date),null!=parsed_date.invalid&&(parsed_date=luxon.DateTime.fromSQL(date)),null!=parsed_date.invalid&&(parsed_date=luxon.DateTime.fromHTML(date)),e.innerHTML=parsed_date.toFormat(TIMESTAMP_FORMAT)}))</script>
+<script>lucide.createIcons({attrs:{class:["svg-icon"]}})</script>
+</body>
+</html>

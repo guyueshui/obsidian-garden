@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<title>202309080931</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script async type="module">import mermaid from"https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"</script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-sv0slik/5O0JIPdLBCR2A3XDg/1U3WuDEheZfI/DI5n8Yqc3h5kjrnr46FGBNiUAJF7rE4LHKwQ/SoSLRKAxEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script async src="https://cdn.jsdelivr.net/npm/lucide@0.115.0/dist/umd/lucide.min.js"></script>
+<script>window.addEventListener("load",(()=>{document.querySelectorAll(".callout").forEach((e=>{const t=getComputedStyle(e).getPropertyValue("--callout-icon"),l=t&&t.trim().replace(/^lucide-/,"");if(l){const t=e.querySelector(".callout-title");if(t){const e=document.createElement("div"),c=document.createElement("i");e.appendChild(c),c.setAttribute("icon-name",l),e.setAttribute("class","callout-icon"),t.insertBefore(e,t.firstChild)}}})),lucide.createIcons(),Array.from(document.querySelectorAll(".callout.is-collapsible")).forEach((e=>{e.querySelector(".callout-title").addEventListener("click",(t=>{e.classList.contains("is-collapsed")?e.classList.remove("is-collapsed"):e.classList.add("is-collapsed")}))}))}))</script>
+<script async src="https://fastly.jsdelivr.net/npm/force-graph@1.43.0/dist/force-graph.min.js"></script>
+<script async src="https://fastly.jsdelivr.net/npm/@alpinejs/persist@3.11.1/dist/cdn.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js" async></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer" async>
+<script src="https://fastly.jsdelivr.net/npm/whatwg-fetch@3.6.2/dist/fetch.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
+<link href="/styles/digital-garden-base.css" rel="stylesheet">
+<link href="/styles/obsidian-base.css" rel="stylesheet">
+<link href="/styles/_theme.d92311c2.css" rel="stylesheet">
+<link href="/styles/custom-style.css" rel="stylesheet">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<style></style>
+</head>
+<body class="theme-dark markdown-preview-view markdown-rendered markdown-preview-section">
+<nav class="navbar">
+<div class="navbar-inner">
+<a href="/" style="text-decoration:none">
+<h1 style="margin:15px!important">Learn2Live</h1>
+</a>
+</div>
+<div class="search-button align-icon" onclick="toggleSearch()">
+<span class="search-icon">
+<i icon-name="search"></i>
+</span>
+<span class="search-text">
+<span>Search</span>
+<span style="font-size:.6rem;padding:2px 2px 0 6px;text-align:center;transform:translateY(4px)" class="search-keys">
+CTRL + K
+</span>
+</span>
+</div>
+</nav>
+<div class="search-container" id="globalsearch" onclick="toggleSearch()">
+<div class="search-box">
+<input type="search" id="term" placeholder="Start typing...">
+<div id="search-results"></div>
+<footer class="search-box-footer">
+<div class="navigation-hint">
+<span>Enter to select</span>
+</div>
+<div class="navigation-hint align-icon">
+<i icon-name="arrow-up" aria-hidden="true"></i>
+<i icon-name="arrow-down" aria-hidden="true"></i>
+<span>to navigate</span>
+</div>
+<div class="navigation-hint">
+<span>ESC to close</span>
+</div>
+</footer>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js"></script>
+<script>document.addEventListener("DOMContentLoaded",init,!1),document.addEventListener("DOMContentLoaded",setCorrectShortcut,!1),window.toggleSearch=function(){document.getElementById("globalsearch").classList.contains("active")?document.getElementById("globalsearch").classList.remove("active"):(document.getElementById("globalsearch").classList.add("active"),document.getElementById("term").focus())},window.toggleTagSearch=function(e){console.log(e.textContent);const t=e.textContent;t&&(window.document.getElementById("term").value=t.trim(),window.toggleSearch(),window.search())};const loadingSvg='\n    <svg width="100" height="100" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg" stroke="#fff">\n      <g fill="none" fill-rule="evenodd" transform="translate(1 1)" stroke-width="2">\n          <circle cx="22" cy="22" r="6" stroke-opacity="0">\n              <animate attributeName="r"\n                   begin="1.5s" dur="3s"\n                   values="6;22"\n                   calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-opacity"\n                   begin="1.5s" dur="3s"\n                   values="1;0" calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-width"\n                   begin="1.5s" dur="3s"\n                   values="2;0" calcMode="linear"\n                   repeatCount="indefinite" />\n          </circle>\n          <circle cx="22" cy="22" r="6" stroke-opacity="0">\n              <animate attributeName="r"\n                   begin="3s" dur="3s"\n                   values="6;22"\n                   calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-opacity"\n                   begin="3s" dur="3s"\n                   values="1;0" calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-width"\n                   begin="3s" dur="3s"\n                   values="2;0" calcMode="linear"\n                   repeatCount="indefinite" />\n          </circle>\n          <circle cx="22" cy="22" r="8">\n              <animate attributeName="r"\n                   begin="0s" dur="1.5s"\n                   values="6;1;2;3;4;5;6"\n                   calcMode="linear"\n                   repeatCount="indefinite" />\n          </circle>\n      </g>\n  </svg>';function debounce(e,t,n){var a;return function(){var r=this,i=arguments,c=n&&!a;clearTimeout(a),a=setTimeout((function(){a=null,n||e.apply(r,i)}),t),c&&e.apply(r,i)}}function setCorrectShortcut(){navigator.platform.toUpperCase().indexOf("MAC")>=0&&document.querySelectorAll(".search-keys").forEach((e=>e.innerHTML="⌘ + K"))}function createIndex(e){const t=e=>e.toLowerCase().split(/([^a-z]|[^\x00-\x7F])/),n=new FlexSearch.Document({cache:!0,charset:"latin:extra",optimize:!0,index:[{field:"content",tokenize:"reverse",encode:t},{field:"title",tokenize:"forward",encode:t},{field:"tags",tokenize:"forward",encode:t}]});return e.forEach(((e,t)=>{n.add({id:t,title:e.title,content:e.content,tags:e.tags})})),n}async function init(){let e=!0;if(localStorage.getItem("searchIndex")){let{date:t,docs:n}=JSON.parse(localStorage.getItem("searchIndex"));if("2025-09-19T16:10:09.342Z"===t){e=!1;let t=createIndex(n);window.docs=n,window.index=t}}if(e){let e=await(await fetch("/searchIndex.json?v=2025-09-19T16:10:09.342Z")).json(),t=createIndex(e);localStorage.setItem("searchIndex",JSON.stringify({date:"2025-09-19T16:10:09.342Z",docs:e})),window.docs=e,window.index=t}document.addEventListener("keydown",(e=>{if((e.ctrlKey||e.metaKey)&&"k"===e.key&&(e.preventDefault(),toggleSearch()),"Escape"===e.key&&document.getElementById("globalsearch").classList.remove("active"),document.getElementById("globalsearch").classList.contains("active")){if("ArrowDown"===e.key){e.preventDefault();let t=document.querySelector(".searchresult.active");t?(t.classList.remove("active"),t.nextElementSibling?t.nextElementSibling.classList.add("active"):document.querySelector(".searchresult").classList.add("active")):document.querySelector(".searchresult").classList.add("active");let n=document.querySelector(".searchresult.active");n&&n.scrollIntoView({behavior:"smooth",block:"nearest",inline:"start"})}if("ArrowUp"===e.key){e.preventDefault();let t=document.querySelector(".searchresult.active");t?(t.classList.remove("active"),t.previousElementSibling?t.previousElementSibling.classList.add("active"):document.querySelectorAll(".searchresult").forEach((e=>{e.nextElementSibling||e.classList.add("active")}))):document.querySelectorAll(".searchresult").forEach((e=>{e.nextElementSibling&&e.classList.add("active")}));let n=document.querySelector(".searchresult.active");n&&n.scrollIntoView({behavior:"smooth",block:"nearest",inline:"start"})}if("Enter"===e.key){e.preventDefault();let t=document.querySelector(".searchresult.active");t&&(window.location.href=t.querySelector("a").href)}}}));const t=debounce(search,200,!1);field=document.querySelector("#term"),field.addEventListener("keydown",(e=>{"ArrowDown"!==e.key&&"ArrowUp"!==e.key&&t()})),resultsDiv=document.querySelector("#search-results");const n=new URL(location.href).searchParams;n.get("q")&&(field.setAttribute("value",n.get("q")),toggleSearch(),search())}async function search(){let e=field.value.trim();if(!e)return;if(e==lastSearch)return;console.log(`search for ${e}`),window.lastSearch=e,resultsDiv.innerHTML=loadingSvg;let t=offlineSearch(e),n="";if(!t.length){let t=document.createElement("p");return t.innerText=`No results for "${e}"`,resultsDiv.innerHTML="",void resultsDiv.appendChild(t)}n+='<div style="max-width:100%;">',t.forEach((e=>{e.tags&&e.tags.length>0?n+=`<div class="searchresult">\n                    <a class="search-link" href="${e.url}">${e.title}</a>\n                    <div onclick="window.location='${e.url}'">\n                        <div class="header-meta">\n                            <div class="header-tags">\n                                ${e.tags.map((e=>'<a class="tag" href="JavaScript:Void(0);">#'+e+"</a>")).join("")}\n                            </div>\n                        </div>\n                        ${e.content}\n                    </div>\n                </div>`:n+=`<div class="searchresult">\n                    <a class="search-link" href="${e.url}">${e.title}</a>\n                    <div onclick="window.location='${e.url}'">\n                        ${e.content}\n                    </div>\n                </div>`})),n+="</div>",resultsDiv.innerHTML=n}function truncate(e,t){return(e=e.replaceAll(/<[^>]*>/g,"")).length<t?e:e.substring(0,t-3)+"..."}function offlineSearch(e){let t=window.docs,n="#"===e[0]&&e.length>1?index.search(e.substring(1),[{field:"tags"}]):index.search(e,[{field:"title",limit:5},{field:"content",weight:10}]);const a=e=>{const t=n.filter((t=>t.field===e));return 0===t.length?[]:[...t[0].result]};return[...new Set([...a("title"),...a("content"),...a("tags")])].map((e=>{let n=t[e];return n.content=truncate(n.content,400),n.tags=n.tags.filter((e=>"gardenEntry"!=e&&"note"!=e)),n}))}window.lastSearch=""</script>
+<main class="content cm-s-obsidian">
+<header>
+<h1 data-note-icon="">202309080931</h1>
+<div class="header-meta">
+<div class="header-tags">
+<a class="tag" onclick="toggleTagSearch(this)">
+#code-smell
+</a>
+<a class="tag" onclick="toggleTagSearch(this)">
+#refactor
+</a>
+</div>
+<div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2023-09-08T09:31:32+08:00"></span></div></div></div>
+</header>
+<p><img src="assets/202309080931code-smells/Pasted%20image%2020230908093159.png" alt=""></p>
+<p>滥用OO<br>
+被拒绝的遗赠<br>
+Refused Bequest<br>
+是什么<br>
+子类不需要父类的数据、方法<br>
+有什么问题<br>
+滥用继承，会造成理解困难，不必要的耦合<br>
+场景<br>
+子类只用父类部分方法<br>
+搞一个兄弟类，把不用的都放进去<br>
+Push Down Method<br>
+Push Down Field<br>
+子类用了父类的实现，但接口不一样<br>
+可能这个时候要用代理，而不是继承<br>
+Replace Inheritance with Delegation<br>
+异曲同工的类<br>
+Alternative Classes with Different Interfaces<br>
+是什么<br>
+两个函数做一样的事，却有不同的签名<br>
+所以主要是接口不同，跟类的关系不大<br>
+有什么问题<br>
+缺乏抽象，引发不必要的复杂度<br>
+场景<br>
+两个函数做的事一样，签名不同<br>
+通过命名的修改来凸显问题<br>
+Rename Method<br>
+通过不停地把行为内置，让两边协议一样<br>
+Move Method<br>
+最后可能提取到父类里<br>
+Extract Superclass<br>
+临时字段<br>
+Temporary Field<br>
+是什么<br>
+为了特定情况建立的字段<br>
+有什么问题<br>
+跟其他字段生命周期不一样容易造成bug<br>
+场景<br>
+用一个或几个field当临时变量<br>
+应该创建一个新类<br>
+Extract Class<br>
+然后传参<br>
+为null设置一个field<br>
+Introduce Null Object<br>
+一个复杂算法，要用很多变量，但是作者不想传太多变量，所以把他们都搞成了field，这些变量只对这个算法有意义<br>
+提取新对象<br>
+Extract Class<br>
+新版被去掉的坏味道<br>
+不完美的类库<br>
+Incomplete Library Class<br>
+手法<br>
+Introduce Local Extension<br>
+Introduce Foreign Method<br>
+Move Method<br>
+场景<br>
+类库有些API不提供，或API不好用<br>
+switch惊悚现身<br>
+switch statements<br>
+是什么<br>
+分支判断很多，而且到处出现<br>
+不仅仅是switch关键字<br>
+有什么问题<br>
+因为四处出现，每改一个分支就要改好多地方<br>
+遗漏而出bug<br>
+即便只有一个地方，太长的分支列表也会有问题<br>
+改一个新的，不小心动到了旧代码<br>
+就算没动到新代码，也会扩散变化，无法证明整个列表中其他分支没有被改变，要做全量回归<br>
+场景<br>
+一个明显需要多态的场景<br>
+需要一连串的手法来实现一个多态替换掉它<br>
+先把整个分支列表移到一个新函数里<br>
+Extract Method<br>
+再移到你计划制造多态的新类里<br>
+Move Method<br>
+然后决定是否需要用继承体系替换掉<br>
+如果是，选择哪一种继承体系，如下：<br>
+一组State/Strategy<br>
+Replace Type Code with State/Strategy<br>
+一些子类<br>
+Replace Type Code with Subclasses<br>
+最后用继承体系替换掉<br>
+多态类的创建场景<br>
+用enum或抽象工厂或loC容器<br>
+手法同上<br>
+有时候调用端其实是只在此自己要什么的，没必要隐藏<br>
+你可以把分支里的行为抽取成具体的函数<br>
+调用段只要直接调用具体的函数就可以<br>
+Replace Parameter with Explicit Methods<br>
+有时候只是判个空<br>
+可以让调用端传入一个NullObject对象<br>
+Introduce Null Object<br>
+膨胀剂<br>
+神秘的命名<br>
+新版新加的<br>
+可以对应magic number<br>
+过长的参数列表<br>
+long parameter list<br>
+是什么<br>
+就是形参太多了<br>
+有什么问题<br>
+不容易理解<br>
+你从接口上看不出为啥需要这些数据<br>
+不容易定义出函数的职责<br>
+造成职责不单一，各种耦合<br>
+接口会经常变动<br>
+场景<br>
+几个参数明显属于一个整体<br>
+手法：组合成一个类<br>
+Introduce Parameter Object<br>
+Preserve Whole Object<br>
+参数里有对象和对象的属性<br>
+手法：那就不要传属性，直接读对象<br>
+Replace Parameter with Method<br>
+有时候自己的属性可以被对方读属性读到<br>
+就直接传自己，手法同上<br>
+Preserve Whole Object<br>
+Replace Parameter with Method<br>
+例外场景<br>
+你不需要被调对象和其他某个对象（比如自己）产生依赖（纯函数流行后，这个可能越发的多了）<br>
+这个时候，传属性是对的<br>
+过长的函数<br>
+long method<br>
+是什么<br>
+一个函数的函数体内代码行数过长<br>
+一个函数建议在20行以内<br>
+有什么问题<br>
+程序越长越难理解，自然容易出bug<br>
+场景<br>
+一个函数内有很多段逻辑，函数本身职责不单一，每段代码彼此可以通过数据传递隔离（绝大多数）<br>
+分割成小函数，并起一个合理的名字<br>
+Extract Method<br>
+如果函数内临时变量太多，或函数本身的参数太多。提取函数会制造大量的参数，搞不好就有long param list坏味道<br>
+可以用函数替代临时变量<br>
+Replace Temp with Query<br>
+这样可以在其他函数里直接调用这个新函数，省去传参<br>
+可以用对象来封装参数<br>
+Introduce Parameter Object<br>
+有时你从一个对象里去除几个数据传给函数A，这个时候，你就直接传这个对象，在函数A里面取<br>
+Preserve Whole Object<br>
+如果以上手法还不能拯救你，就可以祭出大杀器，用函数对象代替函数<br>
+Replace Method with Method Object<br>
+不要滥用<br>
+毕竟OO不是FP<br>
+不知道哪段代码，该被提取<br>
+寻找注释<br>
+哪怕只有一行代码，既然值得注释，就值得提取<br>
+发现循环<br>
+整个提取<br>
+Extract Method<br>
+新时代可以用lambda替换<br>
+发现条件表达式<br>
+把表达式提取成函数<br>
+Decompose Conditional<br>
+数据泥团<br>
+Data Dump<br>
+是什么<br>
+数据项总是扎堆出现，扎堆小时，说明他们是一个类<br>
+有什么问题<br>
+丢失的概念<br>
+往往这里有个概念，但是我们在需求传递中丢失了，造成不内聚<br>
+场景<br>
+有几个数据项，总是同时被某一个或几个函数使用<br>
+有几个数据项，总是同时被一个或几个代码块使用<br>
+手法是一样的<br>
+先把数据项抽取成对象<br>
+Introduce Parameter Object<br>
+直接传对象<br>
+Preserve Whole Object<br>
+过大的类<br>
+Large Class<br>
+是什么<br>
+单个类做了太多的事情<br>
+类的行数很长，field也很多<br>
+有什么问题<br>
+这也是百病之源<br>
+理解困难<br>
+职责不单一，代码容易耦合<br>
+场景<br>
+有些时候，这些变量适合放在子类里<br>
+那就抽取一个子类<br>
+Extract Subclass<br>
+仅仅是行数太长<br>
+也是需要提取一个新类<br>
+Extract Class<br>
+Extract Subclass<br>
+可能是职责不单一，根据客户端的使用情况不同，先提取接口，然后在动刀<br>
+Extract Interface<br>
+这个大类是GUI的类<br>
+有可能需要把业务逻辑和显示逻辑分离<br>
+哪怕你需要duplicate一套数据，两边同步<br>
+Duplicate Observed Data<br>
+如果在服务端，不要对View层的TO过于吝啬<br>
+Controller可以有自己专属的一组ViewObject<br>
+基本类型偏执<br>
+Primitive Obsession<br>
+是什么<br>
+该用结构类型来抽取概念的时候，没用，非要用基本类型<br>
+有什么问题<br>
+不内聚<br>
+逻辑泄漏的到处都是<br>
+场景<br>
+不愿意为了小任务建立小对象<br>
+比如<br>
+money<br>
+用浮点数是由风险的<br>
+contact<br>
+ZipCode<br>
+Range<br>
+URL<br>
+类型码<br>
+手法<br>
+Replace Data Value with Object<br>
+Replace Type Code with Subclass<br>
+Replace Type Code with State/Strategy<br>
+Extract Class<br>
+Introduce Parameter<br>
+数组中的不同下标代表不同含义<br>
+举例<br>
+[&quot;张三&quot;,18,&quot;男&quot;]<br>
+手法<br>
+Replace Array with Object<br>
+可有可无<br>
+夸夸其谈的未来性<br>
+Speculative Generality<br>
+是什么<br>
+过度设计的产物<br>
+认为我们未来会用到，但其实谁知道呢<br>
+有什么问题<br>
+理解困难<br>
+维护困难<br>
+看到一个精巧的设计，人们会本能的害怕，这个东西是不是有谁在用，于是一旦开放的接口只会越来越大，没有人敢删<br>
+场景<br>
+为一个简单的场景做了复杂的设计<br>
+分解成下面具体的场景，然后逐个干掉<br>
+抽象类没啥用（接口类似）<br>
+那就直接用具体类就好了<br>
+Collapse Hierarchy<br>
+不必要的委托（A通过B访问C）<br>
+那就直接依赖被委托的类（A直接访问C）<br>
+Inline Class<br>
+函数的参数没啥用<br>
+删掉没人用的参数<br>
+Remove Parameter<br>
+函数名听着太抽象<br>
+重命名<br>
+Rename Method<br>
+类和函数只有测试用例用，且这些测试用例业务上并不存在<br>
+直接删除就好了<br>
+这些没啥用，是说在当前需求中没用，<br>
+都是为了某个想象出来的需求做的设计<br>
+重复代码<br>
+Duplicated Code<br>
+是什么<br>
+在一个以上的地点看到同样的程序结构<br>
+有什么问题<br>
+重复代码是万恶之源，会衍生出其他绝大多数的坏味道<br>
+最常见的是一旦变化了，到处修改，漏改一个就是bug<br>
+场景<br>
+同一个类的两个函数含有相同的表达式<br>
+把重复的部分提取出一个函数<br>
+Extract Method<br>
+两个互为兄弟的子类中看到相同的表达式<br>
+先<br>
+Extract Method<br>
+再<br>
+Pull Up Method<br>
+前两种情况下，两部分的代码相似却不相同<br>
+首先提取相同部分<br>
+Extract Method<br>
+然后制造模板方法，把差异的部分交给子类实现<br>
+Form Template Method<br>
+有时候，代码确实不同，但其实在做同一件事，只是用了两种算法<br>
+用比较清楚的一种替代掉另一种<br>
+Substitute Algorithm<br>
+两个毫不相关的类里出现重复<br>
+先提炼到一个类里去<br>
+Extract Class<br>
+然后在另一个类里使用<br>
+注意：要决定这个函数在哪合适<br>
+可能在A<br>
+可能在B<br>
+也能在第三个类<br>
+冗余类<br>
+Lazy Class<br>
+是什么<br>
+不必要存在的类，不管是过度设计还是已经过时了<br>
+有什么问题<br>
+增加理解复杂度，已经没用的东西要尽早清理<br>
+场景<br>
+没用的类<br>
+其实方法没人用了，也改干掉<br>
+把类的代码内联回调用端<br>
+Inline Class<br>
+没用的子类<br>
+把子类和父类合成一个类，直接用<br>
+Collapse Hierarchy<br>
+莫名其妙的接口<br>
+删除接口，直接用具体实现<br>
+Collapse Hierarchy<br>
+过多的注释<br>
+Comments<br>
+是什么<br>
+因为代码很糟糕，不得不写注释<br>
+不是什么<br>
+不写注释<br>
+有什么问题<br>
+掩盖坏味道<br>
+场景<br>
+需要注释一段代码干了什么<br>
+Extract Method<br>
+需要注释一个函数干了什么<br>
+Rename Method<br>
+需要注释说明使用规格<br>
+Introduce Assertion<br>
+纯数据类<br>
+Data Class<br>
+是什么<br>
+只有数据，没有方法<br>
+有什么问题<br>
+可能是错误的抽象<br>
+场景<br>
+一堆public field<br>
+没什么好说的，封装起来<br>
+Encapsulate Field<br>
+Encapsulate Collection<br>
+只有setter和getter<br>
+把使用这些数据的函数慢慢挪到类里<br>
+Remove Setting Method<br>
+Move Method<br>
+Extract Method<br>
+Hide Method<br>
+例外<br>
+起步阶段，你可能不知道有啥未来的方法，<br>
+那就先用纯数据类，等业务出现的时候再重构<br>
+难以修改<br>
+平行的继承体系<br>
+Parallel Inheritance Hierarchies<br>
+是什么<br>
+这种情况下，假设有两个类，没给A增加一个子类，就要给B增加一个子类<br>
+有什么问题<br>
+还是因为不内聚，而容易出bug<br>
+场景<br>
+一个体系的前缀和另一个体系的前缀一模一样<br>
+先引用<br>
+再<br>
+Move Method<br>
+Move Field<br>
+虽然类一样，但不继承，还是不要过早下判断<br>
+分层架构下Domain层和View层、持久化层虽然会有类似对象，但是不继承<br>
+最主要的是，他们往往是为了处理不同的变化<br>
+比如一个是业务变化，一个是存储变化<br>
+霰弹式修改<br>
+Shotgun Surgery<br>
+是什么<br>
+一种原因改变多个类<br>
+优秀的设计是，同一种变化应该只改一个类<br>
+最多因为这个类的修改，而逻辑上合理扩散到相关的类<br>
+有什么问题<br>
+很难找到<br>
+也容易遗忘<br>
+忘一个就是一个bug<br>
+场景<br>
+来一个需求，变一处逻辑，要四处修改<br>
+把需要修改的代码放到一个类里，如果这个类不存在，就创造一个<br>
+手法<br>
+Move Method<br>
+Move Field<br>
+Inline Class<br>
+缺点<br>
+会造成发散式变化<br>
+比起霰弹式修改，还是好一点<br>
+但不是说就不管了<br>
+你可以先集中在一处，然后再慢慢重构<br>
+发散式变化<br>
+Divergent Change<br>
+是什么<br>
+多个原因改变一个类<br>
+优秀的设计是，同一个类应该只响应一种变化<br>
+不是什么<br>
+一种变化，不是一个变化<br>
+多个变化可能属于一种变化，比如业务逻辑修改，数据库替换，这是两种变化<br>
+上下文也很重要，这就要结合DDD讲了<br>
+有什么问题<br>
+违反单一职责，这种类很容易代码耦合，不容易变<br>
+也不容易理解<br>
+一个业务实体类因为缓存变一变，因为数据库变一变，因为业务逻辑变一变，最后你看这代码想看出业务逻辑到底是啥就比较费劲<br>
+场景<br>
+一个技术需求和一个业务需求都要改同一个类<br>
+不同上下文的业务，都要改同一个类<br>
+库存<br>
+产品<br>
+识别变化原因<br>
+然后Extract Class<br>
+耦合<br>
+依恋情结<br>
+Feature Envy<br>
+是什么<br>
+一个函数对另一个类的数据感兴趣的程度远超过自己所在的类<br>
+有什么问题<br>
+不够内聚<br>
+逻辑分散<br>
+场景<br>
+就是函数放错地方了，它用到的数据基本全在另一个类里，自己类里的数据反而可能只用一两个<br>
+Move Method<br>
+一段代码，用到的数据全在另一个类里<br>
+先提取函数<br>
+Extract Method<br>
+再挪到另一个类里去<br>
+Move Method<br>
+例外<br>
+visitor<br>
+strategy<br>
+这是为发散式变化付出的代价<br>
+过度耦合的消息连<br>
+Message Chains<br>
+是什么<br>
+a调b，b调c，c调d<br>
+只是为了拿个数据<br>
+有什么问题<br>
+客户端过度了解被调用端结构<br>
+被调用端改变，客户端不得不修改<br>
+场景<br>
+要通过一长串的访问拿到最终对象<br>
+识别<br>
+看看最终对象到底拿来做啥<br>
+这个方法是否属于客户端<br>
+是否可以直接把逻辑放到消息链里<br>
+或其中一个对象上<br>
+手法<br>
+Hide Delegate<br>
+Extract Method<br>
+Move Method<br>
+中间人<br>
+Middle Man<br>
+是什么<br>
+对于委托的滥用<br>
+有什么问题<br>
+莫名其妙的出现了一个委托，每次查找问题的时候会很困扰，从而难以定位bug<br>
+场景<br>
+一个类大多数的逻辑都委托给了另一个类<br>
+举例<br>
+当客户端需要指导两个概念<br>
+Person<br>
+Department<br>
+却只能通过Person拿到Department<br>
+改为<br>
+既能访问Person，也能访问Department<br>
+还能通过两者互取对方<br>
+手法<br>
+Replace Delegation with Inheritance<br>
+Inline Method<br>
+Remove Middle Man<br>
+狎昵关系<br>
+Inappropriate Intimacy<br>
+是什么<br>
+一个类对另一个类的了解太多了<br>
+不管是private的field<br>
+还是函数内在逻辑<br>
+包括私有函数<br>
+以至于自己的逻辑完全建立在对方的逻辑假设之上，从而变得两边隔空耦合<br>
+有什么问题<br>
+耦合，难以变动<br>
+场景<br>
+当两个类设计太深，变一个就得改另一个的时候<br>
+先通过搬移Method和Field看能不能隔离变化<br>
+Move Method<br>
+Move Field<br>
+如果存在双向关联，看看是不是要转为单项关联<br>
+Change Bidirectional Association to Unidirectional<br>
+看看是不是能提取出一个公共的类，双方都依赖它<br>
+Extract Class<br>
+或者这个公共的类，来替它们两个通信<br>
+Hide Delegate<br>
+子类不再适合做子类的时候<br>
+除了上述手法，有一个专题手法<br>
+Replace Inheritance with Delegation<br>
+Replace Parameter with Explicit Methods<br>
+手法是一样的<br>
+先把数据项抽取成对象<br>
+Introduce Parameter Object<br>
+直接传对象<br>
+Preserve Whole Object<br>
+这些没啥用，是说在当前需求中没用，<br>
+都是为了某个想象出来的需求做的设计<br>
+识别变化原因<br>
+然后Extract Class<br>
+这是为发散式变化付出的代价</p>
+</main>
+<aside>
+<div class="sidebar">
+<div class="sidebar-container">
+<script>async function fetchGraphData(){const e=await fetch("/graph.json").then((e=>e.json()));return{graphData:e,fullGraphData:filterFullGraphData(e)}}function getNextLevelNeighbours(e,t){const n=Object.values(e).map((e=>e.neighbors)).flat();return Object.keys(t).reduce(((r,l)=>(-1!=n.indexOf(l)?t[l].hide||(e[l]=t[l]):r[l]=t[l],r)),{})}function filterLocalGraphData(e,t){if(null==e)return null;let n=JSON.parse(JSON.stringify(e.nodes)),r=JSON.parse(JSON.stringify(e.links)),l=n[decodeURI(window.location.pathname)]||Object.values(n).find((e=>e.home));if(delete n[l.url],!l.home){delete n[Object.values(n).find((e=>e.home)).url]}l.current=!0;let i={};i[l.url]=l;for(let e=0;e<t;e++)n=getNextLevelNeighbours(i,n);nodes=Object.values(i),l.home||(nodes=nodes.filter((e=>!e.home)));let o=nodes.map((e=>e.id));return{nodes:nodes,links:r.filter((function(e){return o.indexOf(e.target)>-1&&o.indexOf(e.source)>-1}))}}function getCssVar(e){return getComputedStyle(document.body).getPropertyValue(e)}function htmlDecode(e){return(new DOMParser).parseFromString(e,"text/html").documentElement.textContent}function renderGraph(e,t,n,r){if(null==e)return;const l=document.getElementById(t);width=l.offsetWidth,height=l.offsetHeight;const i=new Set;let o=null;const a=getCssVar("--graph-main"),s=getCssVar("--graph-muted");let u=ForceGraph()(l).graphData(e).nodeId("id").nodeLabel("title").linkSource("source").linkTarget("target").d3AlphaDecay(.1).width(width).height(height).linkDirectionalArrowLength(2).linkDirectionalArrowRelPos(.5).autoPauseRedraw(!1).linkColor((e=>null==o||e.source.id==o.id||e.target.id==o.id?a:s)).nodeCanvasObject(((e,t)=>{const n=e.neighbors&&e.neighbors.length||2,r=Math.min(7,Math.max(n/2,2));t.beginPath(),t.arc(e.x,e.y,r,0,2*Math.PI,!1),null==o||e==o||i.has(e.url)?t.fillStyle=a:t.fillStyle=s,t.fill(),e.current&&(t.beginPath(),t.arc(e.x,e.y,r+1,0,2*Math.PI,!1),t.lineWidth=.5,t.strokeStyle=a,t.stroke());const l=htmlDecode(e.title);t.font="3.5px Sans-Serif",t.textAlign="center",t.textBaseline="top",t.fillText(l,e.x,e.y+r+2)})).onNodeClick((e=>{window.location=e.url})).onNodeHover((e=>{i.clear(),e&&(i.add(e),e.neighbors.forEach((e=>i.add(e)))),o=e||null}));return(r||null!=n&&e.nodes.length>4)&&setTimeout((()=>{u.zoomToFit(5,75)}),n||200),u}function renderLocalGraph(e,t,n){window.graph&&window.graph._destructor();return renderGraph(filterLocalGraphData(e,t),"link-graph",null,n)}function filterFullGraphData(e){if(null==e)return null;e=JSON.parse(JSON.stringify(e));const t=Object.values(e.nodes).filter((e=>e.hide)).map((e=>e.id));return{links:JSON.parse(JSON.stringify(e.links)).filter((e=>-1==t.indexOf(e.source)&&-1==t.indexOf(e.target))),nodes:[...Object.values(e.nodes).filter((e=>!e.hide))]}}function openFullGraph(e){return lucide.createIcons({attrs:{class:["svg-icon"]}}),renderGraph(e,"full-graph-container",200,!1)}function closefullGraph(e){return e&&e._destructor(),null}</script>
+<div x-init="{graphData, fullGraphData} = await fetchGraphData();" x-data="{ graphData: null, depth: 1, graph: null, fullGraph: null, showFullGraph: false, fullScreen: false, fullGraphData: null}" id="graph-component" x-bind:class="fullScreen ? 'graph graph-fs' : 'graph'" v-scope>
+<div class="graph-title-container">
+<div class="graph-title">Connected Pages</div>
+<div id="graph-controls">
+<div class="depth-control">
+<label for="graph-depth">Depth</label>
+<div class="slider">
+<input x-model.number="depth" name="graph-depth" list="depthmarkers" type="range" step="1" min="1" max="3" id="graph-depth">
+<datalist id="depthmarkers">
+<option value="1" label="1"></option>
+<option value="2" label="2"></option>
+<option value="3" label="3"></option>
+</datalist>
+</div>
+<span id="depth-display" x-text="depth"></span>
+</div>
+<div class="ctrl-right">
+<span id="global-graph-btn" x-on:click="showFullGraph = true; setTimeout(() => {fullGraph = openFullGraph(fullGraphData)}, 100)"><i icon-name="globe" aria-hidden="true"></i></span>
+<span id="graph-fs-btn" x-on:click="fullScreen = !fullScreen"><i icon-name="expand" aria-hidden="true"></i></span>
+</div>
+</div>
+</div>
+<div x-effect="window.graph = renderLocalGraph(graphData, depth, fullScreen)" id="link-graph"></div>
+<div x-show="showFullGraph" id="full-graph" class="show" style="display:none">
+<span id="full-graph-close" x-on:click="fullGraph = closefullGraph(fullGraph); showFullGraph = false;"><i icon-name="x" aria-hidden="true"></i></span><div id="full-graph-container"></div>
+</div>
+</div>
+<div class="backlinks">
+<div class="backlink-title" style="margin:4px 0!important">Pages mentioning this page</div>
+<div class="backlink-list"><div class="backlink-card"><i icon-name="link"></i><a href="/" data-note-icon="" class="backlink">Digital Garden Entry</a>
+</div></div>
+</div>
+</div>
+</div>
+</aside>
+<style>#tooltip-wrapper{background:var(--background-primary);padding:1em;border-radius:4px;overflow:hidden;position:fixed;width:80%;max-width:400px;height:auto;max-height:300px;font-size:.8em;box-shadow:0 5px 10px rgba(0,0,0,.1);opacity:0;transition:opacity .1s;unicode-bidi:plaintext;overflow-y:scroll;z-index:10}#tooltip-wrapper:after{content:"";position:absolute;z-index:1;bottom:0;left:0;pointer-events:none;width:100%;unicode-bidi:plaintext;height:75px}</style>
+<div style="opacity:0;display:none" id="tooltip-wrapper">
+<div id="tooltip-content">
+</div>
+</div>
+<iframe style="display:none;height:0;width:0" id="link-preview-iframe" src="">
+</iframe>
+<script>var opacityTimeout,contentTimeout,transitionDurationMs=100,iframe=document.getElementById("link-preview-iframe"),tooltipWrapper=document.getElementById("tooltip-wrapper"),tooltipContent=document.getElementById("tooltip-content"),linkHistories={};function hideTooltip(){opacityTimeout=setTimeout((function(){tooltipWrapper.style.opacity=0,contentTimeout=setTimeout((function(){tooltipContent.innerHTML="",tooltipWrapper.style.display="none"}),transitionDurationMs+1)}),transitionDurationMs)}function showTooltip(t){var e=t.target,o=e.getClientRects()[e.getClientRects().length-1],i=window.pageYOffset||document.documentElement.scrollTop,n=t.target.getAttribute("href");if(-1===n.indexOf("http")||-1!==n.indexOf(window.location.host)){let t=n.split("#")[0];linkHistories[t]?(tooltipContent.innerHTML=linkHistories[t],tooltipWrapper.style.display="block",setTimeout((function(){if(tooltipWrapper.style.opacity=1,-1!=n.indexOf("#")){let t=n.split("#")[1];const e=tooltipWrapper.querySelector(`[id='${t}']`);e.classList.add("referred"),e.scrollIntoView({behavior:"smooth"},!0)}else tooltipWrapper.scroll(0,0)}),1)):(iframe.src=t,iframe.onload=function(){tooltipContentHtml="",tooltipContentHtml+='<div style="font-weight: bold; unicode-bidi: plaintext;">'+iframe.contentWindow.document.querySelector("h1").innerHTML+"</div>",tooltipContentHtml+=iframe.contentWindow.document.querySelector(".content").innerHTML,tooltipContent.innerHTML=tooltipContentHtml,linkHistories[t]=tooltipContentHtml,tooltipWrapper.style.display="block",tooltipWrapper.scrollTop=0,setTimeout((function(){if(tooltipWrapper.style.opacity=1,-1!=n.indexOf("#")){let t=n.split("#")[1];const e=tooltipWrapper.querySelector(`[id='${t}']`);e.classList.add("referred"),console.log(e),e.scrollIntoView({behavior:"smooth"},!0)}else tooltipWrapper.scroll(0,0)}),1)}),tooltipWrapper.style.left=o.left-tooltipWrapper.offsetWidth/2+o.width/2+"px",window.innerHeight-o.top<tooltipWrapper.offsetHeight?tooltipWrapper.style.top=o.top+i-tooltipWrapper.offsetHeight-10+"px":window.innerHeight-o.top>tooltipWrapper.offsetHeight&&(tooltipWrapper.style.top=o.top+i+35+"px"),o.left+o.width/2<tooltipWrapper.offsetWidth/2?tooltipWrapper.style.left="10px":document.body.clientWidth-o.left-o.width/2<tooltipWrapper.offsetWidth/2&&(tooltipWrapper.style.left=document.body.clientWidth-tooltipWrapper.offsetWidth-20+"px")}}function setupListeners(t){t.addEventListener("mouseleave",(function(t){hideTooltip()})),tooltipWrapper.addEventListener("mouseleave",(function(t){hideTooltip()})),t.addEventListener("mouseenter",(function(t){clearTimeout(opacityTimeout),clearTimeout(contentTimeout),showTooltip(t)})),tooltipWrapper.addEventListener("mouseenter",(function(t){clearTimeout(opacityTimeout),clearTimeout(contentTimeout)}))}window.addEventListener("load",(function(t){document.querySelectorAll(".internal-link").forEach(setupListeners),document.querySelectorAll(".backlink-card a").forEach(setupListeners)}))</script>
+<script>window.location.hash&&document.getElementById(window.location.hash.slice(1)).classList.add("referred"),window.addEventListener("hashchange",(e=>{const t=e.oldURL.split("#");t[1]&&document.getElementById(t[1]).classList.remove("referred");const n=e.newURL.split("#");n[1]&&document.getElementById(n[1]).classList.add("referred")}),!1);const url_parts=window.location.href.split("#"),url=url_parts[0],referrence=url_parts[1];document.querySelectorAll(".cm-s-obsidian > *[id]").forEach((function(e){e.ondblclick=function(e){const t=url+"#"+e.target.id;navigator.clipboard.writeText(t)}}))</script>
+<script src="https://fastly.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js"></script>
+<script defer="defer">TIMESTAMP_FORMAT="yyyy/MM/dd HH:mm",document.querySelectorAll(".human-date").forEach((function(e){date=e.getAttribute("data-date")||e.innerText,parsed_date=luxon.DateTime.fromISO(date),null!=parsed_date.invalid&&(parsed_date=luxon.DateTime.fromSQL(date)),null!=parsed_date.invalid&&(parsed_date=luxon.DateTime.fromHTML(date)),e.innerHTML=parsed_date.toFormat(TIMESTAMP_FORMAT)}))</script>
+<script>lucide.createIcons({attrs:{class:["svg-icon"]}})</script>
+</body>
+</html>

@@ -1,0 +1,991 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<title>202304230920</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script async type="module">import mermaid from"https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"</script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-sv0slik/5O0JIPdLBCR2A3XDg/1U3WuDEheZfI/DI5n8Yqc3h5kjrnr46FGBNiUAJF7rE4LHKwQ/SoSLRKAxEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script async src="https://cdn.jsdelivr.net/npm/lucide@0.115.0/dist/umd/lucide.min.js"></script>
+<script>window.addEventListener("load",(()=>{document.querySelectorAll(".callout").forEach((e=>{const t=getComputedStyle(e).getPropertyValue("--callout-icon"),l=t&&t.trim().replace(/^lucide-/,"");if(l){const t=e.querySelector(".callout-title");if(t){const e=document.createElement("div"),c=document.createElement("i");e.appendChild(c),c.setAttribute("icon-name",l),e.setAttribute("class","callout-icon"),t.insertBefore(e,t.firstChild)}}})),lucide.createIcons(),Array.from(document.querySelectorAll(".callout.is-collapsible")).forEach((e=>{e.querySelector(".callout-title").addEventListener("click",(t=>{e.classList.contains("is-collapsed")?e.classList.remove("is-collapsed"):e.classList.add("is-collapsed")}))}))}))</script>
+<script async src="https://fastly.jsdelivr.net/npm/force-graph@1.43.0/dist/force-graph.min.js"></script>
+<script async src="https://fastly.jsdelivr.net/npm/@alpinejs/persist@3.11.1/dist/cdn.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js" async></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer" async>
+<script src="https://fastly.jsdelivr.net/npm/whatwg-fetch@3.6.2/dist/fetch.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
+<link href="/styles/digital-garden-base.css" rel="stylesheet">
+<link href="/styles/obsidian-base.css" rel="stylesheet">
+<link href="/styles/_theme.d92311c2.css" rel="stylesheet">
+<link href="/styles/custom-style.css" rel="stylesheet">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<style></style>
+</head>
+<body class="theme-dark markdown-preview-view markdown-rendered markdown-preview-section">
+<nav class="navbar">
+<div class="navbar-inner">
+<a href="/" style="text-decoration:none">
+<h1 style="margin:15px!important">Learn2Live</h1>
+</a>
+</div>
+<div class="search-button align-icon" onclick="toggleSearch()">
+<span class="search-icon">
+<i icon-name="search"></i>
+</span>
+<span class="search-text">
+<span>Search</span>
+<span style="font-size:.6rem;padding:2px 2px 0 6px;text-align:center;transform:translateY(4px)" class="search-keys">
+CTRL + K
+</span>
+</span>
+</div>
+</nav>
+<div class="search-container" id="globalsearch" onclick="toggleSearch()">
+<div class="search-box">
+<input type="search" id="term" placeholder="Start typing...">
+<div id="search-results"></div>
+<footer class="search-box-footer">
+<div class="navigation-hint">
+<span>Enter to select</span>
+</div>
+<div class="navigation-hint align-icon">
+<i icon-name="arrow-up" aria-hidden="true"></i>
+<i icon-name="arrow-down" aria-hidden="true"></i>
+<span>to navigate</span>
+</div>
+<div class="navigation-hint">
+<span>ESC to close</span>
+</div>
+</footer>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js"></script>
+<script>document.addEventListener("DOMContentLoaded",init,!1),document.addEventListener("DOMContentLoaded",setCorrectShortcut,!1),window.toggleSearch=function(){document.getElementById("globalsearch").classList.contains("active")?document.getElementById("globalsearch").classList.remove("active"):(document.getElementById("globalsearch").classList.add("active"),document.getElementById("term").focus())},window.toggleTagSearch=function(e){console.log(e.textContent);const t=e.textContent;t&&(window.document.getElementById("term").value=t.trim(),window.toggleSearch(),window.search())};const loadingSvg='\n    <svg width="100" height="100" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg" stroke="#fff">\n      <g fill="none" fill-rule="evenodd" transform="translate(1 1)" stroke-width="2">\n          <circle cx="22" cy="22" r="6" stroke-opacity="0">\n              <animate attributeName="r"\n                   begin="1.5s" dur="3s"\n                   values="6;22"\n                   calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-opacity"\n                   begin="1.5s" dur="3s"\n                   values="1;0" calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-width"\n                   begin="1.5s" dur="3s"\n                   values="2;0" calcMode="linear"\n                   repeatCount="indefinite" />\n          </circle>\n          <circle cx="22" cy="22" r="6" stroke-opacity="0">\n              <animate attributeName="r"\n                   begin="3s" dur="3s"\n                   values="6;22"\n                   calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-opacity"\n                   begin="3s" dur="3s"\n                   values="1;0" calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-width"\n                   begin="3s" dur="3s"\n                   values="2;0" calcMode="linear"\n                   repeatCount="indefinite" />\n          </circle>\n          <circle cx="22" cy="22" r="8">\n              <animate attributeName="r"\n                   begin="0s" dur="1.5s"\n                   values="6;1;2;3;4;5;6"\n                   calcMode="linear"\n                   repeatCount="indefinite" />\n          </circle>\n      </g>\n  </svg>';function debounce(e,t,n){var a;return function(){var r=this,i=arguments,c=n&&!a;clearTimeout(a),a=setTimeout((function(){a=null,n||e.apply(r,i)}),t),c&&e.apply(r,i)}}function setCorrectShortcut(){navigator.platform.toUpperCase().indexOf("MAC")>=0&&document.querySelectorAll(".search-keys").forEach((e=>e.innerHTML="⌘ + K"))}function createIndex(e){const t=e=>e.toLowerCase().split(/([^a-z]|[^\x00-\x7F])/),n=new FlexSearch.Document({cache:!0,charset:"latin:extra",optimize:!0,index:[{field:"content",tokenize:"reverse",encode:t},{field:"title",tokenize:"forward",encode:t},{field:"tags",tokenize:"forward",encode:t}]});return e.forEach(((e,t)=>{n.add({id:t,title:e.title,content:e.content,tags:e.tags})})),n}async function init(){let e=!0;if(localStorage.getItem("searchIndex")){let{date:t,docs:n}=JSON.parse(localStorage.getItem("searchIndex"));if("2025-09-19T16:10:09.342Z"===t){e=!1;let t=createIndex(n);window.docs=n,window.index=t}}if(e){let e=await(await fetch("/searchIndex.json?v=2025-09-19T16:10:09.342Z")).json(),t=createIndex(e);localStorage.setItem("searchIndex",JSON.stringify({date:"2025-09-19T16:10:09.342Z",docs:e})),window.docs=e,window.index=t}document.addEventListener("keydown",(e=>{if((e.ctrlKey||e.metaKey)&&"k"===e.key&&(e.preventDefault(),toggleSearch()),"Escape"===e.key&&document.getElementById("globalsearch").classList.remove("active"),document.getElementById("globalsearch").classList.contains("active")){if("ArrowDown"===e.key){e.preventDefault();let t=document.querySelector(".searchresult.active");t?(t.classList.remove("active"),t.nextElementSibling?t.nextElementSibling.classList.add("active"):document.querySelector(".searchresult").classList.add("active")):document.querySelector(".searchresult").classList.add("active");let n=document.querySelector(".searchresult.active");n&&n.scrollIntoView({behavior:"smooth",block:"nearest",inline:"start"})}if("ArrowUp"===e.key){e.preventDefault();let t=document.querySelector(".searchresult.active");t?(t.classList.remove("active"),t.previousElementSibling?t.previousElementSibling.classList.add("active"):document.querySelectorAll(".searchresult").forEach((e=>{e.nextElementSibling||e.classList.add("active")}))):document.querySelectorAll(".searchresult").forEach((e=>{e.nextElementSibling&&e.classList.add("active")}));let n=document.querySelector(".searchresult.active");n&&n.scrollIntoView({behavior:"smooth",block:"nearest",inline:"start"})}if("Enter"===e.key){e.preventDefault();let t=document.querySelector(".searchresult.active");t&&(window.location.href=t.querySelector("a").href)}}}));const t=debounce(search,200,!1);field=document.querySelector("#term"),field.addEventListener("keydown",(e=>{"ArrowDown"!==e.key&&"ArrowUp"!==e.key&&t()})),resultsDiv=document.querySelector("#search-results");const n=new URL(location.href).searchParams;n.get("q")&&(field.setAttribute("value",n.get("q")),toggleSearch(),search())}async function search(){let e=field.value.trim();if(!e)return;if(e==lastSearch)return;console.log(`search for ${e}`),window.lastSearch=e,resultsDiv.innerHTML=loadingSvg;let t=offlineSearch(e),n="";if(!t.length){let t=document.createElement("p");return t.innerText=`No results for "${e}"`,resultsDiv.innerHTML="",void resultsDiv.appendChild(t)}n+='<div style="max-width:100%;">',t.forEach((e=>{e.tags&&e.tags.length>0?n+=`<div class="searchresult">\n                    <a class="search-link" href="${e.url}">${e.title}</a>\n                    <div onclick="window.location='${e.url}'">\n                        <div class="header-meta">\n                            <div class="header-tags">\n                                ${e.tags.map((e=>'<a class="tag" href="JavaScript:Void(0);">#'+e+"</a>")).join("")}\n                            </div>\n                        </div>\n                        ${e.content}\n                    </div>\n                </div>`:n+=`<div class="searchresult">\n                    <a class="search-link" href="${e.url}">${e.title}</a>\n                    <div onclick="window.location='${e.url}'">\n                        ${e.content}\n                    </div>\n                </div>`})),n+="</div>",resultsDiv.innerHTML=n}function truncate(e,t){return(e=e.replaceAll(/<[^>]*>/g,"")).length<t?e:e.substring(0,t-3)+"..."}function offlineSearch(e){let t=window.docs,n="#"===e[0]&&e.length>1?index.search(e.substring(1),[{field:"tags"}]):index.search(e,[{field:"title",limit:5},{field:"content",weight:10}]);const a=e=>{const t=n.filter((t=>t.field===e));return 0===t.length?[]:[...t[0].result]};return[...new Set([...a("title"),...a("content"),...a("tags")])].map((e=>{let n=t[e];return n.content=truncate(n.content,400),n.tags=n.tags.filter((e=>"gardenEntry"!=e&&"note"!=e)),n}))}window.lastSearch=""</script>
+<main class="content cm-s-obsidian">
+<header>
+<h1 data-note-icon="">202304230920</h1>
+<div class="header-meta">
+<div class="header-tags">
+<a class="tag" onclick="toggleTagSearch(this)">
+#cmake
+</a>
+</div>
+<div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2023-04-23T09:20:26+08:00"></span></div></div></div>
+</header>
+<p>Just see:</p>
+<pre><code class="language-cmake">cmake_minimum_required(VERSION 3.15)
+
+project(ClickHouse LANGUAGES C CXX ASM)
+set(CMAKE_THREAD_LIBS_INIT &quot;-lpthread&quot;)
+set(CMAKE_HAVE_THREADS_LIBRARY 1)
+set(CMAKE_USE_WIN32_THREADS_INIT 0)
+set(CMAKE_USE_PTHREADS_INIT 1)
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+
+set(CMAKE_INCLUDE_DIRECTORIES_BEFORE ON)
+include_directories(
+./contrib/libcxx/include/
+./contrib/sysroot/linux-x86_64/x86_64-linux-gnu/libc/
+./contrib/sysroot/linux-x86_64/x86_64-linux-gnu/libc/usr/include/
+./contrib/sysroot/linux-x86_64/x86_64-linux-gnu/libc/usr/include/linux/
+./contrib/sysroot/linux-x86_64/x86_64-linux-gnu/libc/usr/include/x86_64-linux-gnu/
+./contrib/sysroot/linux-x86_64-musl/include/
+./contrib/sysroot/linux-x86_64-musl/lib/gcc/x86_64-linux-musl/10/include/
+/usr/lib/gcc/x86_64-linux-gnu/10.3.1/include/
+)
+
+# If turned off: e.g. when ENABLE_FOO is ON, but FOO tool was not found, the CMake will continue.
+option(FAIL_ON_UNSUPPORTED_OPTIONS_COMBINATION
+   &quot;Stop/Fail CMake configuration if some ENABLE_XXX option is defined (either ON or OFF)
+   but is not possible to satisfy&quot; ON)
+
+if(FAIL_ON_UNSUPPORTED_OPTIONS_COMBINATION)
+    set(RECONFIGURE_MESSAGE_LEVEL FATAL_ERROR)
+else()
+    set(RECONFIGURE_MESSAGE_LEVEL WARNING)
+endif()
+
+include (cmake/arch.cmake)
+include (cmake/target.cmake)
+include (cmake/tools.cmake)
+include (cmake/ccache.cmake)
+include (cmake/clang_tidy.cmake)
+include (cmake/git_status.cmake)
+
+# Ignore export() since we don't use it,
+# but it gets broken with a global targets via link_libraries()
+macro (export)
+endmacro ()
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS 1) # Write compile_commands.json
+set(CMAKE_LINK_DEPENDS_NO_SHARED 1) # Do not relink all depended targets on .so
+set(CMAKE_CONFIGURATION_TYPES &quot;RelWithDebInfo;Debug;Release;MinSizeRel&quot; CACHE STRING &quot;&quot; FORCE)
+set(CMAKE_DEBUG_POSTFIX &quot;d&quot; CACHE STRING &quot;Generate debug library name with a postfix.&quot;)    # To be consistent with CMakeLists from contrib libs.
+
+# Enable the ability to organize targets into hierarchies of &quot;folders&quot; for capable GUI-based IDEs.
+# For more info see https://cmake.org/cmake/help/latest/prop_gbl/USE_FOLDERS.html
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+
+# Check that submodules are present
+if (NOT EXISTS &quot;${ClickHouse_SOURCE_DIR}/contrib/sysroot/README&quot;)
+    message (FATAL_ERROR &quot;Submodules are not initialized. Run\n\tgit submodule update --init&quot;)
+endif ()
+
+# Take care to add prlimit in command line before ccache, or else ccache thinks that
+# prlimit is compiler, and clang++ is its input file, and refuses to work  with
+# multiple inputs, e.g in ccache log:
+# [2021-03-31T18:06:32.655327 36900] Command line: /usr/bin/ccache prlimit --as=10000000000 --data=5000000000 --cpu=600 /usr/bin/clang++-11 - ...... std=gnu++2a -MD -MT src/CMakeFiles/dbms.dir/Storages/MergeTree/IMergeTreeDataPart.cpp.o -MF src/CMakeFiles/dbms.dir/Storages/MergeTree/IMergeTreeDataPart.cpp.o.d -o src/CMakeFiles/dbms.dir/Storages/MergeTree/IMergeTreeDataPart.cpp.o -c ../src/Storages/MergeTree/IMergeTreeDataPart.cpp
+#
+# [2021-03-31T18:06:32.656704 36900] Multiple input files: /usr/bin/clang++-11 and ../src/Storages/MergeTree/IMergeTreeDataPart.cpp
+#
+# Another way would be to use --ccache-skip option before clang++-11 to make
+# ccache ignore it.
+option(ENABLE_CHECK_HEAVY_BUILDS &quot;Don't allow C++ translation units to compile too long or to take too much memory while compiling.&quot; OFF)
+if (ENABLE_CHECK_HEAVY_BUILDS)
+    # set DATA (since RSS does not work since 2.6.x+) to 5G
+    set (RLIMIT_DATA 5000000000)
+    # set VIRT (RLIMIT_AS) to 10G (DATA*10)
+    set (RLIMIT_AS 10000000000)
+    # set CPU time limit to 1000 seconds
+    set (RLIMIT_CPU 1000)
+
+    # gcc10/gcc10/clang -fsanitize=memory is too heavy
+    if (SANITIZE STREQUAL &quot;memory&quot; OR COMPILER_GCC)
+       set (RLIMIT_DATA 10000000000) # 10G
+    endif()
+
+    set (CMAKE_CXX_COMPILER_LAUNCHER prlimit --as=${RLIMIT_AS} --data=${RLIMIT_DATA} --cpu=${RLIMIT_CPU} ${CMAKE_CXX_COMPILER_LAUNCHER})
+endif ()
+
+if (NOT CMAKE_BUILD_TYPE OR CMAKE_BUILD_TYPE STREQUAL &quot;None&quot;)
+    set (CMAKE_BUILD_TYPE &quot;RelWithDebInfo&quot;)
+    message (STATUS &quot;CMAKE_BUILD_TYPE is not set, set to default = ${CMAKE_BUILD_TYPE}&quot;)
+endif ()
+message (STATUS &quot;CMAKE_BUILD_TYPE: ${CMAKE_BUILD_TYPE}&quot;)
+
+string (TOUPPER ${CMAKE_BUILD_TYPE} CMAKE_BUILD_TYPE_UC)
+
+option(USE_STATIC_LIBRARIES &quot;Disable to use shared libraries&quot; ON)
+# DEVELOPER ONLY.
+# Faster linking if turned on.
+option(SPLIT_SHARED_LIBRARIES &quot;Keep all internal libraries as separate .so files&quot; OFF)
+
+if (USE_STATIC_LIBRARIES AND SPLIT_SHARED_LIBRARIES)
+    message(FATAL_ERROR &quot;SPLIT_SHARED_LIBRARIES=1 must not be used together with USE_STATIC_LIBRARIES=1&quot;)
+endif()
+
+if (NOT USE_STATIC_LIBRARIES AND SPLIT_SHARED_LIBRARIES)
+    set(BUILD_SHARED_LIBS 1 CACHE INTERNAL &quot;&quot;)
+endif ()
+
+if (USE_STATIC_LIBRARIES)
+    list(REVERSE CMAKE_FIND_LIBRARY_SUFFIXES)
+endif ()
+
+option (ENABLE_FUZZING &quot;Fuzzy testing using libfuzzer&quot; OFF)
+
+if (ENABLE_FUZZING)
+    # Also set WITH_COVERAGE=1 for better fuzzing process
+    # By default this is disabled, because fuzzers are built in CI with the clickhouse itself.
+    # And we don't want to enable coverage for it.
+    message (STATUS &quot;Fuzzing instrumentation enabled&quot;)
+    set (FUZZER &quot;libfuzzer&quot;)
+    set (CMAKE_CXX_FLAGS &quot;${CMAKE_CXX_FLAGS} -nostdlib++&quot;)
+    set (ENABLE_CLICKHOUSE_ODBC_BRIDGE OFF)
+    set (ENABLE_LIBRARIES 0)
+    set (ENABLE_SSL 1)
+    set (USE_UNWIND ON)
+    set (ENABLE_EMBEDDED_COMPILER 0)
+    set (ENABLE_EXAMPLES 0)
+    set (ENABLE_UTILS 0)
+    set (ENABLE_THINLTO 0)
+    set (ENABLE_TCMALLOC 0)
+    set (ENABLE_JEMALLOC 0)
+    set (ENABLE_CHECK_HEAVY_BUILDS 1)
+    set (GLIBC_COMPATIBILITY OFF)
+
+    # For codegen_select_fuzzer
+    set (ENABLE_PROTOBUF 1)
+endif()
+
+# Global libraries
+# See:
+# - default_libs.cmake
+# - sanitize.cmake
+add_library(global-libs INTERFACE)
+
+include (cmake/fuzzer.cmake)
+include (cmake/sanitize.cmake)
+
+option(ENABLE_COLORED_BUILD &quot;Enable colors in compiler output&quot; ON)
+
+set (CMAKE_COLOR_MAKEFILE ${ENABLE_COLORED_BUILD}) # works only for the makefile generator
+
+if (ENABLE_COLORED_BUILD AND CMAKE_GENERATOR STREQUAL &quot;Ninja&quot;)
+    # Turn on colored output. https://github.com/ninja-build/ninja/wiki/FAQ
+    set (CMAKE_CXX_FLAGS &quot;${CMAKE_CXX_FLAGS} -fdiagnostics-color=always&quot;)
+    set (CMAKE_C_FLAGS &quot;${CMAKE_C_FLAGS} -fdiagnostics-color=always&quot;)
+    # ... such manually setting of flags can be removed once CMake supports a variable to
+    # activate colors in *all* build systems: https://gitlab.kitware.com/cmake/cmake/-/issues/15502
+endif ()
+
+include (cmake/check_flags.cmake)
+include (cmake/add_warning.cmake)
+
+if (COMPILER_CLANG)
+    # generate ranges for fast &quot;addr2line&quot; search
+    if (NOT CMAKE_BUILD_TYPE_UC STREQUAL &quot;RELEASE&quot;)
+        set(COMPILER_FLAGS &quot;${COMPILER_FLAGS} -gdwarf-aranges&quot;)
+    endif ()
+
+    if (HAS_USE_CTOR_HOMING)
+        # For more info see https://blog.llvm.org/posts/2021-04-05-constructor-homing-for-debug-info/
+        if (CMAKE_BUILD_TYPE_UC STREQUAL &quot;DEBUG&quot; OR CMAKE_BUILD_TYPE_UC STREQUAL &quot;RELWITHDEBINFO&quot;)
+            set (CMAKE_CXX_FLAGS &quot;${CMAKE_CXX_FLAGS} -Xclang -fuse-ctor-homing&quot;)
+            set (CMAKE_C_FLAGS &quot;${CMAKE_C_FLAGS} -Xclang -fuse-ctor-homing&quot;)
+        endif()
+    endif()
+
+    no_warning(enum-constexpr-conversion) # breaks Protobuf in clang-16
+endif ()
+
+# If compiler has support for -Wreserved-identifier. It is difficult to detect by clang version,
+# because there are two different branches of clang: clang and AppleClang.
+# (AppleClang is not supported by ClickHouse, but some developers have misfortune to use it).
+if (HAS_RESERVED_IDENTIFIER)
+    add_compile_definitions (HAS_RESERVED_IDENTIFIER)
+endif ()
+
+# If turned `ON`, assumes the user has either the system GTest library or the bundled one.
+option(ENABLE_TESTS &quot;Provide unit_test_dbms target with Google.Test unit tests&quot; ON)
+option(ENABLE_EXAMPLES &quot;Build all example programs in 'examples' subdirectories&quot; OFF)
+
+if (OS_LINUX AND (ARCH_AMD64 OR ARCH_AARCH64) AND USE_STATIC_LIBRARIES AND NOT SPLIT_SHARED_LIBRARIES AND NOT USE_MUSL)
+    # Only for Linux, x86_64 or aarch64.
+    option(GLIBC_COMPATIBILITY &quot;Enable compatibility with older glibc libraries.&quot; ON)
+elseif(GLIBC_COMPATIBILITY)
+    message (${RECONFIGURE_MESSAGE_LEVEL} &quot;Glibc compatibility cannot be enabled in current configuration&quot;)
+endif ()
+
+# Make sure the final executable has symbols exported
+set (CMAKE_EXE_LINKER_FLAGS &quot;${CMAKE_EXE_LINKER_FLAGS} -rdynamic&quot;)
+
+if (OS_DARWIN)
+    # The `-all_load` flag forces loading of all symbols from all libraries,
+    # and leads to multiply-defined symbols. This flag allows force loading
+    # from a _specific_ library, which is what we need.
+    set(WHOLE_ARCHIVE -force_load)
+    # The `-noall_load` flag is the default and now obsolete.
+    set(NO_WHOLE_ARCHIVE &quot;-undefined,error&quot;) # Effectively, a no-op. Here to avoid empty &quot;-Wl, &quot; sequence to be generated in the command line.
+else ()
+    set(WHOLE_ARCHIVE --whole-archive)
+    set(NO_WHOLE_ARCHIVE --no-whole-archive)
+endif ()
+
+option(ENABLE_CURL_BUILD &quot;Enable curl, azure, sentry build on by default except MacOS.&quot; ON)
+if (OS_DARWIN)
+    # Disable the curl, azure, senry build on MacOS
+    set (ENABLE_CURL_BUILD OFF)
+endif ()
+
+# Ignored if `lld` is used
+option(ADD_GDB_INDEX_FOR_GOLD &quot;Add .gdb-index to resulting binaries for gold linker.&quot;)
+
+if (NOT CMAKE_BUILD_TYPE_UC STREQUAL &quot;RELEASE&quot;)
+    # Can be lld or ld-lld.
+    if (LINKER_NAME MATCHES &quot;lld$&quot;)
+        set (CMAKE_EXE_LINKER_FLAGS &quot;${CMAKE_EXE_LINKER_FLAGS} -Wl,--gdb-index&quot;)
+        set (CMAKE_SHARED_LINKER_FLAGS &quot;${CMAKE_SHARED_LINKER_FLAGS} -Wl,--gdb-index&quot;)
+        message (STATUS &quot;Adding .gdb-index via --gdb-index linker option.&quot;)
+    # we use another tool for gdb-index, because gold linker removes section .debug_aranges, which used inside clickhouse stacktraces
+    # http://sourceware-org.1504.n7.nabble.com/gold-No-debug-aranges-section-when-linking-with-gdb-index-td540965.html#a556932
+    elseif (LINKER_NAME MATCHES &quot;gold$&quot; AND ADD_GDB_INDEX_FOR_GOLD)
+        find_program (GDB_ADD_INDEX_EXE NAMES &quot;gdb-add-index&quot; DOC &quot;Path to gdb-add-index executable&quot;)
+        if (NOT GDB_ADD_INDEX_EXE)
+            set (USE_GDB_ADD_INDEX 0)
+            message (WARNING &quot;Cannot add gdb index to binaries, because gold linker is used, but gdb-add-index executable not found.&quot;)
+        else()
+            set (USE_GDB_ADD_INDEX 1)
+            message (STATUS &quot;gdb-add-index found: ${GDB_ADD_INDEX_EXE}&quot;)
+        endif()
+    endif ()
+endif()
+
+if (CMAKE_BUILD_TYPE_UC STREQUAL &quot;RELEASE&quot;
+    OR CMAKE_BUILD_TYPE_UC STREQUAL &quot;RELWITHDEBINFO&quot;
+    OR CMAKE_BUILD_TYPE_UC STREQUAL &quot;MINSIZEREL&quot;)
+    set (OMIT_HEAVY_DEBUG_SYMBOLS_DEFAULT ON)
+else()
+    set (OMIT_HEAVY_DEBUG_SYMBOLS_DEFAULT OFF)
+endif()
+# Provides faster linking and lower binary size.
+# Tradeoff is the inability to debug some source files with e.g. gdb
+# (empty stack frames and no local variables).&quot;
+option(OMIT_HEAVY_DEBUG_SYMBOLS
+    &quot;Do not generate debugger info for heavy modules (ClickHouse functions and dictionaries, some contrib)&quot;
+    ${OMIT_HEAVY_DEBUG_SYMBOLS_DEFAULT})
+
+if (CMAKE_BUILD_TYPE_UC STREQUAL &quot;DEBUG&quot;)
+    set(USE_DEBUG_HELPERS ON)
+endif()
+option(USE_DEBUG_HELPERS &quot;Enable debug helpers&quot; ${USE_DEBUG_HELPERS})
+
+option(BUILD_STANDALONE_KEEPER &quot;Build keeper as small standalone binary&quot; OFF)
+if (NOT BUILD_STANDALONE_KEEPER)
+    option(CREATE_KEEPER_SYMLINK &quot;Create symlink for clickhouse-keeper to main server binary&quot; ON)
+else ()
+    option(CREATE_KEEPER_SYMLINK &quot;Create symlink for clickhouse-keeper to main server binary&quot; OFF)
+endif ()
+
+# Create BuildID when using lld. For other linkers it is created by default.
+if (LINKER_NAME MATCHES &quot;lld$&quot;)
+    # SHA1 is not cryptographically secure but it is the best what lld is offering.
+    set (CMAKE_EXE_LINKER_FLAGS &quot;${CMAKE_EXE_LINKER_FLAGS} -Wl,--build-id=sha1&quot;)
+endif ()
+
+# Add a section with the hash of the compiled machine code for integrity checks.
+# Only for official builds, because adding a section can be time consuming (rewrite of several GB).
+# And cross compiled binaries are not supported (since you cannot execute clickhouse hash-binary)
+if (CLICKHOUSE_OFFICIAL_BUILD AND (NOT CMAKE_TOOLCHAIN_FILE OR CMAKE_TOOLCHAIN_FILE MATCHES &quot;linux/toolchain-x86_64.cmake$&quot;))
+    message(STATUS &quot;Official build: A checksum hash will be added to the clickhouse executable&quot;)
+    set (USE_BINARY_HASH 1 CACHE STRING &quot;Calculate binary hash and store it in the separate section&quot;)
+else ()
+    message(STATUS &quot;No official build: A checksum hash will not be added to the clickhouse executable&quot;)
+endif ()
+
+# Optionally split binaries and debug symbols.
+option(SPLIT_DEBUG_SYMBOLS &quot;Split binaries and debug symbols&quot; OFF)
+if (SPLIT_DEBUG_SYMBOLS)
+    message(STATUS &quot;Will split binaries and debug symbols&quot;)
+    set(SPLITTED_DEBUG_SYMBOLS_DIR &quot;stripped&quot; CACHE STRING &quot;A separate directory for stripped information&quot;)
+endif()
+
+cmake_host_system_information(RESULT AVAILABLE_PHYSICAL_MEMORY QUERY AVAILABLE_PHYSICAL_MEMORY) # Not available under freebsd
+
+
+if(NOT AVAILABLE_PHYSICAL_MEMORY OR AVAILABLE_PHYSICAL_MEMORY GREATER 8000)
+    # Less `/tmp` usage, more RAM usage.
+    option(COMPILER_PIPE &quot;-pipe compiler option&quot; ON)
+endif()
+
+if(COMPILER_PIPE)
+    set(COMPILER_FLAGS &quot;${COMPILER_FLAGS} -pipe&quot;)
+else()
+    message(STATUS &quot;Disabling compiler -pipe option (have only ${AVAILABLE_PHYSICAL_MEMORY} mb of memory)&quot;)
+endif()
+
+include(cmake/cpu_features.cmake)
+
+# Asynchronous unwind tables are needed for Query Profiler.
+# They are already by default on some platforms but possibly not on all platforms.
+# Enable it explicitly.
+set (COMPILER_FLAGS &quot;${COMPILER_FLAGS} -fasynchronous-unwind-tables&quot;)
+
+# Reproducible builds.
+if (CMAKE_BUILD_TYPE_UC STREQUAL &quot;DEBUG&quot;)
+    set (ENABLE_BUILD_PATH_MAPPING_DEFAULT OFF)
+else ()
+    set (ENABLE_BUILD_PATH_MAPPING_DEFAULT ON)
+endif ()
+
+option (ENABLE_BUILD_PATH_MAPPING &quot;Enable remapping of file source paths in debug info, predefined preprocessor macros, and __builtin_FILE(). It's used to generate reproducible builds. See https://reproducible-builds.org/docs/build-path&quot; ${ENABLE_BUILD_PATH_MAPPING_DEFAULT})
+
+if (ENABLE_BUILD_PATH_MAPPING)
+    set (COMPILER_FLAGS &quot;${COMPILER_FLAGS} -ffile-prefix-map=${CMAKE_SOURCE_DIR}=.&quot;)
+    set (CMAKE_ASM_FLAGS &quot;${CMAKE_ASM_FLAGS} -ffile-prefix-map=${CMAKE_SOURCE_DIR}=.&quot;)
+endif ()
+
+option (ENABLE_BUILD_PROFILING &quot;Enable profiling of build time&quot; OFF)
+if (ENABLE_BUILD_PROFILING)
+     if (COMPILER_CLANG)
+        set (COMPILER_FLAGS &quot;${COMPILER_FLAGS} -ftime-trace&quot;)
+     else ()
+        message (${RECONFIGURE_MESSAGE_LEVEL} &quot;Build profiling is only available with CLang&quot;)
+     endif ()
+endif ()
+
+set (CMAKE_CXX_STANDARD 20)
+set (CMAKE_CXX_EXTENSIONS ON) # Same as gnu++2a (ON) vs c++2a (OFF): https://cmake.org/cmake/help/latest/prop_tgt/CXX_EXTENSIONS.html
+set (CMAKE_CXX_STANDARD_REQUIRED ON)
+
+set (CMAKE_C_STANDARD 11)
+set (CMAKE_C_EXTENSIONS ON)
+set (CMAKE_C_STANDARD_REQUIRED ON)
+
+if (COMPILER_GCC OR COMPILER_CLANG)
+    # Enable C++14 sized global deallocation functions. It should be enabled by setting -std=c++14 but I'm not sure.
+    set(CMAKE_CXX_FLAGS &quot;${CMAKE_CXX_FLAGS} -fsized-deallocation&quot;)
+endif ()
+
+# falign-functions=32 prevents from random performance regressions with the code change. Thus, providing more stable
+# benchmarks.
+if (COMPILER_GCC OR COMPILER_CLANG)
+    set(COMPILER_FLAGS &quot;${COMPILER_FLAGS} -falign-functions=32&quot;)
+endif ()
+
+if (ARCH_AMD64)
+    # align branches within a 32-Byte boundary to avoid the potential performance loss when code layout change,
+    # which makes benchmark results more stable.
+    set(BRANCHES_WITHIN_32B_BOUNDARIES &quot;-mbranches-within-32B-boundaries&quot;)
+    if (COMPILER_GCC)
+        # gcc is in assembler, need to add &quot;-Wa,&quot; prefix
+        set(BRANCHES_WITHIN_32B_BOUNDARIES &quot;-Wa,${BRANCHES_WITHIN_32B_BOUNDARIES}&quot;)
+    endif()
+
+    include(CheckCXXCompilerFlag)
+    check_cxx_compiler_flag(&quot;${BRANCHES_WITHIN_32B_BOUNDARIES}&quot; HAS_BRANCHES_WITHIN_32B_BOUNDARIES)
+    if (HAS_BRANCHES_WITHIN_32B_BOUNDARIES)
+        set(COMPILER_FLAGS &quot;${COMPILER_FLAGS} ${BRANCHES_WITHIN_32B_BOUNDARIES}&quot;)
+    endif()
+endif()
+
+if (COMPILER_GCC)
+    set (CMAKE_CXX_FLAGS &quot;${CMAKE_CXX_FLAGS} -fcoroutines&quot;)
+endif ()
+
+# Compiler-specific coverage flags e.g. -fcoverage-mapping for gcc
+option(WITH_COVERAGE &quot;Profile the resulting binary/binaries&quot; OFF)
+
+if (WITH_COVERAGE AND COMPILER_CLANG)
+    set(COMPILER_FLAGS &quot;${COMPILER_FLAGS} -fprofile-instr-generate -fcoverage-mapping&quot;)
+    # If we want to disable coverage for specific translation units
+    set(WITHOUT_COVERAGE &quot;-fno-profile-instr-generate -fno-coverage-mapping&quot;)
+endif()
+
+if (WITH_COVERAGE AND COMPILER_GCC)
+    set(COMPILER_FLAGS &quot;${COMPILER_FLAGS} -fprofile-arcs -ftest-coverage&quot;)
+    set(COVERAGE_OPTION &quot;-lgcov&quot;)
+    set(WITHOUT_COVERAGE &quot;-fno-profile-arcs -fno-test-coverage&quot;)
+endif()
+
+set (COMPILER_FLAGS &quot;${COMPILER_FLAGS}&quot;)
+
+# Our built-in unwinder only supports DWARF version up to 4.
+set (DEBUG_INFO_FLAGS &quot;-g -gdwarf-4&quot;)
+
+set (CMAKE_CXX_FLAGS                     &quot;${CMAKE_CXX_FLAGS} ${COMPILER_FLAGS}&quot;)
+set (CMAKE_CXX_FLAGS_RELWITHDEBINFO      &quot;${CMAKE_CXX_FLAGS_RELWITHDEBINFO} -O3 ${DEBUG_INFO_FLAGS} ${CMAKE_CXX_FLAGS_ADD}&quot;)
+set (CMAKE_CXX_FLAGS_DEBUG               &quot;${CMAKE_CXX_FLAGS_DEBUG} -O0 ${DEBUG_INFO_FLAGS} -fno-inline ${CMAKE_CXX_FLAGS_ADD}&quot;)
+
+set (CMAKE_C_FLAGS                       &quot;${CMAKE_C_FLAGS} ${COMPILER_FLAGS} ${CMAKE_C_FLAGS_ADD}&quot;)
+set (CMAKE_C_FLAGS_RELWITHDEBINFO        &quot;${CMAKE_C_FLAGS_RELWITHDEBINFO} -O3 ${DEBUG_INFO_FLAGS} ${CMAKE_C_FLAGS_ADD}&quot;)
+set (CMAKE_C_FLAGS_DEBUG                 &quot;${CMAKE_C_FLAGS_DEBUG} -O0 ${DEBUG_INFO_FLAGS} -fno-inline ${CMAKE_C_FLAGS_ADD}&quot;)
+
+set (CMAKE_ASM_FLAGS                     &quot;${CMAKE_ASM_FLAGS} ${COMPILER_FLAGS} ${CMAKE_ASM_FLAGS_ADD}&quot;)
+set (CMAKE_ASM_FLAGS_RELWITHDEBINFO      &quot;${CMAKE_ASM_FLAGS_RELWITHDEBINFO} -O3 ${DEBUG_INFO_FLAGS} ${CMAKE_ASM_FLAGS_ADD}&quot;)
+set (CMAKE_ASM_FLAGS_DEBUG               &quot;${CMAKE_ASM_FLAGS_DEBUG} -O0 ${DEBUG_INFO_FLAGS} -fno-inline ${CMAKE_ASM_FLAGS_ADD}&quot;)
+
+if (COMPILER_CLANG)
+    if (OS_DARWIN)
+        set(CMAKE_CXX_FLAGS &quot;${CMAKE_CXX_FLAGS} -stdlib=libc++&quot;)
+        set(CMAKE_EXE_LINKER_FLAGS &quot;${CMAKE_EXE_LINKER_FLAGS} -Wl,-U,_inside_main&quot;)
+    endif()
+
+    # Display absolute paths in error messages. Otherwise KDevelop fails to navigate to correct file and opens a new file instead.
+    set(CMAKE_CXX_FLAGS &quot;${CMAKE_CXX_FLAGS} -fdiagnostics-absolute-paths&quot;)
+    set(CMAKE_C_FLAGS &quot;${CMAKE_C_FLAGS} -fdiagnostics-absolute-paths&quot;)
+
+    if (NOT ENABLE_TESTS AND NOT SANITIZE)
+        # https://clang.llvm.org/docs/ThinLTO.html
+        # Applies to clang only.
+        # Disabled when building with tests or sanitizers.
+        option(ENABLE_THINLTO &quot;Clang-specific link time optimization&quot; ON)
+    endif()
+
+    set(CMAKE_CXX_FLAGS &quot;${CMAKE_CXX_FLAGS} -fstrict-vtable-pointers&quot;)
+
+    # Set new experimental pass manager, it's a performance, build time and binary size win.
+    # Can be removed after https://reviews.llvm.org/D66490 merged and released to at least two versions of clang.
+    set(CMAKE_CXX_FLAGS &quot;${CMAKE_CXX_FLAGS} -fexperimental-new-pass-manager&quot;)
+    set(CMAKE_C_FLAGS &quot;${CMAKE_C_FLAGS} -fexperimental-new-pass-manager&quot;)
+
+    # We cannot afford to use LTO when compiling unit tests, and it's not enough
+    # to only supply -fno-lto at the final linking stage. So we disable it
+    # completely.
+    if (ENABLE_THINLTO AND NOT ENABLE_TESTS AND NOT SANITIZE)
+        # Link time optimization
+        set (CMAKE_C_FLAGS_RELWITHDEBINFO &quot;${CMAKE_C_FLAGS_RELWITHDEBINFO} -flto=thin -fwhole-program-vtables&quot;)
+        set (CMAKE_CXX_FLAGS_RELWITHDEBINFO &quot;${CMAKE_CXX_FLAGS_RELWITHDEBINFO} -flto=thin -fwhole-program-vtables&quot;)
+        set (CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO &quot;${CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO} -flto=thin -fwhole-program-vtables&quot;)
+    elseif (ENABLE_THINLTO)
+        message (${RECONFIGURE_MESSAGE_LEVEL} &quot;Cannot enable ThinLTO&quot;)
+    endif ()
+
+elseif (ENABLE_THINLTO)
+    message (${RECONFIGURE_MESSAGE_LEVEL} &quot;ThinLTO is only available with Clang&quot;)
+endif ()
+
+# Turns on all external libs like s3, kafka, ODBC, ...
+option(ENABLE_LIBRARIES &quot;Enable all external libraries by default&quot; ON)
+
+# Increase stack size on Musl. We need big stack for our recursive-descend parser.
+if (USE_MUSL)
+    set (CMAKE_EXE_LINKER_FLAGS &quot;${CMAKE_EXE_LINKER_FLAGS} -Wl,-z,stack-size=2097152&quot;)
+endif ()
+
+include(cmake/dbms_glob_sources.cmake)
+
+add_library(global-group INTERFACE)
+if (OS_LINUX OR OS_ANDROID)
+    include(cmake/linux/default_libs.cmake)
+elseif (OS_DARWIN)
+    include(cmake/darwin/default_libs.cmake)
+elseif (OS_FREEBSD)
+    include(cmake/freebsd/default_libs.cmake)
+endif ()
+link_libraries(global-group)
+
+if (NOT (OS_LINUX OR OS_DARWIN))
+    # Using system libs can cause a lot of warnings in includes (on macro expansion).
+    option(WERROR &quot;Enable -Werror compiler option&quot; OFF)
+else ()
+    option(WERROR &quot;Enable -Werror compiler option&quot; ON)
+endif ()
+
+if (WERROR)
+    # Don't pollute CMAKE_CXX_FLAGS with -Werror as it will break some CMake checks.
+    # Instead, adopt modern cmake usage requirement.
+    target_compile_options(global-group INTERFACE &quot;-Werror&quot;)
+endif ()
+
+# Make this extra-checks for correct library dependencies.
+if (OS_LINUX AND NOT SANITIZE)
+    target_link_options(global-group INTERFACE &quot;LINKER:--no-undefined&quot;)
+endif ()
+
+######################################
+### Add targets below this comment ###
+######################################
+
+set (CMAKE_POSTFIX_VARIABLE &quot;CMAKE_${CMAKE_BUILD_TYPE_UC}_POSTFIX&quot;)
+
+if (USE_STATIC_LIBRARIES)
+    set (CMAKE_POSITION_INDEPENDENT_CODE OFF)
+    if (OS_LINUX AND NOT ARCH_AARCH64)
+        # Slightly more efficient code can be generated
+        # It's disabled for ARM because otherwise ClickHouse cannot run on Android.
+        set (CMAKE_CXX_FLAGS_RELWITHDEBINFO &quot;${CMAKE_CXX_FLAGS_RELWITHDEBINFO} &quot;)
+        set (CMAKE_C_FLAGS_RELWITHDEBINFO &quot;${CMAKE_C_FLAGS_RELWITHDEBINFO} &quot;)
+        set (CMAKE_EXE_LINKER_FLAGS &quot;${CMAKE_EXE_LINKER_FLAGS} &quot;)
+    endif ()
+else ()
+    set (CMAKE_POSITION_INDEPENDENT_CODE ON)
+    # This is required for clang on Arch linux, that uses PIE by default.
+    # See enable-SSP-and-PIE-by-default.patch [1].
+    #
+    #   [1]: https://github.com/archlinux/svntogit-packages/blob/6e681aa860e65ad46a1387081482eb875c2200f2/trunk/enable-SSP-and-PIE-by-default.patch
+    set (CMAKE_EXE_LINKER_FLAGS &quot;${CMAKE_EXE_LINKER_FLAGS} &quot;)
+endif ()
+
+if (ENABLE_TESTS)
+    message (STATUS &quot;Unit tests are enabled&quot;)
+else()
+    message(STATUS &quot;Unit tests are disabled&quot;)
+endif ()
+
+enable_testing() # Enable for tests without binary
+
+# when installing to /usr - place configs to /etc but for /usr/local place to /usr/local/etc
+if (CMAKE_INSTALL_PREFIX STREQUAL &quot;/usr&quot;)
+    set (CLICKHOUSE_ETC_DIR &quot;/etc&quot;)
+else ()
+    set (CLICKHOUSE_ETC_DIR &quot;${CMAKE_INSTALL_PREFIX}/etc&quot;)
+endif ()
+
+message (STATUS
+    &quot;Building for: ${CMAKE_SYSTEM} ${CMAKE_SYSTEM_PROCESSOR} ${CMAKE_LIBRARY_ARCHITECTURE} ;
+    USE_STATIC_LIBRARIES=${USE_STATIC_LIBRARIES}
+    SPLIT_SHARED_LIBRARIES=${SPLIT_SHARED_LIBRARIES}&quot;)
+
+include (GNUInstallDirs)
+
+# When testing for memory leaks with Valgrind, don't link tcmalloc or jemalloc.
+
+if (TARGET global-group)
+    install (EXPORT global DESTINATION cmake)
+endif ()
+
+add_subdirectory (contrib EXCLUDE_FROM_ALL)
+
+if (NOT ENABLE_JEMALLOC)
+    message (WARNING &quot;Non default allocator is disabled. This is not recommended for production builds.&quot;)
+endif ()
+
+macro (clickhouse_add_executable target)
+    # invoke built-in add_executable
+    # explicitly acquire and interpose malloc symbols by clickhouse_malloc
+    # if GLIBC_COMPATIBILITY is ON and ENABLE_THINLTO is on than provide memcpy symbol explicitly to neutrialize thinlto's libcall generation.
+    if (ARCH_AMD64 AND GLIBC_COMPATIBILITY AND ENABLE_THINLTO)
+        add_executable (${ARGV} $&lt;TARGET_OBJECTS:clickhouse_malloc&gt; $&lt;TARGET_OBJECTS:memcpy&gt;)
+    else ()
+        add_executable (${ARGV} $&lt;TARGET_OBJECTS:clickhouse_malloc&gt;)
+    endif ()
+
+    get_target_property (type ${target} TYPE)
+    if (${type} STREQUAL EXECUTABLE)
+        # disabled for TSAN and gcc since libtsan.a provides overrides too
+        if (TARGET clickhouse_new_delete)
+            # operator::new/delete for executables (MemoryTracker stuff)
+            target_link_libraries (${target} PRIVATE clickhouse_new_delete)
+        endif()
+
+        # In case of static jemalloc, because zone_register() is located in zone.c and
+        # is never used outside (it is declared as constructor) it is omitted
+        # by the linker, and so jemalloc will not be registered as system
+        # allocator under osx [1], and clickhouse will SIGSEGV.
+        #
+        #   [1]: https://github.com/jemalloc/jemalloc/issues/708
+        #
+        # About symbol name:
+        # - _zone_register not zone_register due to Mach-O binary format,
+        # - _je_zone_register due to JEMALLOC_PRIVATE_NAMESPACE=je_ under OS X.
+        # - but jemalloc-cmake does not run private_namespace.sh
+        #   so symbol name should be _zone_register
+        if (ENABLE_JEMALLOC AND USE_STATIC_LIBRARIES AND OS_DARWIN)
+            set_property(TARGET ${target} APPEND PROPERTY LINK_OPTIONS -u_zone_register)
+        endif()
+    endif()
+endmacro()
+
+# With cross-compiling, all targets are built for the target platform which usually different from the host
+# platform. This is problematic if a build artifact X (e.g. a file or an executable) is generated by running
+# another executable Y previously produced in the build. This is solved by compiling and running Y for/on
+# the host platform. Add target to the list:
+#    add_native_target(&lt;target&gt; ...)
+set_property (GLOBAL PROPERTY NATIVE_BUILD_TARGETS)
+function (add_native_target)
+    set_property (GLOBAL APPEND PROPERTY NATIVE_BUILD_TARGETS ${ARGV})
+endfunction (add_native_target)
+
+set(ConfigIncludePath ${CMAKE_CURRENT_BINARY_DIR}/includes/configs CACHE INTERNAL &quot;Path to generated configuration files.&quot;)
+include_directories(${ConfigIncludePath})
+
+# Add as many warnings as possible for our own code.
+include (cmake/warnings.cmake)
+include (cmake/print_flags.cmake)
+
+add_subdirectory (base)
+add_subdirectory (src)
+add_subdirectory (programs)
+add_subdirectory (tests)
+add_subdirectory (utils)
+
+include (cmake/sanitize_target_link_libraries.cmake)
+
+# Build native targets if necessary
+get_property(NATIVE_BUILD_TARGETS GLOBAL PROPERTY NATIVE_BUILD_TARGETS)
+if (NATIVE_BUILD_TARGETS
+    AND NOT(
+        CMAKE_HOST_SYSTEM_NAME STREQUAL CMAKE_SYSTEM_NAME
+        AND CMAKE_HOST_SYSTEM_PROCESSOR STREQUAL CMAKE_SYSTEM_PROCESSOR
+    )
+)
+    message (STATUS &quot;Building native targets...&quot;)
+
+    set (NATIVE_BUILD_DIR &quot;${CMAKE_BINARY_DIR}/native&quot;)
+
+    execute_process(
+        COMMAND ${CMAKE_COMMAND} -E make_directory &quot;${NATIVE_BUILD_DIR}&quot;
+        COMMAND_ECHO STDOUT)
+
+    execute_process(
+        COMMAND ${CMAKE_COMMAND}
+            &quot;-DCMAKE_C_COMPILER=${CMAKE_C_COMPILER}&quot;
+            &quot;-DCMAKE_CXX_COMPILER=${CMAKE_CXX_COMPILER}&quot;
+        ${CMAKE_SOURCE_DIR}
+        WORKING_DIRECTORY &quot;${NATIVE_BUILD_DIR}&quot;
+        COMMAND_ECHO STDOUT)
+
+    execute_process(
+        COMMAND ${CMAKE_COMMAND} --build &quot;${NATIVE_BUILD_DIR}&quot; --target ${NATIVE_BUILD_TARGETS}
+        COMMAND_ECHO STDOUT)
+endif ()
+
+option(ENABLE_PBKDF2 &quot;Enable PBKDF2&quot; 0)
+
+if (ENABLE_PBKDF2)
+    add_definitions(-DENABLE_PBKDF2=1)
+endif()
+
+option(DISABLE_HTTP &quot;Disable HTTP Protocl&quot; 0)
+
+if (DISABLE_HTTP)
+    add_definitions(-DISABLE_HTTP=1)
+endif()
+
+option(DISABLE_MEMCPY &quot;Disable memcpy_jart&quot; 0)
+
+if (DISABLE_MEMCPY)
+    add_definitions(-DISABLE_MEMCPY=1)
+endif()
+</code></pre>
+<p>我们从一个简单的CMakeLists.txt开始：</p>
+<pre><code class="language-cmake">cmake_minimum_required(VERSION 3.20)
+project(GREDialing VERSION 0.1)
+
+message(STATUS &quot;CMake version: &quot; ${CMAKE_VERSION})
+if(NOT ${CMAKE_VERSION} VERSION_LESS &quot;3.2&quot;)
+    set(CMAKE_CXX_STANDARD 17)
+    set(CMAKE_CXX_STANDARD_REQUIRED ON)
+else()
+    message(STATUS &quot;Checking compiler flags for C++11 support.&quot;)
+    # Set C++11 support flags for various compilers
+    include(CheckCXXCompilerFlag)
+    check_cxx_compiler_flag(&quot;-std=c++11&quot; COMPILER_SUPPORTS_CXX11)
+    check_cxx_compiler_flag(&quot;-std=c++0x&quot; COMPILER_SUPPORTS_CXX0X)
+    if(COMPILER_SUPPORTS_CXX11)
+        message(STATUS &quot;C++11 is supported.&quot;)
+        if(${CMAKE_SYSTEM_NAME} MATCHES &quot;Darwin&quot;)
+            set(CMAKE_CXX_FLAGS &quot;${CMAKE_CXX_FLAGS} -std=c++11 -stdlib=libc++&quot;)
+        else()
+            set(CMAKE_CXX_FLAGS &quot;${CMAKE_CXX_FLAGS} -std=c++11&quot;)
+        endif()
+    elseif(COMPILER_SUPPORTS_CXX0X)
+        message(STATUS &quot;C++0x is supported.&quot;)
+        if(${CMAKE_SYSTEM_NAME} MATCHES &quot;Darwin&quot;)
+            set(CMAKE_CXX_FLAGS &quot;${CMAKE_CXX_FLAGS} -std=c++0x -stdlib=libc++&quot;)
+        else()
+            set(CMAKE_CXX_FLAGS &quot;${CMAKE_CXX_FLAGS} -std=c++0x&quot;)
+        endif()
+    else()
+        message(STATUS &quot;The compiler ${CMAKE_CXX_COMPILER} has no C++11 support. Please use a different C++ compiler.&quot;)
+    endif()
+endif()
+
+
+ 
+# 禁止 C++ assert terminate 程序
+# add_definitions(-DNDEBUG)
+
+# ASIO 不使用 Boost 库
+<a class="tag" onclick="toggleTagSearch(this)" data-content="#add_definitions">#add_definitions</a>(-DASIO_STANDALONE)
+
+# Spdlog 使用外部 Fmt 库
+<a class="tag" onclick="toggleTagSearch(this)" data-content="#add_definitions">#add_definitions</a>(-DSPDLOG_FMT_EXTERNAL)
+
+# Jwt-cpp 使用外部 Json 库
+# ADD_DEFINITIONS(-DJWT_CPP_JSON_EXTERNAL)
+
+# add_definitions(-DGLOG_ON)
+
+# 生成编译命令文件，给 YCM/Clangd 使用
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+ADD_COMPILE_OPTIONS(-g)
+
+<a class="tag" onclick="toggleTagSearch(this)" data-content="#设置输出目录">#设置输出目录</a>
+# set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+# set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+# set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
+
+
+<a class="tag" onclick="toggleTagSearch(this)" data-content="#加入包含目录">#加入包含目录</a>
+# include_directories(${CMAKE_CURRENT_SOURCE_DIR}/service/src/main/cpp/decryptSDK/include) 
+include_directories(decryptSDK/include) 
+include_directories(/home/hubingbing/rapidjson/include)
+include_directories(/home/hubingbing/concurrentqueue)
+# include_directories(/opt/Euler_compile_env/usr/src/kernels/4.19.90-vhulk2107.1.0.h699.eulerosv2r10.aarch64/include)
+
+
+<a class="tag" onclick="toggleTagSearch(this)" data-content="#静态库目录">#静态库目录</a>
+<a class="tag" onclick="toggleTagSearch(this)" data-content="#link_directories">#link_directories</a>(/usr/lib64/mysql)
+
+<a class="tag" onclick="toggleTagSearch(this)" data-content="#logger">#logger</a> lib 
+<a class="tag" onclick="toggleTagSearch(this)" data-content="#add_subdirectory">#add_subdirectory</a>(decryptSDK)
+ 
+
+# aux_source_directory(decryptSDK SRCS) <a class="tag" onclick="toggleTagSearch(this)" data-content="#加入目录下所有源码">#加入目录下所有源码</a>
+# add_executable(demo ${SRCS}) <a class="tag" onclick="toggleTagSearch(this)" data-content="#生成可执行文件">#生成可执行文件</a>
+# target_link_libraries(demo logger)  <a class="tag" onclick="toggleTagSearch(this)" data-content="#链接logger库">#链接logger库</a>
+
+set(EXECUTABLE_OUTPUT_PATH &quot;${CMAKE_CURRENT_SOURCE_DIR}/build&quot;)
+message(STATUS &quot;binary dir is ${EXECUTABLE_OUTPUT_PATH}&quot;)
+
+set(BUILD_SCRATCH_TARGET 0)
+
+if(BUILD_SCRATCH_TARGET)
+    file(GLOB_RECURSE scratch_srcs scratch/*.cpp)
+    # message(STATUS &quot;all scratchs: ${scratch_srcs}&quot;)
+    foreach(srcfile IN LISTS scratch_srcs)
+        # Get file name without directory
+        get_filename_component(elfname ${srcfile} NAME_WE)
+        message(STATUS &quot;${elfname} .. ${srcfile}&quot;)
+        add_executable(${elfname} ${srcfile})
+        target_link_libraries(${elfname} pthread)
+    endforeach()
+endif()
+
+
+# add_executable(main ../main.cpp)
+# add_executable(server udp_server.cpp) 
+# add_executable(ConfigReader ConfigReader.cpp) 
+# add_executable(packet_handler packet_handler.cpp)
+
+set(BUILD_MAIN_TARGET 1)
+
+if(BUILD_MAIN_TARGET)
+    set(target main)
+
+    set(src_lst main.cpp ConfigReader.cpp packet_handler.cpp SslClient.cpp packet.cpp)
+    add_executable(${target} ${src_lst})
+
+    aux_source_directory(decryptSDK KMC_DIR)
+    target_sources(${target} PRIVATE ${KMC_DIR})
+    target_include_directories(${target} PRIVATE /home/hubingbing/cloud-frame-kmc/include/)
+    target_link_directories(${target} PRIVATE /home/hubingbing/cloud-frame-kmc/lib_so/)
+    target_link_libraries(${target} kmcjni)
+
+    target_link_libraries(${target} ssl crypto pthread)
+endif()
+# target_link_libraries(debug pthread)
+# target_link_libraries(server pthread)
+</code></pre>
+<p>上面的cmake也不算太简单，我们再简化一下：</p>
+<pre><code class="language-cmake">cmake_minimum_required(VERSION 3.20)
+project(GREDialing VERSION 0.1)
+
+message(STATUS &quot;CMake version: &quot; ${CMAKE_VERSION})
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# 生成编译命令文件，给 YCM/Clangd 使用
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+# 附加调试信息
+ADD_COMPILE_OPTIONS(-g)
+
+<a class="tag" onclick="toggleTagSearch(this)" data-content="#加入包含目录">#加入包含目录</a>
+include_directories(decryptSDK/include) 
+include_directories(/home/yychi/rapidjson/include)
+include_directories(/home/yychi/concurrentqueue)
+
+# 加入./decryptSDK目录下所有源码并赋到SRCS变量中
+# 后续可用$SRCS使用该变量
+aux_source_directory(decryptSDK SRCS) 
+add_executable(demo ${SRCS}) <a class="tag" onclick="toggleTagSearch(this)" data-content="#生成可执行文件">#生成可执行文件</a>
+target_link_libraries(demo logger)  <a class="tag" onclick="toggleTagSearch(this)" data-content="#链接logger库">#链接logger库</a>
+
+set(EXECUTABLE_OUTPUT_PATH &quot;${CMAKE_CURRENT_SOURCE_DIR}/build&quot;)
+message(STATUS &quot;binary dir is ${EXECUTABLE_OUTPUT_PATH}&quot;)
+
+set(BUILD_SCRATCH_TARGET 0)
+if(BUILD_SCRATCH_TARGET)
+    # 递归找到./scratch目录下所有cpp文件，赋值给scratch_srcs变量
+    file(GLOB_RECURSE scratch_srcs scratch/*.cpp)
+    # message(STATUS &quot;all scratchs: ${scratch_srcs}&quot;)
+    foreach(srcfile IN LISTS scratch_srcs)
+        # Get file name without directory
+        get_filename_component(elfname ${srcfile} NAME_WE)
+        message(STATUS &quot;${elfname} .. ${srcfile}&quot;)
+        add_executable(${elfname} ${srcfile})
+        target_link_libraries(${elfname} pthread)
+    endforeach()
+endif()
+
+
+set(BUILD_MAIN_TARGET 1)
+if(BUILD_MAIN_TARGET)
+    set(target main)
+
+    set(src_lst main.cpp a.cpp b.cpp c.cpp d.cpp)
+    add_executable(${target} ${src_lst})
+
+    aux_source_directory(decryptSDK descrypt_srcs)
+    # 为target增加要编译的源文件
+    target_sources(${target} PRIVATE ${descrypt_srcs})
+    # 为target增加include目录
+    target_include_directories(${target} PRIVATE /home/yychi/cloud/include/)
+    # 为target增加动态库/静态库搜索路径
+    target_link_directories(${target} PRIVATE /home/yychi/frame/lib_so/)
+    # 为target链接库文件
+    target_link_libraries(${target} ssl crypto pthread)
+endif()
+</code></pre>
+<p>通常的，一个CMakeLists.txt中必须包含至少一个target，target可以是动态库/静态库/可执行文件。当定义了target之后，推荐使用</p>
+<ul>
+<li>target_sources</li>
+<li>target_include_directories</li>
+<li>target_link_directories</li>
+<li>target_link_options</li>
+<li>target_link_libraries</li>
+<li>target_compile_options</li>
+<li>target_compile_definitions</li>
+<li>target_compile_features</li>
+</ul>
+<p>而非</p>
+<ul>
+<li>include_directories</li>
+<li>link_directories</li>
+<li>add_compile_options</li>
+<li>add_link_options</li>
+</ul>
+<p>等全局函数。</p>
+<h2 id="变量" tabindex="-1">变量</h2>
+<pre><code class="language-cmake">set(&lt;variable&gt; &lt;value&gt;) # set value to variable
+${variable} # take the value of variable
+</code></pre>
+<div class="callout" data-callout="note"><div class="callout-title"><div class="callout-title-inner">Note</div></div>
+<div class="callout-content">
+<p>
+CMake语言不区分大小写，但是参数区分大小写。</p>
+</div></div>
+<h2 id="references" tabindex="-1">References</h2>
+<ol>
+<li><a href="https://www.ljjyy.com/archives/2021/03/100652.html" target="_blank" class="external-link">CMake 完整使用教程 之二 从可执行文件到库</a></li>
+</ol>
+</main>
+<aside>
+<div class="sidebar">
+<div class="sidebar-container">
+<script>async function fetchGraphData(){const e=await fetch("/graph.json").then((e=>e.json()));return{graphData:e,fullGraphData:filterFullGraphData(e)}}function getNextLevelNeighbours(e,t){const n=Object.values(e).map((e=>e.neighbors)).flat();return Object.keys(t).reduce(((r,l)=>(-1!=n.indexOf(l)?t[l].hide||(e[l]=t[l]):r[l]=t[l],r)),{})}function filterLocalGraphData(e,t){if(null==e)return null;let n=JSON.parse(JSON.stringify(e.nodes)),r=JSON.parse(JSON.stringify(e.links)),l=n[decodeURI(window.location.pathname)]||Object.values(n).find((e=>e.home));if(delete n[l.url],!l.home){delete n[Object.values(n).find((e=>e.home)).url]}l.current=!0;let i={};i[l.url]=l;for(let e=0;e<t;e++)n=getNextLevelNeighbours(i,n);nodes=Object.values(i),l.home||(nodes=nodes.filter((e=>!e.home)));let o=nodes.map((e=>e.id));return{nodes:nodes,links:r.filter((function(e){return o.indexOf(e.target)>-1&&o.indexOf(e.source)>-1}))}}function getCssVar(e){return getComputedStyle(document.body).getPropertyValue(e)}function htmlDecode(e){return(new DOMParser).parseFromString(e,"text/html").documentElement.textContent}function renderGraph(e,t,n,r){if(null==e)return;const l=document.getElementById(t);width=l.offsetWidth,height=l.offsetHeight;const i=new Set;let o=null;const a=getCssVar("--graph-main"),s=getCssVar("--graph-muted");let u=ForceGraph()(l).graphData(e).nodeId("id").nodeLabel("title").linkSource("source").linkTarget("target").d3AlphaDecay(.1).width(width).height(height).linkDirectionalArrowLength(2).linkDirectionalArrowRelPos(.5).autoPauseRedraw(!1).linkColor((e=>null==o||e.source.id==o.id||e.target.id==o.id?a:s)).nodeCanvasObject(((e,t)=>{const n=e.neighbors&&e.neighbors.length||2,r=Math.min(7,Math.max(n/2,2));t.beginPath(),t.arc(e.x,e.y,r,0,2*Math.PI,!1),null==o||e==o||i.has(e.url)?t.fillStyle=a:t.fillStyle=s,t.fill(),e.current&&(t.beginPath(),t.arc(e.x,e.y,r+1,0,2*Math.PI,!1),t.lineWidth=.5,t.strokeStyle=a,t.stroke());const l=htmlDecode(e.title);t.font="3.5px Sans-Serif",t.textAlign="center",t.textBaseline="top",t.fillText(l,e.x,e.y+r+2)})).onNodeClick((e=>{window.location=e.url})).onNodeHover((e=>{i.clear(),e&&(i.add(e),e.neighbors.forEach((e=>i.add(e)))),o=e||null}));return(r||null!=n&&e.nodes.length>4)&&setTimeout((()=>{u.zoomToFit(5,75)}),n||200),u}function renderLocalGraph(e,t,n){window.graph&&window.graph._destructor();return renderGraph(filterLocalGraphData(e,t),"link-graph",null,n)}function filterFullGraphData(e){if(null==e)return null;e=JSON.parse(JSON.stringify(e));const t=Object.values(e.nodes).filter((e=>e.hide)).map((e=>e.id));return{links:JSON.parse(JSON.stringify(e.links)).filter((e=>-1==t.indexOf(e.source)&&-1==t.indexOf(e.target))),nodes:[...Object.values(e.nodes).filter((e=>!e.hide))]}}function openFullGraph(e){return lucide.createIcons({attrs:{class:["svg-icon"]}}),renderGraph(e,"full-graph-container",200,!1)}function closefullGraph(e){return e&&e._destructor(),null}</script>
+<div x-init="{graphData, fullGraphData} = await fetchGraphData();" x-data="{ graphData: null, depth: 1, graph: null, fullGraph: null, showFullGraph: false, fullScreen: false, fullGraphData: null}" id="graph-component" x-bind:class="fullScreen ? 'graph graph-fs' : 'graph'" v-scope>
+<div class="graph-title-container">
+<div class="graph-title">Connected Pages</div>
+<div id="graph-controls">
+<div class="depth-control">
+<label for="graph-depth">Depth</label>
+<div class="slider">
+<input x-model.number="depth" name="graph-depth" list="depthmarkers" type="range" step="1" min="1" max="3" id="graph-depth">
+<datalist id="depthmarkers">
+<option value="1" label="1"></option>
+<option value="2" label="2"></option>
+<option value="3" label="3"></option>
+</datalist>
+</div>
+<span id="depth-display" x-text="depth"></span>
+</div>
+<div class="ctrl-right">
+<span id="global-graph-btn" x-on:click="showFullGraph = true; setTimeout(() => {fullGraph = openFullGraph(fullGraphData)}, 100)"><i icon-name="globe" aria-hidden="true"></i></span>
+<span id="graph-fs-btn" x-on:click="fullScreen = !fullScreen"><i icon-name="expand" aria-hidden="true"></i></span>
+</div>
+</div>
+</div>
+<div x-effect="window.graph = renderLocalGraph(graphData, depth, fullScreen)" id="link-graph"></div>
+<div x-show="showFullGraph" id="full-graph" class="show" style="display:none">
+<span id="full-graph-close" x-on:click="fullGraph = closefullGraph(fullGraph); showFullGraph = false;"><i icon-name="x" aria-hidden="true"></i></span><div id="full-graph-container"></div>
+</div>
+</div>
+<div class="backlinks">
+<div class="backlink-title" style="margin:4px 0!important">Pages mentioning this page</div>
+<div class="backlink-list"><div class="backlink-card"><i icon-name="link"></i><a href="/" data-note-icon="" class="backlink">Digital Garden Entry</a>
+</div></div>
+</div>
+</div>
+</div>
+</aside>
+<style>#tooltip-wrapper{background:var(--background-primary);padding:1em;border-radius:4px;overflow:hidden;position:fixed;width:80%;max-width:400px;height:auto;max-height:300px;font-size:.8em;box-shadow:0 5px 10px rgba(0,0,0,.1);opacity:0;transition:opacity .1s;unicode-bidi:plaintext;overflow-y:scroll;z-index:10}#tooltip-wrapper:after{content:"";position:absolute;z-index:1;bottom:0;left:0;pointer-events:none;width:100%;unicode-bidi:plaintext;height:75px}</style>
+<div style="opacity:0;display:none" id="tooltip-wrapper">
+<div id="tooltip-content">
+</div>
+</div>
+<iframe style="display:none;height:0;width:0" id="link-preview-iframe" src="">
+</iframe>
+<script>var opacityTimeout,contentTimeout,transitionDurationMs=100,iframe=document.getElementById("link-preview-iframe"),tooltipWrapper=document.getElementById("tooltip-wrapper"),tooltipContent=document.getElementById("tooltip-content"),linkHistories={};function hideTooltip(){opacityTimeout=setTimeout((function(){tooltipWrapper.style.opacity=0,contentTimeout=setTimeout((function(){tooltipContent.innerHTML="",tooltipWrapper.style.display="none"}),transitionDurationMs+1)}),transitionDurationMs)}function showTooltip(t){var e=t.target,o=e.getClientRects()[e.getClientRects().length-1],i=window.pageYOffset||document.documentElement.scrollTop,n=t.target.getAttribute("href");if(-1===n.indexOf("http")||-1!==n.indexOf(window.location.host)){let t=n.split("#")[0];linkHistories[t]?(tooltipContent.innerHTML=linkHistories[t],tooltipWrapper.style.display="block",setTimeout((function(){if(tooltipWrapper.style.opacity=1,-1!=n.indexOf("#")){let t=n.split("#")[1];const e=tooltipWrapper.querySelector(`[id='${t}']`);e.classList.add("referred"),e.scrollIntoView({behavior:"smooth"},!0)}else tooltipWrapper.scroll(0,0)}),1)):(iframe.src=t,iframe.onload=function(){tooltipContentHtml="",tooltipContentHtml+='<div style="font-weight: bold; unicode-bidi: plaintext;">'+iframe.contentWindow.document.querySelector("h1").innerHTML+"</div>",tooltipContentHtml+=iframe.contentWindow.document.querySelector(".content").innerHTML,tooltipContent.innerHTML=tooltipContentHtml,linkHistories[t]=tooltipContentHtml,tooltipWrapper.style.display="block",tooltipWrapper.scrollTop=0,setTimeout((function(){if(tooltipWrapper.style.opacity=1,-1!=n.indexOf("#")){let t=n.split("#")[1];const e=tooltipWrapper.querySelector(`[id='${t}']`);e.classList.add("referred"),console.log(e),e.scrollIntoView({behavior:"smooth"},!0)}else tooltipWrapper.scroll(0,0)}),1)}),tooltipWrapper.style.left=o.left-tooltipWrapper.offsetWidth/2+o.width/2+"px",window.innerHeight-o.top<tooltipWrapper.offsetHeight?tooltipWrapper.style.top=o.top+i-tooltipWrapper.offsetHeight-10+"px":window.innerHeight-o.top>tooltipWrapper.offsetHeight&&(tooltipWrapper.style.top=o.top+i+35+"px"),o.left+o.width/2<tooltipWrapper.offsetWidth/2?tooltipWrapper.style.left="10px":document.body.clientWidth-o.left-o.width/2<tooltipWrapper.offsetWidth/2&&(tooltipWrapper.style.left=document.body.clientWidth-tooltipWrapper.offsetWidth-20+"px")}}function setupListeners(t){t.addEventListener("mouseleave",(function(t){hideTooltip()})),tooltipWrapper.addEventListener("mouseleave",(function(t){hideTooltip()})),t.addEventListener("mouseenter",(function(t){clearTimeout(opacityTimeout),clearTimeout(contentTimeout),showTooltip(t)})),tooltipWrapper.addEventListener("mouseenter",(function(t){clearTimeout(opacityTimeout),clearTimeout(contentTimeout)}))}window.addEventListener("load",(function(t){document.querySelectorAll(".internal-link").forEach(setupListeners),document.querySelectorAll(".backlink-card a").forEach(setupListeners)}))</script>
+<script>window.location.hash&&document.getElementById(window.location.hash.slice(1)).classList.add("referred"),window.addEventListener("hashchange",(e=>{const t=e.oldURL.split("#");t[1]&&document.getElementById(t[1]).classList.remove("referred");const n=e.newURL.split("#");n[1]&&document.getElementById(n[1]).classList.add("referred")}),!1);const url_parts=window.location.href.split("#"),url=url_parts[0],referrence=url_parts[1];document.querySelectorAll(".cm-s-obsidian > *[id]").forEach((function(e){e.ondblclick=function(e){const t=url+"#"+e.target.id;navigator.clipboard.writeText(t)}}))</script>
+<script src="https://fastly.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js"></script>
+<script defer="defer">TIMESTAMP_FORMAT="yyyy/MM/dd HH:mm",document.querySelectorAll(".human-date").forEach((function(e){date=e.getAttribute("data-date")||e.innerText,parsed_date=luxon.DateTime.fromISO(date),null!=parsed_date.invalid&&(parsed_date=luxon.DateTime.fromSQL(date)),null!=parsed_date.invalid&&(parsed_date=luxon.DateTime.fromHTML(date)),e.innerHTML=parsed_date.toFormat(TIMESTAMP_FORMAT)}))</script>
+<script>lucide.createIcons({attrs:{class:["svg-icon"]}})</script>
+</body>
+</html>
