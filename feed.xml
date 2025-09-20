@@ -3,14 +3,14 @@
     <title>Learn2Live</title>
     <link href="https://guyueshui.github.io/obsidian-garden//feed.xml" rel="self" >
     <link href="https://guyueshui.github.io/obsidian-garden/" >
-    <updated>2025-09-20T06:52:53Z</updated>
+    <updated>2025-09-20T07:02:18Z</updated>
     <id>https://guyueshui.github.io/obsidian-garden/</id>
         <entry>
             <title>
                 继承
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//notes/cpp/继承/</id>
             <content type="html">
                 &lt;h2 id=&quot;public-inheritance&quot; tabindex=&quot;-1&quot;&gt;Public inheritance&lt;/h2&gt;
@@ -128,7 +128,7 @@ see more in &lt;a href=&quot;https://www.cnblogs.com/qlwy/archive/2011/08/25/215
                 药性赋
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//life/养生/药性赋/</id>
             <content type="html">
                 &lt;p&gt;《药性赋》，原书未著撰人，据考证约为金元时代作品。原为中医初学中药的启蒙书。该书将248种常用中药按药性分寒、热、温、平四类，用韵语编写成赋体，言简意赅，朗朗上口，便于诵读记忆。尤其是对药性概括精辟，一经铭记在心，受用终生，颇受历代读者喜爱，传沿至今，长盛不衰。&lt;/p&gt;
@@ -157,7 +157,7 @@ see more in &lt;a href=&quot;https://www.cnblogs.com/qlwy/archive/2011/08/25/215
                 202508232328garden-entry
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//</id>
             <content type="html">
                 &lt;p&gt;This is site is powerd by obsidian digital garden plugin. And this page is a sample entry point for exploring this site, which should not be such simple though.&lt;/p&gt;
@@ -1588,7 +1588,7 @@ see more in &lt;a href=&quot;https://www.cnblogs.com/qlwy/archive/2011/08/25/215
                 202508181019redis配置io-threads
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202508181019redis配置io-threads/</id>
             <content type="html">
                 &lt;pre&gt;&lt;code&gt;################################ THREADED I/O #################################
@@ -1636,7 +1636,7 @@ see more in &lt;a href=&quot;https://www.cnblogs.com/qlwy/archive/2011/08/25/215
                 202508151303redis集群部署
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202508151303redis集群部署/</id>
             <content type="html">
                 &lt;p&gt;一般集群3主3备，需要6个redis示例。示例配置，&lt;/p&gt;
@@ -1686,7 +1686,7 @@ e88867b424ef5a10d61a59bb0d7999390d85cde3 10.24.71.18:6380@16380 slave 046e003333
                 202507241701cat命令
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202507241701cat命令/</id>
             <content type="html">
                 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;# cat标准输入和一个文件到另一个文件
@@ -1707,7 +1707,7 @@ command1 | cat - &amp;lt;(command2)
                 202507181631sed技巧
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202507181631sed技巧/</id>
             <content type="html">
                 &lt;p&gt;sed很强大，但也没那么直观易用。&lt;/p&gt;
@@ -1741,7 +1741,7 @@ sed -nE &#39;/(&amp;quot;Address&amp;quot;.*:.*&amp;quot;.*:)([0-9]{4,})&amp;quo
                 202507171527debug技巧之top
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202507171527debug技巧之top/</id>
             <content type="html">
                 &lt;p&gt;虽然htop更modern，但是top毕竟是自带。&lt;/p&gt;
@@ -1792,7 +1792,7 @@ KiB Swap:        0 total,        0 free,        0 used. 23842748 avail Mem
                 202507031535mysql基本命令
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202507031535mysql基本命令/</id>
             <content type="html">
                 &lt;h2 id=&quot;命令行&quot; tabindex=&quot;-1&quot;&gt;命令行&lt;/h2&gt;
@@ -1815,7 +1815,7 @@ mysql&amp;gt; ALTER TABLE equity_delta_price MODIFY COLUMN shortnm varchar(200) 
                 202506292148texlive精简安装
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202506292148texlive精简安装/</id>
             <content type="html">
                 &lt;p&gt;参考：&lt;/p&gt;
@@ -1841,7 +1841,7 @@ tmlgr option showall # 查看相关信息
                 202505281711lambda表达式作为参数传递
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202505281711lambda表达式作为参数传递/</id>
             <content type="html">
                 &lt;p&gt;lambda不等于std::function，传参时会发生隐式转换&lt;br /&gt;
@@ -1855,7 +1855,7 @@ tmlgr option showall # 查看相关信息
                 202505090847awk判断csv的id有序性
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202505090847awk判断csv的id有序性/</id>
             <content type="html">
                 &lt;h2 id=&quot;example-1&quot; tabindex=&quot;-1&quot;&gt;Example 1&lt;/h2&gt;
@@ -2043,7 +2043,7 @@ awk -F&#39;,&#39; &#39;$1==&amp;quot;920088&amp;quot; &amp;amp;&amp;amp; $(NF-1)
                 202504301210反向迭代器转正向迭代器
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202504301210反向迭代器转正向迭代器/</id>
             <content type="html">
                 &lt;p&gt;反向迭代器有一个坑点。正向迭代器，指向的位置和解引用对应的元素是一致的；反向迭代器指向的位置和解引用对应的元素差了一个。从前往后看（正向角度），反向迭代器指向位置i，那么解引用会得到i-1位置上的元素。&lt;/p&gt;
@@ -2092,7 +2092,7 @@ int main() {
                 202503191332程序的进程名和命令名
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202503191332程序的进程名和命令名/</id>
             <content type="html">
                 &lt;p&gt;英文叫做&lt;/p&gt;
@@ -2134,7 +2134,7 @@ rootl-dev01:~# pgrep -lf feeder
                 202503092037NetworkManager更换iwd后端
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202503092037NetworkManager更换iwd后端/</id>
             <content type="html">
                 &lt;p&gt;此前NetworkManager一直使用wpa_supplicant作为后端，但是&lt;code&gt;journalctl -f&lt;/code&gt;发现狂刷日志，&lt;/p&gt;
@@ -2175,7 +2175,7 @@ Install iwd&lt;/p&gt;
                 202503071009不要直接改系统的glibc版本
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202503071009不要直接改系统的glibc版本/</id>
             <content type="html">
                 &lt;p&gt;如题，不要改系统的glibc版本，否则！你的系统可能崩掉！&lt;/p&gt;
@@ -2241,7 +2241,7 @@ lrwxrwxrwx 1 root root      18 Mar  7 09:23 /lib/x86_64-linux-gnu/libpthread.so.
                 202502261718firefox-chrome-禁用政策插件
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202502261718firefox-chrome-禁用政策插件/</id>
             <content type="html">
                 &lt;p&gt;看到浏览器中“由贵组织管理”让人很恼怒，它装的插件一般是用来监控你的浏览记录和浏览内容的。所以，在这种情况下，你等于没穿衣服在网上冲浪。我们必须强烈抵制这种行为。&lt;/p&gt;
@@ -2272,7 +2272,7 @@ lrwxrwxrwx 1 root root      18 Mar  7 09:23 /lib/x86_64-linux-gnu/libpthread.so.
                 202502241705crtp-in-cpp
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202502241705crtp-in-cpp/</id>
             <content type="html">
                 &lt;p&gt;今天学了一个新的C++知识点，诚然&lt;strong&gt;life is too short to learn c++&lt;/strong&gt;.&lt;/p&gt;
@@ -2330,7 +2330,7 @@ main(int argc, const char* argv[])
                 202502210928make-template
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202502210928make-template/</id>
             <content type="html">
                 &lt;p&gt;Here list some makefile as references.&lt;/p&gt;
@@ -2386,7 +2386,7 @@ clean:
                 202502201432python-paramiko使用小记
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202502201432python-paramiko使用小记/</id>
             <content type="html">
                 &lt;p&gt;paramiko是一个python ssh库，提供python api去执行ssh操作，包括但不限于登录远程机器（ssh），执行远程命令，sftp上传下载文件。&lt;/p&gt;
@@ -3007,7 +3007,7 @@ if __name__ == &#39;__main__&#39;:
                 202502181657gdb-attach
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202502181657gdb-attach/</id>
             <content type="html">
                 &lt;p&gt;gdb &lt;a href=&quot;https://guyueshui.github.io/notes/cpp/gdb%E5%9F%BA%E7%A1%80#1.1%20%E7%BB%91%E5%AE%9A%E8%BF%9B%E7%A8%8B&quot; target=&quot;_blank&quot; class=&quot;external-link&quot;&gt;attach&lt;/a&gt;到正在运行的程序上进行调试，&lt;/p&gt;
@@ -3040,7 +3040,7 @@ gdb -p 1234&lt;/p&gt;
                 202502181641virtualbox虚拟机断网问题
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202502181641virtualbox虚拟机断网问题/</id>
             <content type="html">
                 &lt;h2 id=&quot;问题背景&quot; tabindex=&quot;-1&quot;&gt;问题背景&lt;/h2&gt;
@@ -3080,7 +3080,7 @@ default via 192.168.137.1 dev enp0s8 proto static metric 234 # 主动设置
                 202502141432tar命令的小坑
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202502141432tar命令的小坑/</id>
             <content type="html">
                 &lt;h1 id=&quot;202502141432&quot; tabindex=&quot;-1&quot;&gt;202502141432&lt;/h1&gt;
@@ -3102,7 +3102,7 @@ tar -cvpaf ../home.tgz * --exclude-caches --exclude-caches-all --exclude-vcs --e
                 202501241043创建软连接的路径问题
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202501241043创建软连接的路径问题/</id>
             <content type="html">
                 &lt;p&gt;一个可能违反直觉的事实！&lt;/p&gt;
@@ -3155,7 +3155,7 @@ target的路径是相对于link的路径来的，如果link和target同路径，
                 202501211106kroki-sample
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202501211106kroki-sample/</id>
             <content type="html">
                 &lt;p&gt;先安装一下obsidian插件&lt;a href=&quot;https://kroki.io/&quot; target=&quot;_blank&quot; class=&quot;external-link&quot;&gt;kroki&lt;/a&gt;，然后可用。&lt;/p&gt;
@@ -3238,7 +3238,7 @@ line right until even with X9 - ($r,0) &#92;
                 202501092242archlinux安装指定版本包
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202501092242archlinux安装指定版本包/</id>
             <content type="html">
                 &lt;p&gt;首先在aur上搜索，如gcc-4.8，&lt;/p&gt;
@@ -3262,7 +3262,7 @@ line right until even with X9 - ($r,0) &#92;
                 202501082036suckless-windows
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202501082036suckless-windows/</id>
             <content type="html">
                 &lt;p&gt;Windows毛病例举，&lt;/p&gt;
@@ -3440,7 +3440,7 @@ Host varch
                 202412262023qt添加翻译
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202412262023qt添加翻译/</id>
             <content type="html">
                 &lt;p&gt;QT Application想要支持多语言，需要添加一个项目对应的ts（translation source）文件。每支持一种语言就要添加一个ts文件。同时在cmake中指明翻译文件。&lt;/p&gt;
@@ -3575,7 +3575,7 @@ add_custom_target(translation ALL DEPENDS ${QM_FILES})
                 202412251940linux目录结构
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202412251940linux目录结构/</id>
             <content type="html">
                 &lt;p&gt;三个目录的区别，&lt;/p&gt;
@@ -3593,7 +3593,7 @@ add_custom_target(translation ALL DEPENDS ${QM_FILES})
                 202412242129rygel使用小记
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202412242129rygel使用小记/</id>
             <content type="html">
                 &lt;p&gt;&lt;a href=&quot;https://wiki.archlinux.org/title/Rygel&quot; target=&quot;_blank&quot; class=&quot;external-link&quot;&gt;Rygel&lt;/a&gt;是一个流媒体服务器，可与支持DLNA/UPnP协议的客户端通信达到局域网文件共享、家庭媒体播放的效果。&lt;/p&gt;
@@ -3610,7 +3610,7 @@ add_custom_target(translation ALL DEPENDS ${QM_FILES})
                 202412222011termux编译baidupcs
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202412222011termux编译baidupcs/</id>
             <content type="html">
                 &lt;p&gt;有两种方式编译android版本的baidupcs&lt;/p&gt;
@@ -3647,7 +3647,7 @@ GOPROXY=&#39;https://mirrors.aliyun.com/goproxy/,direct&#39;
                 202412221603笔记方法论
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202412221603笔记方法论/</id>
             <content type="html">
                 &lt;p&gt;目前遵循&lt;a href=&quot;https://zettelkasten.de/introduction/zh/&quot; target=&quot;_blank&quot; class=&quot;external-link&quot;&gt;卡片法&lt;/a&gt;记录笔记。有心得两条：&lt;/p&gt;
@@ -3665,7 +3665,7 @@ GOPROXY=&#39;https://mirrors.aliyun.com/goproxy/,direct&#39;
                 202412212328goldendict更换systray-icon
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202412212328goldendict更换systray-icon/</id>
             <content type="html">
                 &lt;p&gt;参考：&lt;a href=&quot;https://github.com/goldendict/goldendict/issues/1304#issuecomment-732902086&quot; target=&quot;_blank&quot; class=&quot;external-link&quot;&gt;https://github.com/goldendict/goldendict/issues/1304#issuecomment-732902086&lt;/a&gt;&lt;/p&gt;
@@ -3680,7 +3680,7 @@ GOPROXY=&#39;https://mirrors.aliyun.com/goproxy/,direct&#39;
                 202412212317fcitx5更换systray-icon
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202412212317fcitx5更换systray-icon/</id>
             <content type="html">
                 &lt;p&gt;安装了Papirus图标包（extra/papirus-icon-theme）之后，按照&lt;a href=&quot;https://wiki.archlinux.org/title/GTK#Configuration&quot; target=&quot;_blank&quot; class=&quot;external-link&quot;&gt;wiki&lt;/a&gt;上的教程设置icon-theme，发现fcitx5的托盘图标太暗了，看不清楚。于是想着换一个亮一点的。最后鼓捣发现把图标包设置为Papirus-Dark之后就好了，托盘图标就变亮了。PS，下图最后一个图标是替换过之后的&lt;a href=&quot;https://guyueshui.github.io/obsidian-garden/202412212328goldendict%E6%9B%B4%E6%8D%A2systray-icon&quot; target=&quot;_blank&quot; class=&quot;external-link&quot;&gt;goldendict图标&lt;/a&gt;。&lt;/p&gt;
@@ -3695,7 +3695,7 @@ GOPROXY=&#39;https://mirrors.aliyun.com/goproxy/,direct&#39;
                 202412202251ssh问题记录
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202412202251ssh问题记录/</id>
             <content type="html">
                 &lt;h2 id=&quot;warning-terminal-is-not-fully-functional&quot; tabindex=&quot;-1&quot;&gt;WARNING: terminal is not fully functional&lt;/h2&gt;
@@ -3721,7 +3721,7 @@ GOPROXY=&#39;https://mirrors.aliyun.com/goproxy/,direct&#39;
                 202412202053simplify
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202412202053simplify/</id>
             <content type="html">
                 &lt;h1 id=&quot;目录结构简化&quot; tabindex=&quot;-1&quot;&gt;目录结构简化&lt;/h1&gt;
@@ -3755,7 +3755,7 @@ GOPROXY=&#39;https://mirrors.aliyun.com/goproxy/,direct&#39;
                 202412171658imv官包不支持gif
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202412171658imv官包不支持gif/</id>
             <content type="html">
                 &lt;p&gt;Archlinux的官方extra/imv不支持gif文件查看，&lt;/p&gt;
@@ -3838,7 +3838,7 @@ inih is used under the New (3-clause) BSD license.
                 202412151610pipewire-commands
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202412151610pipewire-commands/</id>
             <content type="html">
                 &lt;blockquote&gt;
@@ -3896,7 +3896,7 @@ Adapted from &lt;a href=&quot;https://kowalcj0.github.io/2022/01/09/handy-pipewi
                 202412131501waydroid使用小记
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202412131501waydroid使用小记/</id>
             <content type="html">
                 &lt;p&gt;&lt;a href=&quot;https://wiki.archlinux.org/title/Waydroid&quot; target=&quot;_blank&quot; class=&quot;external-link&quot;&gt;Waydroid&lt;/a&gt;是一款可以在linux体内跑android的容器。不同于虚拟机，它利用容器化技术直接在Linux启动android系统，性能比虚拟机要好得多。目前仅支持&lt;a href=&quot;https://wayland.freedesktop.org/&quot; target=&quot;_blank&quot; class=&quot;external-link&quot;&gt;Wayland&lt;/a&gt; session. 但通过在X session中使用一些compositor也能跑起来。&lt;/p&gt;
@@ -3945,7 +3945,7 @@ Android内部快捷菜单中的wifi按钮开关是假的，没有任何意义。
                 202412121707redshift使用小记
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202412121707redshift使用小记/</id>
             <content type="html">
                 &lt;p&gt;&lt;a href=&quot;https://wiki.archlinux.org/title/Redshift&quot; target=&quot;_blank&quot; class=&quot;external-link&quot;&gt;Redshift&lt;/a&gt;是linux桌面护眼程序，配置简单却足够使用。开启后自动根据一天中的时间设置渐变色温（色温范围在日间色温和夜间色温之间）。减少蓝光输出，稍微护眼一点吧。&lt;/p&gt;
@@ -3972,7 +3972,7 @@ lon=xxx.8
                 202412112322firefox重启保留标签页
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202412112322firefox重启保留标签页/</id>
             <content type="html">
                 &lt;p&gt;firefox带标签页重启&lt;/p&gt;
@@ -3996,7 +3996,7 @@ lon=xxx.8
                 202412112316linux桌面美化
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202412112316linux桌面美化/</id>
             <content type="html">
                 &lt;h2 id=&quot;icon-theme&quot; tabindex=&quot;-1&quot;&gt;icon-theme&lt;/h2&gt;
@@ -4022,7 +4022,7 @@ theme位置：/usr/share/themes&lt;/p&gt;
                 202412111913dunst使用小记
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202412111913dunst使用小记/</id>
             <content type="html">
                 &lt;p&gt;Dunst是一个notification-daemon，同类的软件包有很多，其中之一是extra/notification-daemon，如果没注意，你可能默认用的就是这个软件包。当安装了多个notification-daemon的时候，他们都会宣称自己提供了同个dbus service (org.freedesktop.Notifications)，导致冲突，默认会用一个，但具体规则我不清楚&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://guyueshui.github.io/obsidian-garden/#fn1&quot; id=&quot;fnref1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
@@ -4052,7 +4052,7 @@ org.knopwob.dunst.service:Name=org.freedesktop.Notifications
                 202411251922动态库链接问题
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202411251922动态库链接问题/</id>
             <content type="html">
                 &lt;p&gt;参考修改：&lt;a href=&quot;https://github.com/tbuktu/libntru/pull/47/files&quot; target=&quot;_blank&quot; class=&quot;external-link&quot;&gt;https://github.com/tbuktu/libntru/pull/47/files&lt;/a&gt;&lt;br /&gt;
@@ -4168,7 +4168,7 @@ All tests passed
                 202411132048数字证书
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202411132048数字证书/</id>
             <content type="html">
                 &lt;p&gt;https比http安全在哪里？http是明文传输，如果被中间人劫持，你提交的表单（例如输入的密码）就会被窃取。而https是加密传输，即使被截取，得到的也是密文，无法直接破译。&lt;/p&gt;
@@ -4229,7 +4229,7 @@ All tests passed
                 202411100101firewalld使用小记
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202411100101firewalld使用小记/</id>
             <content type="html">
                 &lt;p&gt;centos自带的防火墙firewalld感觉不太好用，命令行太长了，开放/删除端口的命令比较长，记不住。这里列一个简单方法，&lt;/p&gt;
@@ -4250,7 +4250,7 @@ firewall-是用户交互命令，光看这个命令就很长orz&lt;/p&gt;
                 202411092142-frp使用小记
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202411092142-frp使用小记/</id>
             <content type="html">
                 &lt;p&gt;frp官方文档：&lt;a href=&quot;https://gofrp.org/zh-cn/docs/reference/server-configures/&quot; target=&quot;_blank&quot; class=&quot;external-link&quot;&gt;https://gofrp.org/zh-cn/docs/reference/server-configures/&lt;/a&gt;&lt;/p&gt;
@@ -4337,7 +4337,7 @@ keepTunnelOpen = true
                 202409242301-usb耳机无声音
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202409242301-usb耳机无声音/</id>
             <content type="html">
                 &lt;p&gt;起因：入了个usb耳机，然后插上电脑（archlinux）无效果。电脑自带扬声器和3.5mm耳机孔都是好好工作的，然而插了usb耳机后好像没插一样。&lt;/p&gt;
@@ -4395,7 +4395,7 @@ pactl set-default-source alsa_input.usb-GN_Audio_A_S_Jabra_EVOLVE_30_II_0005EDED
                 202406111912函数栈
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202406111912函数栈/</id>
             <content type="html">
                 &lt;p&gt;两个重要指针：&lt;/p&gt;
@@ -4439,7 +4439,7 @@ EBP (Extended Base Pointer) is used for this purpose. 指向栈帧&lt;/p&gt;
                 202405100938mutable-in-cpp
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202405100938mutable-in-cpp/</id>
             <content type="html">
                 &lt;p&gt;C++中的&lt;code&gt;mutable&lt;/code&gt;关键字&lt;/p&gt;
@@ -4458,7 +4458,7 @@ EBP (Extended Base Pointer) is used for this purpose. 指向栈帧&lt;/p&gt;
                 202404150949vlan
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202404150949vlan/</id>
             <content type="html">
                 &lt;h1 id=&quot;vlan-vxlan&quot; tabindex=&quot;-1&quot;&gt;Vlan和Vxlan&lt;/h1&gt;
@@ -4513,7 +4513,7 @@ EBP (Extended Base Pointer) is used for this purpose. 指向栈帧&lt;/p&gt;
                 202310232023
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202310232023/</id>
             <content type="html">
                 &lt;p&gt;&lt;a class=&quot;tag&quot; onclick=&quot;toggleTagSearch(this)&quot; data-content=&quot;#链接&quot;&gt;#链接&lt;/a&gt; &lt;a class=&quot;tag&quot; onclick=&quot;toggleTagSearch(this)&quot; data-content=&quot;#编译&quot;&gt;#编译&lt;/a&gt;&lt;/p&gt;
@@ -4640,7 +4640,7 @@ sizeof(x)=2, sizeof(y)=2
                 202310162020UML基础
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202310162020UML基础/</id>
             <content type="html">
                 &lt;p&gt;UML图分类：&lt;br /&gt;
@@ -4691,7 +4691,7 @@ classK ..|&gt; classL : Realization&lt;/pre&gt;&lt;blockquote&gt;
                 202309080931code-smells
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202309080931code-smells/</id>
             <content type="html">
                 &lt;p&gt;&lt;img src=&quot;https://guyueshui.github.io/obsidian-garden/assets/202309080931code-smells/Pasted%20image%2020230908093159.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -5190,7 +5190,7 @@ Preserve Whole Object&lt;br /&gt;
                 202308261504make基础
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202308261504make基础/</id>
             <content type="html">
                 &lt;h2 id=&quot;makefile&quot; tabindex=&quot;-1&quot;&gt;makefile的规则&lt;/h2&gt;
@@ -5430,7 +5430,7 @@ endef
                 202308181549SFINAE
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202308181549SFINAE/</id>
             <content type="html">
                 &lt;h2 id=&quot;问题背景&quot; tabindex=&quot;-1&quot;&gt;问题背景&lt;/h2&gt;
@@ -5531,7 +5531,7 @@ int main()
                 202308012018lambda表达式
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202308012018lambda表达式/</id>
             <content type="html">
                 &lt;p&gt;考虑如下代码：&lt;/p&gt;
@@ -5627,7 +5627,7 @@ Done work 37 (No. 1) in thread 281473544192448
                 202308011934C++惯用法
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202308011934C++惯用法/</id>
             <content type="html">
                 &lt;h2 id=&quot;lambda&quot; tabindex=&quot;-1&quot;&gt;使用lambda表达式消除多重初始化路径&lt;/h2&gt;
@@ -5670,7 +5670,7 @@ case mode2:
                 202307261811vscode开发cpp配置
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202307261811vscode开发cpp配置/</id>
             <content type="html">
                 &lt;p&gt;首先安装必要插件，&lt;/p&gt;
@@ -5818,7 +5818,7 @@ vadimcn.vscode-lldb
                 202307121011开源协议解读
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202307121011开源协议解读/</id>
             <content type="html">
                 &lt;div class=&quot;quill-better-table-wrapper&quot;&gt;
@@ -6557,7 +6557,7 @@ vadimcn.vscode-lldb
                 202307051438CPP调试-coredump
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202307051438CPP调试-coredump/</id>
             <content type="html">
                 &lt;h2 id=&quot;segmentation-fault&quot; tabindex=&quot;-1&quot;&gt;Segmentation fault&lt;/h2&gt;
@@ -6641,7 +6641,7 @@ main (void)
                 202307031654GIT-rebase撤销
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202307031654GIT-rebase撤销/</id>
             <content type="html">
                 &lt;p&gt;&lt;a href=&quot;https://juejin.cn/s/git%20%E6%92%A4%E9%94%80rebase&quot; target=&quot;_blank&quot; class=&quot;external-link&quot;&gt;https://juejin.cn/s/git 撤销rebase&lt;/a&gt;&lt;/p&gt;
@@ -6655,7 +6655,7 @@ main (void)
                 202306301718类成员是否可以是类本身的类型
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202306301718类成员是否可以是类本身的类型/</id>
             <content type="html">
                 &lt;p&gt;类内成员如果要定义为本身类型的话，只能通过指针或者静态变量定义。原因参考： &lt;a href=&quot;https://www.zhihu.com/question/341035289/answer/1047747826&quot; target=&quot;_blank&quot; class=&quot;external-link&quot;&gt;https://www.zhihu.com/question/341035289/answer/1047747826&lt;/a&gt;&lt;/p&gt;
@@ -6668,7 +6668,7 @@ main (void)
                 202306281126异常处理
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202306281126异常处理/</id>
             <content type="html">
                 &lt;h2 id=&quot;异常仅用于处理错误&quot; tabindex=&quot;-1&quot;&gt;异常仅用于处理错误&lt;/h2&gt;
@@ -6705,7 +6705,7 @@ throw exp;
                 202306281021资源管理
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202306281021资源管理/</id>
             <content type="html">
                 &lt;h2 id=&quot;资源访问校验&quot; tabindex=&quot;-1&quot;&gt;资源访问校验&lt;/h2&gt;
@@ -6777,7 +6777,7 @@ void init_arr_temp(T (&amp;amp;arr_temp)[N])  // ok, template instantiate to ini
                 202306281018循环队列参考
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202306281018循环队列参考/</id>
             <content type="html">
                 &lt;p&gt;下列材料可供实现并发循环队列时参考：&lt;/p&gt;
@@ -6796,7 +6796,7 @@ void init_arr_temp(T (&amp;amp;arr_temp)[N])  // ok, template instantiate to ini
                 202306272237整数运算
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202306272237整数运算/</id>
             <content type="html">
                 &lt;h2 id=&quot;常见整数运算的问题&quot; tabindex=&quot;-1&quot;&gt;常见整数运算的问题&lt;/h2&gt;
@@ -6831,7 +6831,7 @@ void init_arr_temp(T (&amp;amp;arr_temp)[N])  // ok, template instantiate to ini
                 202306272227类型转换
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202306272227类型转换/</id>
             <content type="html">
                 &lt;p&gt;dynamic_cast 只能用于继承体系下的转换，一般用于将基类转换为子类，需要考虑是不是设计有问题？&lt;/p&gt;
@@ -6847,7 +6847,7 @@ void init_arr_temp(T (&amp;amp;arr_temp)[N])  // ok, template instantiate to ini
                 202306270923memcpy
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202306270923memcpy/</id>
             <content type="html">
                 &lt;p&gt;memcpy拷贝字符串数组时，不会自动拷贝null-terminator，除非指定的size包含它。&lt;/p&gt;
@@ -6871,7 +6871,7 @@ class A {
                 202306262103cmake-template
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202306262103cmake-template/</id>
             <content type="html">
                 &lt;pre&gt;&lt;code class=&quot;language-cmake&quot;&gt;cmake_minimum_required(VERSION 3.20)
@@ -7160,7 +7160,7 @@ endif()
                 202306071056对称加密和非对称加密
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202306071056对称加密和非对称加密/</id>
             <content type="html">
                 &lt;h2 id=&quot;明文通信的弊端&quot; tabindex=&quot;-1&quot;&gt;明文通信的弊端&lt;/h2&gt;
@@ -7242,7 +7242,7 @@ endif()
                 202306062013SSL-vs-TLS
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202306062013SSL-vs-TLS/</id>
             <content type="html">
                 &lt;p&gt;SSL (Secure Sockets Layer) 【安全套接字层】和 TLS (Transport Layer Security) 【传输层安全】都是通信协议，用于加密服务器、应用程序、用户和系统之间的数据。这两种协议都会对通过网络连接的双方进行身份验证，以便他们能安全交换数据。&lt;/p&gt;
@@ -7267,7 +7267,7 @@ endif()
                 202305310919GO语言基础
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202305310919GO语言基础/</id>
             <content type="html">
                 &lt;pre&gt;&lt;code class=&quot;language-go&quot;&gt;m := map[string]int {&amp;quot;a&amp;quot;:1, &amp;quot;b&amp;quot;:2}
@@ -7322,7 +7322,7 @@ With the Go threading model, calls to C code, assembler code, or blocking system
                 202305302345
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202305302345/</id>
             <content type="html">
                 &lt;div id=&quot;main-splitpane-left&quot; class=&quot;coding-question__left-pane&quot;&gt;&lt;section class=&quot;question-view__title-wrapper&quot;&gt;&lt;h1 class=&quot;question-view__title&quot;&gt;1. Prime or Not?&lt;/h1&gt;&lt;/section&gt;&lt;section class=&quot;question-view__instruction&quot;&gt;&lt;div class=&quot;candidate-rich-text&quot;&gt;&lt;div id=&quot;1eq7133bo-instruction&quot;&gt;&lt;style type=&quot;text/css&quot;&gt;.ps-content-wrapper-v0 div { margin: 0 auto; overflow: auto; } .ps-content-wrapper-v0 div.preheader { display: none; } .ps-content-wrapper-v0 p { white-space: pre-wrap; padding-left: 4px; padding-right: 4px; padding-top: 0px; padding-bottom: 2px; } .ps-content-wrapper-v0 p.section-title { font-weight: bold; padding-bottom: 0px; } .ps-content-wrapper-v0 ol.plain-list, .ps-content-wrapper-v0 ul.plain-list { list-style-type: none; padding: 4px; } .ps-content-wrapper-v0 li { white-space: normal; margin-top: 4px; margin-bottom: 4px; } .ps-content-wrapper-v0 code { color: black; } .ps-content-wrapper-v0 pre { background-color: &lt;a class=&quot;tag&quot; onclick=&quot;toggleTagSearch(this)&quot; data-content=&quot;#f4faff&quot;&gt;#f4faff&lt;/a&gt;; border: 0; border-radius: 2px; margin: 8px; padding: 10px; } .ps-content-wrapper-v0 figure { background-color: transparent; display: table; margin-top: 8px; margin-bottom: 8px; text-align: center; margin-left: auto; margin-right: auto; } .ps-content-wrapper-v0 figcaption { text-align: center; display: table-caption; caption-side: bottom; margin-top: 4px; margin-bottom: 4px; } .ps-content-wrapper-v0 img { width: auto; max-width: 100%; height: auto; } .ps-content-wrapper-v0 details { background-color: transparent; padding-left: 4px; padding-right: 4px; padding-top: 0px; padding-bottom: 2px; } .ps-content-wrapper-v0 details summary { background-color: &lt;a class=&quot;tag&quot; onclick=&quot;toggleTagSearch(this)&quot; data-content=&quot;#39424e&quot;&gt;#39424e&lt;/a&gt;; color: white; font-weight: bold; margin-top: 4px; margin-bottom: 4px; padding: 8px; } .ps-content-wrapper-v0 details div.collapsable-details { margin: 0 auto; padding-left: 4px; padding-right: 4px; padding-top: 0px; padding-bottom: 2px; overflow: auto; } .ps-content-wrapper-v0 details div.collapsable-details pre { margin-left: 4px; margin-right: 4px; margin-top: 4px; margin-bottom: 4px; } .ps-content-wrapper-v0 table { border: 1px solid black; border-collapse: collapse; border-color: darkgray; margin: 0 auto; margin-top: 8px; margin-bottom: 8px; padding: 8px; width: 96%; table-layout: fixed; } .ps-content-wrapper-v0 table tbody tr th, .ps-content-wrapper-v0 table tbody tr td { font-weight: bold; white-space: nowrap; text-align: center; vertical-align: middle; border: 1px solid black; border-color: darkgray; padding: 8px; } .ps-content-wrapper-v0 table tbody tr th.description { width: 60%; } .ps-content-wrapper-v0 table tbody tr td { font-weight: normal; white-space: normal; } .ps-content-wrapper-v0 table.function-params tbody tr:first-child td.headers { border-bottom-width: 2px; } .ps-content-wrapper-v0 table.function-params tbody tr:last-child td { border-top-width: 2px; border-top-color: darkgray; } .ps-content-wrapper-v0 table.function-params tbody tr td.headers { width: 25%; font-weight: bold; text-align: center; border: 1px solid black; border-right-width: 2px; border-color: darkgray; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell { width: 100%; height: 100%; padding: 0px; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table { width: 100%; height: 100%; padding: 0px; margin: 0px; border: 0; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr td.code { white-space: normal; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr th { border-top: 0; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr th:first-child { border-left: 0; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr th:last-child { border-right: 0; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr:last-child td { border-bottom: 0; border-top-width: 1px; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr td:first-child { border-left: 0; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr td:last-child { border-right: 0; } .ps-content-wrapper-v0 .left { text-align: left; } .ps-content-wrapper-v0 .right { text-align: right; } .ps-content-wrapper-v0 .code { font-family: monospace; white-space: nowrap; } .ps-content-wrapper-v0 .json-object-array ol, .ps-content-wrapper-v0 .json-object-array ol ul { margin-top: 0px; padding-left: 14px; } .json-object-array li { float: left; margin-right: 30px; margin-left: 10px; } .json-object-array pre { padding: 4px; margin-left: 0px; }
@@ -7960,7 +7960,7 @@ abcddcbabcdcdaadcdcbabcdddcb  →  s = &quot;abcddcbabcdcdaadcdcbabcdddcb&quot;
                 202305271514sudo安全问题
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202305271514sudo安全问题/</id>
             <content type="html">
                 &lt;p&gt;sudo安全排查涉及的两个要求：&lt;/p&gt;
@@ -7979,7 +7979,7 @@ abcddcbabcdcdaadcdcbabcdddcb  →  s = &quot;abcddcbabcdcdaadcdcbabcdddcb&quot;
                 202305191500tcpdump抓包
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202305191500tcpdump抓包/</id>
             <content type="html">
                 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;tcpdump -i any port 30002 and host 10.136.242.200 -X  # 接口不限，指定端口和ip，进行抓包
@@ -7998,7 +7998,7 @@ aa.cap: pcap capture file, microsecond ts (little-endian) - version 2.4 (Etherne
                 202305170944callout-user-guide
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202305170944callout-user-guide/</id>
             <content type="html">
                 &lt;blockquote&gt;
@@ -8069,7 +8069,7 @@ Yes! In a foldable callout, the contents are hidden until it is expanded.&lt;/p&
                 202305161028内存模型
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202305161028内存模型/</id>
             <content type="html">
                 &lt;h2 id=&quot;为什么需要内存模型&quot; tabindex=&quot;-1&quot;&gt;为什么需要内存模型&lt;/h2&gt;
@@ -8139,7 +8139,7 @@ Yes! In a foldable callout, the contents are hidden until it is expanded.&lt;/p&
                 202305160951初始化列表
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202305160951初始化列表/</id>
             <content type="html">
                 &lt;p&gt;初始化列表是轻量级的对象，用于传参是无需使用引用，可以理解为传int这种参数，无需考虑拷贝开销。此外，&lt;strong&gt;初始化列表中传入的视为常量，不允许修改&lt;/strong&gt;。&lt;/p&gt;
@@ -8152,7 +8152,7 @@ Yes! In a foldable callout, the contents are hidden until it is expanded.&lt;/p&
                 202305091937枚举
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202305091937枚举/</id>
             <content type="html">
                 &lt;p&gt;C++中有两种枚举，&lt;/p&gt;
@@ -8185,7 +8185,7 @@ void foo()
                 202305080906 Redis数据库连接
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202305080906 Redis数据库连接/</id>
             <content type="html">
                 &lt;p&gt;每个微服务每套环境的数据库都是互相独立的。例如连接UniNetworkResourceService的redis数据库，可在管理面查看相关信息：&lt;/p&gt;
@@ -8215,7 +8215,7 @@ void foo()
                 202304281707-右值引用
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202304281707-右值引用/</id>
             <content type="html">
                 &lt;p&gt;右值就是没有确切地址可供访问&lt;/p&gt;
@@ -8229,7 +8229,7 @@ void foo()
                 202304241826 RTTI in cpp
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202304241826 RTTI in cpp/</id>
             <content type="html">
                 &lt;p&gt;RTTI stands for RunTime Type Identification. Commonly two ways to achieve it.&lt;/p&gt;
@@ -8262,7 +8262,7 @@ void foo(Base* b)
                 202304231659 firefox伪装chrome ua
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202304231659 firefox伪装chrome ua/</id>
             <content type="html">
                 &lt;p&gt;许多网站强制建议使用chrome打开，但其实firefox能够完美渲染该页面。所以需要强制更改firefox的ua伪装chrome：&lt;/p&gt;
@@ -8282,7 +8282,7 @@ void foo(Base* b)
                 202304231411 name mangling
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202304231411 name mangling/</id>
             <content type="html">
                 &lt;blockquote&gt;
@@ -8368,7 +8368,7 @@ char bar(char);
                 202304230920 cmake learn
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202304230920 cmake learn/</id>
             <content type="html">
                 &lt;p&gt;Just see:&lt;/p&gt;
@@ -9240,7 +9240,7 @@ CMake语言不区分大小写，但是参数区分大小写。&lt;/p&gt;
                 202304202149volatile-specifier
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202304202149volatile-specifier/</id>
             <content type="html">
                 &lt;p&gt;volatile修饰的变量旨在告诉编译器这个变量易失（对应缓存的术语）、易变，因此在读取变量值的时候，始终通过内存取址的方式，而不信赖缓存。&lt;/p&gt;
@@ -9269,7 +9269,7 @@ cout &amp;lt;&amp;lt; b;  // 32
                 202304101713 serach in hugo
                 
             </title>
-            <updated>2025-09-20T06:52:34Z</updated>
+            <updated>2025-09-20T07:02:02Z</updated>
             <id>https://guyueshui.github.io/obsidian-garden//__zettel/202304101713 serach in hugo/</id>
             <content type="html">
                 &lt;h1 id=&quot;hugo&quot; tabindex=&quot;-1&quot;&gt;为hugo网站添加搜索功能&lt;/h1&gt;
