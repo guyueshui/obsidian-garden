@@ -13,6 +13,7 @@ const {
   userMarkdownSetup,
   userEleventySetup,
 } = require("./src/helpers/userSetup");
+const { siteMeta } = require("./src/site/_data/meta");
 
 const Image = require("@11ty/eleventy-img");
 function transformImage(src, cls, alt, sizes, widths = ["500", "700", "auto"]) {
@@ -66,6 +67,7 @@ function getAnchorAttributes(filePath, linkTitle) {
     if (frontMatter.data.noteIcon) {
       noteIcon = frontMatter.data.noteIcon;
     }
+    permalink = "/obsidian-garden" + permalink;
   } catch {
     deadLink = true;
   }
@@ -74,7 +76,7 @@ function getAnchorAttributes(filePath, linkTitle) {
     return {
       attributes: {
         "class": "internal-link is-unresolved",
-        "href": "/404",
+        "href": "/obsidian-garden/404",
         "target": "",
       },
       innerHTML: title,
