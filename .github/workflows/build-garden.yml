@@ -17,12 +17,13 @@ env:
 
 jobs:
   blog-deploy:
-    name: Hugo blog build & deploy
+    name: Garden build & deploy
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-verison: [20.x, 22.x]
+        # node-verison: [20.x, 22.x]
+        node-verison: [22.x]
 
     steps:
       - uses: actions/checkout@v4
